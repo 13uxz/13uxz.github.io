@@ -15,8 +15,6 @@ sec1:
 sec2:
   title: "Biography:"
   text:
-    -  13UXZ is a Dubai based DJ with a keen ear to provide appropriate sets for any venue. With a clear passion for music, seamless mixing and thoughtful track selection 13uxz will take great satisfaction in entertaining your audience. With a collection at his fingertips of almost 8000 tracks ranging across a wide variety of genres, there is something for everyone to enjoy in his dynamic sets.
-    
     - 13uxz takes satisfaction in tailoring unique and dynamic sets that captivate audiences. With a collection of over 13,000 tracks across various genres, he delivers seamless mixes with a keen ear for thoughtful track selection. His passion for music is complemented by professional training, including courses at Granular DXB, Toolroom, and Point Blank Music School, as well as private tuition with locally and internationally recognized artists. He has also taught at Original Mix DJs and Dubai Sound Academy, with his students performing at events in Dubai and internationally.
 
     -  After completing a successful two-year residency at Masti, 13uxz has now moved on to a residency at Jamavar and Mimi Meifair, following the relocation of these Michelin-star restaurants from London to Dubai. He regularly performs at corporate gigs, with notable events including a COP28 staff closing party and the Tilal Al Ghaf Real Estate Awards. His preferred genres—Afrohouse and Melodic Techno/House —are not only reflected in his DJ sets but evident in his releases on Soviett Records and Mystic Carousel Records, with more lined up for 2024.
