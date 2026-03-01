@@ -8,7 +8,7 @@ export default function Hero() {
         src="/photos/hero.jpg"
         alt="13uxz"
         fill
-        className="object-cover object-top brightness-[0.35]"
+        className="object-cover object-top brightness-[0.35] md:hidden"
         priority
       />
 
