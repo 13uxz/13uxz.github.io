@@ -2,9 +2,9 @@ import Image from "next/image";
 import { siteData } from "@/data/siteData";
 
 function logoFilter(src: string) {
-  return src.endsWith(".jpg") || src.endsWith(".jpeg") || src.endsWith(".png")
-    ? "invert"
-    : "brightness-0 invert";
+  if (src.endsWith(".png")) return "";
+  if (src.endsWith(".jpg") || src.endsWith(".jpeg")) return "invert";
+  return "brightness-0 invert";
 }
 
 export default function Brands() {
