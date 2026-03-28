@@ -82,7 +82,7 @@ export const siteData = {
       logo: "/logos/blackspoon.jpg",
       url: "https://www.blackspoon.me/",
       venues: [
-        { name: "Blue Seafood Asia", role: "Resident DJ", logo: "/logos/blue-seafood-asia.jpg" },
+        { name: "Blue Seafood Asia", role: "Resident DJ", logo: "/logos/blue-seafood-asia.jpg", url: "https://www.blueseafoodasia.com/" },
         { name: "Masti", role: "Resident DJ", logo: "/logos/masti.avif", url: "https://www.mastidubai.com/" },
       ],
     },
@@ -91,8 +91,8 @@ export const siteData = {
       logo: "/logos/lsl-capital.svg",
       url: "https://lslcapital.com/",
       venues: [
-        { name: "Jamavar Dubai", role: "Resident DJ", logo: "/logos/jamavar.svg", url: "https://lslcapital.com/jamavar/" },
-        { name: "Mimi Mei Fair Dubai", role: "Resident DJ", logo: "/logos/mimi-mei-fair.svg", url: "https://mimimeifair.com/" },
+        { name: "Jamavar Dubai", role: "Resident DJ", logo: "/logos/jamavar.svg", url: "https://www.jamavardubai.com/" },
+        { name: "Mimi Mei Fair Dubai", role: "Resident DJ", logo: "/logos/mimi-mei-fair.svg", url: "https://www.mimimeifairdubai.com/" },
       ],
     },
   ],
