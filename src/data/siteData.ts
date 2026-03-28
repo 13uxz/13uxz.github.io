@@ -79,10 +79,10 @@ export const siteData = {
   brands: [
     {
       management: "Blackspoon Management",
-      logo: "/logos/blackspoon.jpg",
+      logo: "/logos/blackspoon.png",
       url: "https://www.blackspoon.me/",
       venues: [
-        { name: "Blue Seafood Asia", role: "Resident DJ", logo: "/logos/blue-seafood-asia.jpg" },
+        { name: "Blue Seafood Asia", role: "Resident DJ", logo: "/logos/blue-seafood-asia.png" },
         { name: "Masti", role: "Resident DJ", logo: "/logos/masti.avif", url: "https://www.mastidubai.com/" },
       ],
     },
