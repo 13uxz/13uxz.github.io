@@ -9,7 +9,7 @@ export default function Brands() {
           Brands
         </h2>
 
-        <div className="grid gap-20 md:grid-cols-2">
+        <div className="grid gap-24 md:grid-cols-2">
           {siteData.brands.map((group) => (
             <div key={group.management} className="text-center">
               {/* Management company */}
@@ -17,15 +17,15 @@ export default function Brands() {
                 href={group.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mb-10 inline-block transition-opacity hover:opacity-70"
+                className="mb-12 flex h-20 items-center justify-center transition-opacity hover:opacity-70"
               >
                 <Image
-                    src={group.logo}
-                    alt={group.management}
-                    width={160}
-                    height={60}
-                    className="mx-auto h-12 w-auto"
-                  />
+                  src={group.logo}
+                  alt={group.management}
+                  width={240}
+                  height={80}
+                  className="h-16 w-auto brightness-0 invert"
+                />
               </a>
 
               <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
@@ -40,14 +40,14 @@ export default function Brands() {
                     href={"url" in venue ? (venue.url as string) : undefined}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex flex-col items-center justify-center border border-border px-4 py-8 transition-colors duration-300 hover:border-white/30"
+                    className="group flex h-40 flex-col items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
                   >
                     <Image
                       src={venue.logo}
                       alt={venue.name}
-                      width={120}
-                      height={120}
-                      className="mb-3 h-16 w-auto opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                      width={180}
+                      height={80}
+                      className="mb-3 h-20 w-auto object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100"
                     />
                     <span className="text-[10px] uppercase tracking-[0.2em] text-accent">
                       {venue.role}
