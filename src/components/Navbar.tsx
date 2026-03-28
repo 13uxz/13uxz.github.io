@@ -1,12 +1,28 @@
 "use client";
 
 import { useState } from "react";
+import { siteData } from "@/data/siteData";
+import {
+  SpotifyIcon,
+  BeatportIcon,
+  SoundCloudIcon,
+  InstagramIcon,
+  LinktreeIcon,
+} from "@/components/SocialIcons";
 
 const links = [
   { label: "Biography", href: "#about" },
   { label: "Music", href: "#music" },
   { label: "Bookings", href: "#bookings" },
 ];
+
+const socialConfig: Record<string, { label: string; icon: React.FC }> = {
+  spotify: { label: "Spotify", icon: SpotifyIcon },
+  beatport: { label: "Beatport", icon: BeatportIcon },
+  soundcloud: { label: "SoundCloud", icon: SoundCloudIcon },
+  instagram: { label: "Instagram", icon: InstagramIcon },
+  linktree: { label: "Linktree", icon: LinktreeIcon },
+};
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -21,7 +37,28 @@ export default function Navbar() {
           13UXZ
         </a>
 
-        {/* Desktop */}
+        {/* Desktop social icons — center */}
+        <div className="hidden items-center gap-4 md:flex">
+          {Object.entries(siteData.socials).map(([key, url]) => {
+            const config = socialConfig[key];
+            if (!config) return null;
+            const Icon = config.icon;
+            return (
+              <a
+                key={key}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent transition-colors duration-300 hover:text-white"
+                aria-label={config.label}
+              >
+                <Icon />
+              </a>
+            );
+          })}
+        </div>
+
+        {/* Desktop nav links — right */}
         <ul className="hidden gap-10 md:flex">
           {links.map((link) => (
             <li key={link.href}>
@@ -55,19 +92,37 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <ul className="flex flex-col gap-6 bg-black/95 px-8 pb-8 pt-4 md:hidden">
+        <div className="flex flex-col gap-6 bg-black/95 px-8 pb-8 pt-4 md:hidden">
           {links.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="text-[13px] uppercase tracking-[0.15em] text-accent transition-colors hover:text-white"
-              >
-                {link.label}
-              </a>
-            </li>
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="text-[13px] uppercase tracking-[0.15em] text-accent transition-colors hover:text-white"
+            >
+              {link.label}
+            </a>
           ))}
-        </ul>
+          <div className="flex gap-4 pt-2">
+            {Object.entries(siteData.socials).map(([key, url]) => {
+              const config = socialConfig[key];
+              if (!config) return null;
+              const Icon = config.icon;
+              return (
+                <a
+                  key={key}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent transition-colors duration-300 hover:text-white"
+                  aria-label={config.label}
+                >
+                  <Icon />
+                </a>
+              );
+            })}
+          </div>
+        </div>
       )}
     </nav>
   );
