@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { siteData } from "@/data/siteData";
 
+function logoFilter(src: string) {
+  return src.endsWith(".jpg") || src.endsWith(".jpeg") || src.endsWith(".png")
+    ? "invert"
+    : "brightness-0 invert";
+}
+
 export default function Brands() {
   return (
     <section id="brands" className="px-6 py-32 sm:px-8">
@@ -24,7 +30,7 @@ export default function Brands() {
                   alt={group.management}
                   width={240}
                   height={80}
-                  className="h-16 w-auto brightness-0 invert"
+                  className={`h-16 w-auto ${logoFilter(group.logo)}`}
                 />
               </a>
 
@@ -47,7 +53,7 @@ export default function Brands() {
                       alt={venue.name}
                       width={180}
                       height={80}
-                      className="mb-3 h-20 w-auto object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                      className={`mb-3 h-20 w-auto object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${logoFilter(venue.logo)}`}
                     />
                     <span className="text-[10px] uppercase tracking-[0.2em] text-accent">
                       {venue.role}
