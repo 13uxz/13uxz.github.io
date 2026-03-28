@@ -82,7 +82,7 @@ export const siteData = {
       logo: "/logos/blackspoon.jpg",
       url: "https://www.blackspoon.me/",
       venues: [
-        { name: "Blue Seafood Asia", role: "Resident DJ", logo: "/logos/blue-seafood-asia.jpg", url: "https://www.blueseafoodasia.com/" },
+        { name: "Blue Seafood Asia", role: "Resident DJ", logo: "/logos/blue-seafood-asia.jpg" },
         { name: "Masti", role: "Resident DJ", logo: "/logos/masti.avif", url: "https://www.mastidubai.com/" },
       ],
     },
