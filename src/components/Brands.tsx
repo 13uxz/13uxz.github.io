@@ -80,12 +80,22 @@ export default function Brands() {
           })}
         </div>
 
-        {/* Bookings — Sole Agency DJ Bookings */}
+        {/* Bookings — Sole Agency */}
         {bookings && (
           <div className="mt-24 text-center">
-            <h3 className="mb-12 text-lg font-light uppercase tracking-[0.3em] text-white/80">
-              Sole Agency DJ Bookings
-            </h3>
+            <div className="mb-12 flex h-20 items-center justify-center">
+              <Image
+                src={bookings.logo}
+                alt={bookings.management}
+                width={240}
+                height={80}
+                className="h-16 w-auto"
+              />
+            </div>
+
+            <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
+              Bookings
+            </p>
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
               {bookings.venues.map((venue) => {
@@ -103,7 +113,7 @@ export default function Brands() {
                       alt={venue.name}
                       width={300}
                       height={120}
-                      className="h-24 max-w-[80%] object-contain mix-blend-screen opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                      className="h-24 max-w-[80%] object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100"
                     />
                   </Tag>
                 );
