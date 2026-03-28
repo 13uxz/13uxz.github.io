@@ -111,5 +111,15 @@ export const siteData = {
     },
   ],
 
+  labels: [
+    { name: "Cafe De Anatolia", logo: "/logos/cafe-de-anatolia.jpg" },
+    { name: "Soviett Records", logo: "/logos/soviett.jpg" },
+    { name: "Dyno Records", logo: "/logos/dyno-records.jpg" },
+    { name: "Nova Mova Records", logo: "/logos/nova-mova.jpg" },
+    { name: "Erase Records", logo: "/logos/erase-records.jpg" },
+    { name: "Browing", logo: "/logos/browing.png" },
+    { name: "Mystic Carousel", logo: "/logos/mystic-carousel.jpg" },
+  ],
+
   soundcloudUrl: "https://soundcloud.com/13uxz",
 } as const;
