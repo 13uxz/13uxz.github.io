@@ -78,20 +78,6 @@ export const siteData = {
 
   brands: [
     {
-      management: "Sole Agency",
-      logo: "/logos/sole-agency.png",
-      url: "",
-      label: "Bookings",
-      venues: [
-        { name: "COP 28", role: "DJ", logo: "/logos/cop28.png", url: "https://www.cop28.com/" },
-        { name: "Tilal Al Ghaf", role: "DJ", logo: "/logos/tilal-al-ghaf.png", url: "https://www.tilalalghaf.com/" },
-        { name: "Destination Insights", role: "DJ", logo: "/logos/destination-insights.png", url: "https://www.destinationinsight.com/" },
-        { name: "Inspiratus Brand Experience", role: "DJ", logo: "/logos/inspiratus.png", url: "https://www.inspiratus.com/" },
-        { name: "Dubai Shopping Festival", role: "DJ", logo: "/logos/dubai-shopping-festival.png", url: "https://www.mydsf.ae/" },
-        { name: "Offside Sports Bar", role: "DJ", logo: "/logos/offside.png", url: "https://www.jaresortshotels.com/restaurant-detail/dubai/ja-ocean-view-hotel/offside" },
-      ],
-    },
-    {
       management: "Blackspoon Management",
       logo: "/logos/blackspoon.png",
       url: "https://www.blackspoon.me/",
@@ -107,6 +93,20 @@ export const siteData = {
       venues: [
         { name: "Jamavar Dubai", role: "Resident DJ", logo: "/logos/jamavar.svg", url: "https://jamavarrestaurants.com/indian-restaurant-dubai/" },
         { name: "Mimi Mei Fair Dubai", role: "Resident DJ", logo: "/logos/mimi-mei-fair.svg", url: "https://mimimeifair.com/asian-chinese-restaurant-dubai/" },
+      ],
+    },
+    {
+      management: "Sole Agency",
+      logo: "/logos/sole-agency.png",
+      url: "",
+      label: "Bookings",
+      venues: [
+        { name: "UAE Consensus", role: "DJ", logo: "/logos/cop28.svg", url: "https://www.cop28.com/" },
+        { name: "Tilal Al Ghaf", role: "DJ", logo: "/logos/tilal-al-ghaf.png", url: "https://www.tilalalghaf.com/" },
+        { name: "Destination Insights", role: "DJ", logo: "/logos/destination-insights.png", url: "https://www.destinationinsight.com/" },
+        { name: "Inspiratus Brand Experience", role: "DJ", logo: "/logos/inspiratus.png", url: "https://www.inspiratus.com/" },
+        { name: "Dubai Shopping Festival", role: "DJ", logo: "/logos/dubai-shopping-festival.png", url: "https://www.mydsf.ae/" },
+        { name: "Offside Sports Bar", role: "DJ", logo: "/logos/offside.png", url: "https://www.jaresortshotels.com/restaurant-detail/dubai/ja-ocean-view-hotel/offside" },
       ],
     },
   ],
