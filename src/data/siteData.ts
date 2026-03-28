@@ -78,6 +78,20 @@ export const siteData = {
 
   brands: [
     {
+      management: "Sole Agency",
+      logo: "/logos/sole-agency.png",
+      url: "",
+      label: "Bookings",
+      venues: [
+        { name: "COP 28", role: "DJ", logo: "/logos/cop28.png" },
+        { name: "Tilal Al Ghaf", role: "DJ", logo: "/logos/tilal-al-ghaf.png" },
+        { name: "Destination Insights", role: "DJ", logo: "/logos/destination-insights.png" },
+        { name: "Inspiratus Brand Experience", role: "DJ", logo: "/logos/inspiratus.png" },
+        { name: "Dubai Shopping Festival", role: "DJ", logo: "/logos/dubai-shopping-festival.jpg" },
+        { name: "Offside Sports Bar", role: "DJ", logo: "/logos/offside.jpg" },
+      ],
+    },
+    {
       management: "Blackspoon Management",
       logo: "/logos/blackspoon.png",
       url: "https://www.blackspoon.me/",
