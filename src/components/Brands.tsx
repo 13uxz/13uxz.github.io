@@ -83,7 +83,12 @@ export default function Brands() {
         {/* Bookings — Sole Agency */}
         {bookings && (
           <div className="mt-24 text-center">
-            <div className="mb-12 flex h-20 items-center justify-center">
+            <a
+              href={bookings.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-12 flex h-20 items-center justify-center transition-opacity hover:opacity-70"
+            >
               <Image
                 src={bookings.logo}
                 alt={bookings.management}
@@ -91,10 +96,10 @@ export default function Brands() {
                 height={80}
                 className="h-16 w-auto"
               />
-            </div>
+            </a>
 
             <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
-              Bookings
+              {"label" in bookings ? (bookings.label as string) : "Bookings"}
             </p>
 
             <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
@@ -106,14 +111,14 @@ export default function Brands() {
                   <Tag
                     key={venue.name}
                     {...linkProps}
-                    className="group flex h-40 items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
+                    className="group flex h-44 items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
                   >
                     <Image
                       src={venue.logo}
                       alt={venue.name}
                       width={300}
-                      height={120}
-                      className="h-24 max-w-[80%] object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                      height={150}
+                      className="h-28 max-w-[85%] object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100"
                     />
                   </Tag>
                 );

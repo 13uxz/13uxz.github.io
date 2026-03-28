@@ -98,8 +98,8 @@ export const siteData = {
     {
       management: "Sole Agency",
       logo: "/logos/sole-agency.png",
-      url: "",
-      label: "Bookings",
+      url: "https://sole-agency.com/",
+      label: "Agency Bookings",
       venues: [
         { name: "UAE Consensus", role: "DJ", logo: "/logos/cop28.svg", url: "https://www.cop28.com/" },
         { name: "Tilal Al Ghaf", role: "DJ", logo: "/logos/tilal-al-ghaf.png", url: "https://www.tilalalghaf.com/" },
@@ -112,13 +112,13 @@ export const siteData = {
   ],
 
   labels: [
-    { name: "Cafe De Anatolia", logo: "/logos/cafe-de-anatolia.jpg" },
-    { name: "Soviett Records", logo: "/logos/soviett.jpg" },
-    { name: "Dyno Records", logo: "/logos/dyno-records.jpg" },
-    { name: "Nova Mova Records", logo: "/logos/nova-mova.jpg" },
-    { name: "Erase Records", logo: "/logos/erase-records.jpg" },
-    { name: "Browing", logo: "/logos/browing.png" },
-    { name: "Mystic Carousel", logo: "/logos/mystic-carousel.jpg" },
+    { name: "Cafe De Anatolia", logo: "/logos/cafe-de-anatolia.jpg", url: "https://www.beatport.com/label/cafe-de-anatolia/86029", invert: true },
+    { name: "Soviett Records", logo: "/logos/soviett.jpg", url: "https://www.beatport.com/label/soviett/87498", invert: false },
+    { name: "Dyno Records", logo: "/logos/dyno-records.jpg", url: "https://www.beatport.com/label/dyno-records/148595", invert: false },
+    { name: "Nova Mova Records", logo: "/logos/nova-mova.jpg", url: "https://www.beatport.com/label/nova-mova/105198", invert: true },
+    { name: "Erase Records", logo: "/logos/erase-records.jpg", url: "https://www.beatport.com/label/erase-records/16498", invert: false },
+    { name: "Browing", logo: "/logos/browing.png", url: "https://browingrecords.com/", invert: true },
+    { name: "Mystic Carousel", logo: "/logos/mystic-carousel.jpg", url: "https://www.beatport.com/label/mystic-carousel-records/32044", invert: false },
   ],
 
   soundcloudUrl: "https://soundcloud.com/13uxz",

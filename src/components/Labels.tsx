@@ -9,21 +9,29 @@ export default function Labels() {
           Labels
         </h2>
 
-        <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 md:grid-cols-4">
-          {siteData.labels.map((label) => (
-            <div
-              key={label.name}
-              className="group flex h-36 items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
-            >
-              <Image
-                src={label.logo}
-                alt={label.name}
-                width={200}
-                height={100}
-                className="h-20 w-auto max-w-[85%] object-contain mix-blend-screen opacity-70 transition-opacity duration-300 group-hover:opacity-100"
-              />
-            </div>
-          ))}
+        <div className="flex flex-wrap justify-center gap-6">
+          {siteData.labels.map((label) => {
+            const filter = label.invert
+              ? "invert mix-blend-screen"
+              : "mix-blend-screen";
+            return (
+              <a
+                key={label.name}
+                href={label.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex h-36 w-[calc(50%-12px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(33.333%-16px)] md:w-[calc(25%-18px)]"
+              >
+                <Image
+                  src={label.logo}
+                  alt={label.name}
+                  width={200}
+                  height={100}
+                  className={`h-20 w-auto max-w-[85%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${filter}`}
+                />
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>
