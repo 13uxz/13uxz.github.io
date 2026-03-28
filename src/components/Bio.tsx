@@ -21,7 +21,7 @@ export default function Bio() {
           </div>
 
           {/* Text */}
-          <div className="-mt-1">
+          <div className="-mt-[6px]">
             {siteData.bio.map((paragraph, i) => (
               <p
                 key={i}

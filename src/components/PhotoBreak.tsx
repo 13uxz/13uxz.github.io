@@ -9,12 +9,16 @@ export default function PhotoBreak() {
       </h2>
       <div className="mx-auto grid max-w-6xl grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4">
         {siteData.photos.map((photo, i) => (
-          <div key={i} className="group relative aspect-square overflow-hidden">
+          <div
+            key={i}
+            className="group relative aspect-square overflow-hidden"
+            style={"bg" in photo ? { backgroundColor: photo.bg as string } : undefined}
+          >
             <Image
               src={photo.src}
               alt={photo.alt}
               fill
-              className={`object-cover transition-transform duration-700 group-hover:scale-105 ${"position" in photo ? photo.position : "object-center"}`}
+              className={`transition-transform duration-700 group-hover:scale-105 ${"fit" in photo ? "object-contain" : "object-cover"} ${"position" in photo ? photo.position : "object-center"}`}
             />
           </div>
         ))}

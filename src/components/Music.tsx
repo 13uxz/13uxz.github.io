@@ -91,7 +91,7 @@ export default function Music() {
           .filter((g) => g.tracks.length > 1)
           .map((group) => (
             <div key={group.genre} className="mb-16 last:mb-0">
-              <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-accent">
+              <p className="mb-6 pl-[0.25em] text-center text-[11px] uppercase tracking-[0.25em] text-accent">
                 {group.genre}
               </p>
 
@@ -148,7 +148,7 @@ export default function Music() {
               <div className="mx-auto grid max-w-lg grid-cols-2 gap-5 sm:gap-7">
                 {singles.map((group) => (
                   <div key={group.genre}>
-                    <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-accent">
+                    <p className="mb-6 pl-[0.25em] text-center text-[11px] uppercase tracking-[0.25em] text-accent">
                       {group.genre}
                     </p>
                     <TrackCard track={group.tracks[0]} />
