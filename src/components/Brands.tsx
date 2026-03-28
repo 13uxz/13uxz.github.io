@@ -3,10 +3,10 @@ import { siteData } from "@/data/siteData";
 
 export default function Brands() {
   return (
-    <section className="px-6 py-32 sm:px-8">
+    <section id="brands" className="px-6 py-32 sm:px-8">
       <div className="mx-auto max-w-5xl">
         <h2 className="mb-16 text-center text-3xl font-light tracking-wide sm:text-4xl">
-          Brands I Have Worked With
+          Brands
         </h2>
 
         <div className="grid gap-20 md:grid-cols-2">
@@ -19,19 +19,13 @@ export default function Brands() {
                 rel="noopener noreferrer"
                 className="mb-10 inline-block transition-opacity hover:opacity-70"
               >
-                {"logo" in group ? (
-                  <Image
+                <Image
                     src={group.logo}
                     alt={group.management}
                     width={160}
                     height={60}
                     className="mx-auto h-12 w-auto"
                   />
-                ) : (
-                  <span className="text-lg font-light tracking-[0.15em] uppercase">
-                    {group.management}
-                  </span>
-                )}
               </a>
 
               <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
