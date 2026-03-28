@@ -76,5 +76,25 @@ export const siteData = {
     linktree: "https://linktr.ee/13uxz",
   },
 
+  brands: [
+    {
+      management: "Blackspoon Management",
+      url: "https://www.blackspoon.me/",
+      venues: [
+        { name: "Blue Seafood Asia", role: "Resident DJ" },
+        { name: "Masti", role: "Resident DJ", url: "https://www.mastidubai.com/" },
+      ],
+    },
+    {
+      management: "LSL Capital",
+      logo: "/logos/lsl-capital.svg",
+      url: "https://lslcapital.com/",
+      venues: [
+        { name: "Jamavar Dubai", role: "Resident DJ", logo: "/logos/jamavar.svg", url: "https://lslcapital.com/jamavar/" },
+        { name: "Mimi Mei Fair Dubai", role: "Resident DJ", logo: "/logos/mimi-mei-fair-emblem.svg", url: "https://mimimeifair.com/" },
+      ],
+    },
+  ],
+
   soundcloudUrl: "https://soundcloud.com/13uxz",
 } as const;
