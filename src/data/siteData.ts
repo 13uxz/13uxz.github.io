@@ -106,7 +106,7 @@ export const siteData = {
       url: "https://lslcapital.com/",
       venues: [
         { name: "Jamavar Dubai", role: "Resident DJ", logo: "/logos/jamavar.svg", url: "https://www.jamavardubai.com/" },
-        { name: "Mimi Mei Fair Dubai", role: "Resident DJ", logo: "/logos/mimi-mei-fair.svg", url: "https://www.mimimeifairdubai.com/" },
+        { name: "Mimi Mei Fair Dubai", role: "Resident DJ", logo: "/logos/mimi-mei-fair.svg", url: "https://mimimeifair.com/asian-chinese-restaurant-dubai/" },
       ],
     },
   ],
