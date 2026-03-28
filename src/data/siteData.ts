@@ -61,7 +61,11 @@ export const siteData = {
 
   photos: [
     { src: "/photos/rooftop-set.webp", alt: "13uxz rooftop DJ set" },
-    { src: "/photos/bio.jpg", alt: "13uxz portrait" },
+    { src: "/photos/blue-light-set.png", alt: "13uxz performing under blue lights" },
+    { src: "/photos/big-crowd.png", alt: "13uxz playing to a huge crowd" },
+    { src: "/photos/venue-set.png", alt: "13uxz DJ set at venue" },
+    { src: "/photos/backstage-crew.png", alt: "13uxz backstage with fellow DJs" },
+    { src: "/photos/studio-producing.png", alt: "13uxz producing in the studio on Ableton" },
   ],
 
   socials: {
