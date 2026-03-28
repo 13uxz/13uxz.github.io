@@ -83,12 +83,12 @@ export const siteData = {
       url: "",
       label: "Bookings",
       venues: [
-        { name: "COP 28", role: "DJ", logo: "/logos/cop28.png" },
-        { name: "Tilal Al Ghaf", role: "DJ", logo: "/logos/tilal-al-ghaf.png" },
-        { name: "Destination Insights", role: "DJ", logo: "/logos/destination-insights.png" },
-        { name: "Inspiratus Brand Experience", role: "DJ", logo: "/logos/inspiratus.png" },
-        { name: "Dubai Shopping Festival", role: "DJ", logo: "/logos/dubai-shopping-festival.jpg" },
-        { name: "Offside Sports Bar", role: "DJ", logo: "/logos/offside.jpg" },
+        { name: "COP 28", role: "DJ", logo: "/logos/cop28.png", url: "https://www.cop28.com/" },
+        { name: "Tilal Al Ghaf", role: "DJ", logo: "/logos/tilal-al-ghaf.png", url: "https://www.tilalalghaf.com/" },
+        { name: "Destination Insights", role: "DJ", logo: "/logos/destination-insights.png", url: "https://www.destinationinsight.com/" },
+        { name: "Inspiratus Brand Experience", role: "DJ", logo: "/logos/inspiratus.png", url: "https://www.inspiratus.com/" },
+        { name: "Dubai Shopping Festival", role: "DJ", logo: "/logos/dubai-shopping-festival.png", url: "https://www.mydsf.ae/" },
+        { name: "Offside Sports Bar", role: "DJ", logo: "/logos/offside.png" },
       ],
     },
     {

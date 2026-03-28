@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run:*)",
+      "mcp__claude_ai_BrightData__scrape_batch",
+      "WebFetch(domain:www.13uxz.com)",
+      "WebFetch(domain:linktr.ee)",
+      "WebFetch(domain:soundcloud.com)",
+      "WebFetch(domain:www.beatport.com)",
+      "Bash(cp:*)",
+      "Bash(netstat:*)",
+      "Bash(curl:*)",
+      "mcp__claude_ai_BrightData__search_engine_batch",
+      "WebSearch",
+      "mcp__claude_ai_BrightData__scrape_as_markdown",
+      "WebFetch(domain:icons.getbootstrap.com)",
+      "WebFetch(domain:www.svgrepo.com)",
+      "WebFetch(domain:fontawesomeicons.com)",
+      "WebFetch(domain:support.beatport.com)",
+      "WebFetch(domain:uxwing.com)",
+      "Bash(code .:*)",
+      "Bash(gh run:*)",
+      "Bash(where gh:*)"
+    ]
+  }
+}
