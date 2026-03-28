@@ -101,9 +101,9 @@ export default function Brands() {
                     <Image
                       src={venue.logo}
                       alt={venue.name}
-                      width={200}
-                      height={90}
-                      className="h-16 w-auto object-contain mix-blend-screen opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                      width={300}
+                      height={120}
+                      className="h-24 max-w-[80%] object-contain mix-blend-screen opacity-70 transition-opacity duration-300 group-hover:opacity-100"
                     />
                   </Tag>
                 );
