@@ -17,10 +17,10 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center">
-        <p className="mb-4 pl-[0.4em] text-[13px] uppercase tracking-[0.4em] text-accent">
+        <p className="mb-4 text-[13px] uppercase tracking-[0.4em] text-accent">
           DJ &middot; Producer &middot; London
         </p>
-        <h1 className="pl-[0.35em] font-mono text-7xl font-bold tracking-[0.35em] sm:text-[120px] sm:leading-none">
+        <h1 className="font-mono text-7xl font-bold tracking-[0.35em] sm:text-[120px] sm:leading-none">
           13UXZ
         </h1>
         <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:gap-5">
@@ -29,6 +29,12 @@ export default function Hero() {
             className="bg-white px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-black transition-opacity hover:opacity-80"
           >
             Biography
+          </a>
+          <a
+            href="#gallery"
+            className="border border-white/30 px-7 py-3 text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
+          >
+            Gallery
           </a>
           <a
             href="#music"
@@ -47,7 +53,7 @@ export default function Hero() {
 
       {/* Scroll line */}
       <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2">
-        <span className="pl-[0.3em] text-[10px] uppercase tracking-[0.3em] text-accent">
+        <span className="text-[10px] uppercase tracking-[0.3em] text-accent">
           Scroll
         </span>
         <div className="h-10 w-px bg-gradient-to-b from-accent to-transparent" />

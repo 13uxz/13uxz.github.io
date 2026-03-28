@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-border px-6 py-14">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8">
-        <span className="pl-[0.25em] font-mono text-sm font-bold tracking-[0.25em]">
+        <span className="font-mono text-sm font-bold tracking-[0.25em]">
           13UXZ
         </span>
 
