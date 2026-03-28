@@ -37,40 +37,38 @@ export default function Navbar() {
           13UXZ
         </a>
 
-        {/* Desktop social icons — center */}
-        <div className="hidden items-center gap-4 md:flex">
-          {Object.entries(siteData.socials).map(([key, url]) => {
-            const config = socialConfig[key];
-            if (!config) return null;
-            const Icon = config.icon;
-            return (
-              <a
-                key={key}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-accent transition-colors duration-300 hover:text-white"
-                aria-label={config.label}
-              >
-                <Icon />
-              </a>
-            );
-          })}
-        </div>
-
-        {/* Desktop nav links — right */}
-        <ul className="hidden gap-10 md:flex">
+        {/* Desktop nav links + social icons — right */}
+        <div className="hidden items-center gap-10 md:flex">
           {links.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                className="text-[13px] uppercase tracking-[0.15em] text-accent transition-colors duration-300 hover:text-white"
-              >
-                {link.label}
-              </a>
-            </li>
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-[13px] uppercase tracking-[0.15em] text-accent transition-colors duration-300 hover:text-white"
+            >
+              {link.label}
+            </a>
           ))}
-        </ul>
+          <span className="h-4 w-px bg-border" />
+          <div className="flex items-center gap-3">
+            {Object.entries(siteData.socials).map(([key, url]) => {
+              const config = socialConfig[key];
+              if (!config) return null;
+              const Icon = config.icon;
+              return (
+                <a
+                  key={key}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent transition-colors duration-300 hover:text-white"
+                  aria-label={config.label}
+                >
+                  <Icon />
+                </a>
+              );
+            })}
+          </div>
+        </div>
 
         {/* Mobile hamburger */}
         <button
