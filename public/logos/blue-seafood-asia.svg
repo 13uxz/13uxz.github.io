@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 180" fill="none">
+  <!-- Script "Blue" -->
+  <g stroke="#173347" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- B loop and descender into l -->
+    <path d="M80,55 C30,55 20,65 20,80 C20,100 45,105 80,105 C110,105 120,95 120,80 C120,65 105,55 80,55 C65,50 60,42 70,28 C80,18 95,20 100,28"/>
+    <!-- l -->
+    <path d="M100,28 C102,45 105,75 108,95 C110,108 112,115 118,115"/>
+    <!-- u -->
+    <path d="M118,70 C118,70 115,95 118,105 C121,115 130,118 140,108 C148,100 148,85 148,70"/>
+    <!-- e with tail -->
+    <path d="M155,88 C155,88 180,82 180,92 C180,102 168,112 155,112 C145,112 140,106 145,100"/>
+    <!-- Extended flourish tail -->
+    <path d="M180,92 C195,92 220,85 240,78 C280,64 320,50 350,55 C365,58 370,65 360,72"/>
+  </g>
+  <!-- SEAFOOD ASIA subtitle -->
+  <text x="200" y="155" text-anchor="middle" font-family="'Trebuchet MS', 'Gill Sans', 'Segoe UI', sans-serif" font-size="22" font-weight="400" letter-spacing="8" fill="#173347">SEAFOOD ASIA</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" fill="none">
+  <g stroke="#1a6b5a" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- M -->
+    <polyline points="20,120 20,35 60,85 100,35 100,120" fill="none"/>
+    <!-- A (no crossbar — clock hands instead) -->
+    <polyline points="140,120 175,35 210,120" fill="none"/>
+    <!-- Clock dot -->
+    <circle cx="175" cy="78" r="4" fill="#b8975c" stroke="none"/>
+    <!-- Clock hand - hour (pointing up-left) -->
+    <line x1="175" y1="78" x2="175" y2="55" stroke="#1a6b5a" stroke-width="2.5"/>
+    <!-- Clock hand - minute (pointing right) -->
+    <line x1="175" y1="78" x2="190" y2="70" stroke="#1a6b5a" stroke-width="2.5"/>
+    <!-- S -->
+    <path d="M240,50 C240,38 252,32 268,32 C284,32 296,38 296,50 C296,62 284,66 268,72 C252,78 240,82 240,96 C240,110 252,118 268,118 C284,118 296,110 296,96" fill="none"/>
+    <!-- T -->
+    <line x1="320" y1="35" x2="380" y2="35"/>
+    <line x1="350" y1="35" x2="350" y2="120"/>
+    <!-- I -->
+    <line x1="410" y1="35" x2="410" y2="120"/>
+  </g>
+  <!-- COCKTAILS & CUISINE subtitle -->
+  <g fill="#b8975c">
+    <text x="215" y="150" text-anchor="middle" font-family="'Trebuchet MS', 'Gill Sans', 'Segoe UI', sans-serif" font-size="12.5" font-weight="400" letter-spacing="4.5">COCKTAILS &amp; CUISINE</text>
+  </g>
+</svg>

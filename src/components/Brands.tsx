@@ -19,7 +19,7 @@ export default function Brands() {
                 rel="noopener noreferrer"
                 className="mb-10 inline-block transition-opacity hover:opacity-70"
               >
-                {"logo" in group && group.logo ? (
+                {"logo" in group ? (
                   <Image
                     src={group.logo}
                     alt={group.management}
@@ -43,24 +43,18 @@ export default function Brands() {
                 {group.venues.map((venue) => (
                   <a
                     key={venue.name}
-                    href={"url" in venue ? venue.url : undefined}
+                    href={"url" in venue ? (venue.url as string) : undefined}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="group flex flex-col items-center justify-center border border-border px-4 py-8 transition-colors duration-300 hover:border-white/30"
                   >
-                    {"logo" in venue && venue.logo ? (
-                      <Image
-                        src={venue.logo}
-                        alt={venue.name}
-                        width={120}
-                        height={120}
-                        className="mb-3 h-16 w-auto opacity-70 transition-opacity duration-300 group-hover:opacity-100"
-                      />
-                    ) : (
-                      <span className="mb-3 text-sm font-medium tracking-wide text-foreground">
-                        {venue.name}
-                      </span>
-                    )}
+                    <Image
+                      src={venue.logo}
+                      alt={venue.name}
+                      width={120}
+                      height={120}
+                      className="mb-3 h-16 w-auto opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                    />
                     <span className="text-[10px] uppercase tracking-[0.2em] text-accent">
                       {venue.role}
                     </span>
