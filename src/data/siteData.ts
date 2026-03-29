@@ -121,7 +121,7 @@ export const siteData = {
       url: "https://sole-agency.com/",
       label: "Agency Bookings",
       venues: [
-        { name: "UAE Consensus", role: "DJ", logo: "/logos/cop28.svg", url: "https://www.cop28.com/" },
+        { name: "COP28 Closing Party", role: "DJ", logo: "/logos/cop28.svg", url: "https://www.cop28.com/" },
         { name: "Tilal Al Ghaf", role: "DJ", logo: "/logos/tilal-al-ghaf.png", url: "https://www.tilalalghaf.com/" },
         { name: "Destination Insights", role: "DJ", logo: "/logos/destination-insights.png", url: "https://www.destinationinsight.com/" },
         { name: "Inspiratus Brand Experience", role: "DJ", logo: "/logos/inspiratus.png", url: "https://www.inspiratus.com/", size: "double" },
