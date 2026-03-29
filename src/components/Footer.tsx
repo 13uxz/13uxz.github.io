@@ -51,7 +51,7 @@ export default function Footer() {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-accent transition-colors duration-300 hover:text-white"
+                className="text-white transition-opacity duration-300 hover:opacity-70"
                 aria-label={config.label}
               >
                 <Icon />
@@ -61,7 +61,7 @@ export default function Footer() {
           <span className="h-4 w-px bg-border" />
           <a
             href="mailto:13uxz.official@gmail.com"
-            className="text-accent transition-colors duration-300 hover:text-white"
+            className="text-white transition-opacity duration-300 hover:opacity-70"
             aria-label="Email"
           >
             <EmailIcon />
@@ -70,14 +70,14 @@ export default function Footer() {
             href="https://wa.me/971503019926"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent transition-colors duration-300 hover:text-white"
+            className="text-white transition-opacity duration-300 hover:opacity-70"
             aria-label="WhatsApp"
           >
             <WhatsAppIcon />
           </a>
         </div>
 
-        <p className="text-[11px] text-accent/50">
+        <p className="text-[11px] text-white/50">
           &copy; {new Date().getFullYear()} 13uxz
         </p>
       </div>

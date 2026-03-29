@@ -46,7 +46,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-[13px] uppercase tracking-[0.15em] text-accent transition-colors duration-300 hover:text-white"
+              className="text-[13px] uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-70"
             >
               {link.label}
             </a>
@@ -63,7 +63,7 @@ export default function Navbar() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent transition-colors duration-300 hover:text-white"
+                  className="text-white transition-opacity duration-300 hover:opacity-70"
                   aria-label={config.label}
                 >
                   <Icon />
@@ -86,7 +86,7 @@ export default function Navbar() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent transition-colors duration-300 hover:text-white [&_svg]:h-3.5 [&_svg]:w-3.5"
+                  className="text-white transition-opacity duration-300 hover:opacity-70 [&_svg]:h-3.5 [&_svg]:w-3.5"
                   aria-label={config.label}
                 >
                   <Icon />
@@ -120,7 +120,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-[13px] uppercase tracking-[0.15em] text-accent transition-colors hover:text-white"
+              className="text-[13px] uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-70"
             >
               {link.label}
             </a>

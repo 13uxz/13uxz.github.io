@@ -48,7 +48,7 @@ export default function Brands() {
                   </div>
                 )}
 
-                <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
+                <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-white/75">
                   Residencies
                 </p>
 
@@ -70,7 +70,7 @@ export default function Brands() {
                           height={80}
                           className={`mb-3 h-20 w-auto object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${logoFilter(venue.logo)}`}
                         />
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-accent">
+                        <span className="text-[10px] uppercase tracking-[0.2em] text-white/75">
                           {venue.role}
                         </span>
                       </Tag>
@@ -107,7 +107,7 @@ export default function Brands() {
               )}
             </div>
 
-            <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
+            <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-white/75">
               {event.label}
             </p>
 
@@ -171,7 +171,7 @@ export default function Brands() {
               </div>
             )}
 
-            <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
+            <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-white/75">
               {"label" in agency ? (agency.label as string) : "Bookings"}
             </p>
 

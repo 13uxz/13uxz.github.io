@@ -15,11 +15,11 @@ export default function Testimonials() {
                 &ldquo;{t.quote}&rdquo;
               </p>
               <footer className="mt-8">
-                <span className="text-[11px] uppercase tracking-[0.2em] text-accent">
+                <span className="text-[11px] uppercase tracking-[0.2em] text-white/75">
                   {t.name}
                 </span>
                 <br />
-                <span className="text-[10px] uppercase tracking-[0.2em] text-accent/60">
+                <span className="text-[10px] uppercase tracking-[0.2em] text-white/60">
                   {t.title}
                 </span>
               </footer>

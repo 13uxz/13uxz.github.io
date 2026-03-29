@@ -25,7 +25,7 @@ function TrackCard({ track }: { track: { title: string; label: string; artwork: 
       </div>
       <div className="mt-3">
         <p className="text-sm font-medium">{track.title}</p>
-        <p className="text-[11px] text-accent">{track.label}</p>
+        <p className="text-[11px] text-white/75">{track.label}</p>
       </div>
     </a>
   );
@@ -55,13 +55,13 @@ export default function Music() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10" />
             <div className="absolute bottom-0 left-0 p-8 sm:p-10">
-              <p className="mb-2 text-[10px] uppercase tracking-[0.3em] text-accent">
+              <p className="mb-2 text-[10px] uppercase tracking-[0.3em] text-white/75">
                 Featured
               </p>
               <p className="text-xl font-medium sm:text-3xl">
                 {siteData.featured.title}
               </p>
-              <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-accent transition-colors duration-300 group-hover:text-white">
+              <p className="mt-3 text-[11px] uppercase tracking-[0.2em] text-white/75 transition-colors duration-300 group-hover:text-white">
                 Play on SoundCloud &rarr;
               </p>
             </div>
@@ -91,7 +91,7 @@ export default function Music() {
           .filter((g) => g.tracks.length > 1)
           .map((group) => (
             <div key={group.genre} className="mb-16 last:mb-0">
-              <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-accent">
+              <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
                 {group.genre}
               </p>
 
@@ -112,7 +112,7 @@ export default function Music() {
                     />
                   </div>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-accent">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-white/75">
                       Featured on
                     </p>
                     <p className="text-sm font-medium">
@@ -148,7 +148,7 @@ export default function Music() {
               <div className="mx-auto grid max-w-lg grid-cols-2 gap-5 sm:gap-7">
                 {singles.map((group) => (
                   <div key={group.genre}>
-                    <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-accent">
+                    <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
                       {group.genre}
                     </p>
                     <TrackCard track={group.tracks[0]} />

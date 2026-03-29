@@ -5,7 +5,7 @@ export default function Photos() {
   return (
     <section id="photos" className="px-6 py-24">
       <div className="mx-auto max-w-5xl">
-        <h2 className="mb-12 text-center font-mono text-sm tracking-[0.2em] text-accent">
+        <h2 className="mb-12 text-center font-mono text-sm tracking-[0.2em] text-white/75">
           PHOTOS
         </h2>
 

@@ -17,7 +17,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center">
-        <p className="-mr-[0.4em] mb-4 text-[13px] uppercase tracking-[0.4em] text-accent">
+        <p className="-mr-[0.4em] mb-4 text-[13px] uppercase tracking-[0.4em] text-white/75">
           DJ &middot; Producer &middot; London &middot; Dubai
         </p>
         <h1 className="-mr-[0.35em] font-mono text-7xl font-bold tracking-[0.35em] sm:text-[120px] sm:leading-none">
@@ -65,7 +65,7 @@ export default function Hero() {
 
       {/* Scroll line */}
       <div className="absolute bottom-10 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-2">
-        <span className="-mr-[0.3em] text-[10px] uppercase tracking-[0.3em] text-accent">
+        <span className="-mr-[0.3em] text-[10px] uppercase tracking-[0.3em] text-white/75">
           Scroll
         </span>
         <div className="h-10 w-px bg-gradient-to-b from-accent to-transparent" />
