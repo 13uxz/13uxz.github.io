@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Bio from "@/components/Bio";
+import Testimonials from "@/components/Testimonials";
 import Brands from "@/components/Brands";
 import Teaching from "@/components/Teaching";
 import PhotoBreak from "@/components/PhotoBreak";
@@ -16,11 +17,12 @@ export default function Home() {
       <main>
         <Hero />
         <Bio />
+        <PhotoBreak />
+        <Music />
+        <Labels />
         <Brands />
         <Teaching />
-        <PhotoBreak />
-        <Labels />
-        <Music />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />

@@ -141,6 +141,14 @@ export const siteData = {
     },
   ],
 
+  testimonials: [
+    {
+      quote: "Dave '13uxz' Buckley is an exceptionally talented DJ and producer I've had the pleasure of collaborating with. He's one of the most driven and hardworking artists I've come across, with a constant hunger to learn, connect, and create. He's already delivered one of our standout releases of 2025 on my label, with more strong material on the way. Beyond music, Dave is a person of great character\u2014thoughtful, insightful, and deeply dedicated to his craft. He has all the makings of an artist with limitless potential and a wonderful future ahead.",
+      name: "Aritra 'ARIII' Dasgupta",
+      title: "Label Founder, Dyno Music Records",
+    },
+  ],
+
   labels: [
     { name: "Cafe De Anatolia", logo: "/logos/cafe-de-anatolia.jpg", url: "https://cafe-de-anatolia.com/", invert: true },
     { name: "Soviett Records", logo: "/logos/soviett.jpg", url: "https://www.beatport.com/label/soviett/61640", invert: false },

@@ -23,28 +23,34 @@ export default function Hero() {
         <h1 className="-mr-[0.35em] font-mono text-7xl font-bold tracking-[0.35em] sm:text-[120px] sm:leading-none">
           13UXZ
         </h1>
-        <div className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:gap-5">
+        <div className="mt-12 grid grid-cols-2 gap-3 sm:flex sm:flex-row sm:gap-5">
           <a
             href="#about"
-            className="bg-white px-7 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-black transition-opacity hover:opacity-80"
+            className="bg-white px-7 py-3 text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-black transition-opacity hover:opacity-80 sm:col-span-1"
           >
             Biography
           </a>
           <a
-            href="#gallery"
-            className="border border-white/30 px-7 py-3 text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
-          >
-            Gallery
-          </a>
-          <a
             href="#music"
-            className="border border-white/30 px-7 py-3 text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
+            className="border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
           >
             Music
           </a>
           <a
+            href="#gallery"
+            className="border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
+          >
+            Gallery
+          </a>
+          <a
+            href="#brands"
+            className="border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
+          >
+            Brands
+          </a>
+          <a
             href="#bookings"
-            className="border border-white/30 px-7 py-3 text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
+            className="col-span-2 border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5 sm:col-span-1"
           >
             Bookings
           </a>

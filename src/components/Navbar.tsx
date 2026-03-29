@@ -12,10 +12,9 @@ import {
 
 const links = [
   { label: "Biography", href: "#about" },
-  { label: "Brands", href: "#brands" },
-  { label: "Teaching", href: "#teaching" },
-  { label: "Gallery", href: "#gallery" },
   { label: "Music", href: "#music" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Brands", href: "#brands" },
   { label: "Bookings", href: "#bookings" },
 ];
 
@@ -32,7 +31,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 z-50 w-full bg-black/60 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 sm:py-5">
         <a
           href="#"
           className="font-mono text-base font-bold tracking-[0.25em]"
@@ -73,38 +72,9 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="flex flex-col gap-1.5 md:hidden"
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`h-px w-6 bg-white transition-all duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`}
-          />
-          <span
-            className={`h-px w-6 bg-white transition-all duration-300 ${open ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`h-px w-6 bg-white transition-all duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`}
-          />
-        </button>
-      </div>
-
-      {/* Mobile menu */}
-      {open && (
-        <div className="flex flex-col gap-6 bg-black/95 px-8 pb-8 pt-4 md:hidden">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="text-[13px] uppercase tracking-[0.15em] text-accent transition-colors hover:text-white"
-            >
-              {link.label}
-            </a>
-          ))}
-          <div className="flex gap-4 pt-2">
+        {/* Mobile: social icons + hamburger */}
+        <div className="flex items-center gap-4 md:hidden">
+          <div className="flex items-center gap-2.5">
             {Object.entries(siteData.socials).map(([key, url]) => {
               const config = socialConfig[key];
               if (!config) return null;
@@ -115,7 +85,7 @@ export default function Navbar() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-accent transition-colors duration-300 hover:text-white"
+                  className="text-accent transition-colors duration-300 hover:text-white [&_svg]:h-3.5 [&_svg]:w-3.5"
                   aria-label={config.label}
                 >
                   <Icon />
@@ -123,6 +93,37 @@ export default function Navbar() {
               );
             })}
           </div>
+          <button
+            onClick={() => setOpen(!open)}
+            className="flex flex-col gap-1.5"
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`h-px w-5 bg-white transition-all duration-300 ${open ? "translate-y-[7px] rotate-45" : ""}`}
+            />
+            <span
+              className={`h-px w-5 bg-white transition-all duration-300 ${open ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`h-px w-5 bg-white transition-all duration-300 ${open ? "-translate-y-[7px] -rotate-45" : ""}`}
+            />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="flex flex-col gap-5 bg-black/95 px-6 pb-6 pt-3 md:hidden">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="text-[13px] uppercase tracking-[0.15em] text-accent transition-colors hover:text-white"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
       )}
     </nav>
