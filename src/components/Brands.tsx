@@ -128,7 +128,11 @@ export default function Brands() {
                       alt={venue.name}
                       width={300}
                       height={120}
-                      className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 brightness-0 invert h-28`}
+                      className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 h-28 ${
+                        venue.logo.includes("helipad")
+                          ? "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"
+                          : "brightness-0 invert"
+                      }`}
                     />
                   </Tag>
                 );
@@ -152,7 +156,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "grayscale invert brightness-[2]"}`}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"}`}
                 />
               </a>
             ) : (
@@ -162,7 +166,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "grayscale invert brightness-[2]"}`}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"}`}
                 />
               </div>
             )}
@@ -181,9 +185,7 @@ export default function Brands() {
                   <Tag
                     key={venue.name}
                     {...linkProps}
-                    className={`group flex items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 ${
-                      isDouble ? "h-64 w-[calc(50%-8px)] sm:w-[calc(50%-8px)]" : "h-48 w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)]"
-                    }`}
+                    className="group flex h-48 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(33.333%-11px)]"
                   >
                     <Image
                       src={venue.logo}
@@ -191,7 +193,7 @@ export default function Brands() {
                       width={400}
                       height={200}
                       className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
-                        isDouble ? "h-52" : "h-36"
+                        isDouble ? "h-44" : "h-36"
                       } ${
                         venue.logo.includes("jebel-ali-rec") || venue.logo.includes("helipad") ? "grayscale invert brightness-[2]" : "brightness-0 invert"
                       }`}
