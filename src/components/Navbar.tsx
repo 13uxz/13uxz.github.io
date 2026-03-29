@@ -114,7 +114,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="flex flex-col gap-5 bg-black/95 px-6 pb-6 pt-3 md:hidden">
+        <div className="flex flex-col gap-5 bg-black/95 px-6 pb-6 pt-6 md:hidden">
           {links.map((link) => (
             <a
               key={link.href}
