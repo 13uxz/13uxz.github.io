@@ -19,64 +19,8 @@ export default function Brands() {
           Brands
         </h2>
 
-        {/* Events — Sounds by AKS (above agencies) */}
-        {siteData.events.map((event) => (
-          <div key={event.name} className="mb-24 text-center">
-            <div className="mb-12 flex h-32 items-center justify-center">
-              {event.url ? (
-                <a href={event.url} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-70">
-                  <Image
-                    src={event.logo}
-                    alt={event.name}
-                    width={300}
-                    height={120}
-                    className="h-28 w-auto grayscale brightness-[2] mix-blend-screen"
-                  />
-                </a>
-              ) : (
-                <Image
-                  src={event.logo}
-                  alt={event.name}
-                  width={300}
-                  height={120}
-                  className="h-28 w-auto grayscale brightness-[2] mix-blend-screen"
-                />
-              )}
-            </div>
-
-            <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
-              {event.label}
-            </p>
-
-            <div className="flex flex-wrap justify-center gap-4">
-              {event.venues.map((venue) => {
-                const venueUrl = "url" in venue ? (venue.url as string) : "";
-                const Tag = venueUrl ? "a" : "div";
-                const linkProps = venueUrl ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" } : {};
-                return (
-                  <Tag
-                    key={venue.name}
-                    {...linkProps}
-                    className="group flex h-44 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(25%-12px)]"
-                  >
-                    <Image
-                      src={venue.logo}
-                      alt={venue.name}
-                      width={300}
-                      height={120}
-                      className={`h-28 max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
-                        venue.logo.endsWith(".png") ? "grayscale invert brightness-[2]" : "brightness-0 invert"
-                      }`}
-                    />
-                  </Tag>
-                );
-              })}
-            </div>
-          </div>
-        ))}
-
         {/* Residencies */}
-        <div className="grid gap-24 md:grid-cols-2">
+        <div className="mb-24 grid gap-24 md:grid-cols-2">
           {residencies.map((group: any) => {
             const LogoImg = (
               <Image
@@ -137,6 +81,60 @@ export default function Brands() {
             );
           })}
         </div>
+
+        {/* Events — Sounds by AKS */}
+        {siteData.events.map((event) => (
+          <div key={event.name} className="mb-24 text-center">
+            <div className="mb-12 flex h-32 items-center justify-center">
+              {event.url ? (
+                <a href={event.url} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-70">
+                  <Image
+                    src={event.logo}
+                    alt={event.name}
+                    width={300}
+                    height={120}
+                    className="h-28 w-auto grayscale brightness-[2] mix-blend-screen"
+                  />
+                </a>
+              ) : (
+                <Image
+                  src={event.logo}
+                  alt={event.name}
+                  width={300}
+                  height={120}
+                  className="h-28 w-auto grayscale brightness-[2] mix-blend-screen"
+                />
+              )}
+            </div>
+
+            <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
+              {event.label}
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              {event.venues.map((venue) => {
+                const venueUrl = "url" in venue ? (venue.url as string) : "";
+                const Tag = venueUrl ? "a" : "div";
+                const linkProps = venueUrl ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" } : {};
+                return (
+                  <Tag
+                    key={venue.name}
+                    {...linkProps}
+                    className="group flex h-44 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(25%-12px)]"
+                  >
+                    <Image
+                      src={venue.logo}
+                      alt={venue.name}
+                      width={300}
+                      height={120}
+                      className="h-28 max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 brightness-0 invert"
+                    />
+                  </Tag>
+                );
+              })}
+            </div>
+          </div>
+        ))}
 
         {/* Agencies — Sole Agency + Mais Musica */}
         {agencies.map((agency: any) => (
