@@ -52,7 +52,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/epk"
+            href="/13uxz-press-kit.pdf" download
             className="flex items-center gap-1.5 text-[13px] uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-70"
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -138,7 +138,7 @@ export default function Navbar() {
           ))}
           <span className="h-px w-full bg-border" />
           <a
-            href="/epk"
+            href="/13uxz-press-kit.pdf" download
             onClick={() => setOpen(false)}
             className="flex items-center justify-end gap-1.5 text-[13px] uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-70"
           >
