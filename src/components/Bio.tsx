@@ -25,7 +25,7 @@ export default function Bio() {
             {siteData.bio.map((paragraph, i) => (
               <p
                 key={i}
-                className="mb-5 text-[15px] leading-[1.8] text-accent last:mb-0"
+                className="mb-5 text-[15px] leading-[1.8] text-foreground last:mb-0"
               >
                 {paragraph}
               </p>
