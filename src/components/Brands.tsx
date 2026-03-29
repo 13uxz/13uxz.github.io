@@ -45,14 +45,16 @@ export default function Brands() {
                   <Tag
                     key={venue.name}
                     {...linkProps}
-                    className="group flex h-40 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(25%-12px)]"
+                    className="group flex h-44 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(25%-12px)]"
                   >
                     <Image
                       src={venue.logo}
                       alt={venue.name}
-                      width={200}
-                      height={90}
-                      className="h-20 max-w-[85%] object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                      width={300}
+                      height={120}
+                      className={`h-28 max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
+                        venue.logo.endsWith(".png") ? "grayscale invert brightness-[2]" : "brightness-0 invert"
+                      }`}
                     />
                   </Tag>
                 );
@@ -139,7 +141,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto mix-blend-screen ${agency.logo.endsWith(".png") || agency.logo.endsWith(".svg") ? "invert" : ""}`}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "grayscale invert brightness-[2]"}`}
                 />
               </a>
             ) : (
@@ -149,7 +151,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto mix-blend-screen ${agency.logo.endsWith(".png") || agency.logo.endsWith(".svg") ? "invert" : ""}`}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "grayscale invert brightness-[2]"}`}
                 />
               </div>
             )}
@@ -167,15 +169,15 @@ export default function Brands() {
                   <Tag
                     key={venue.name}
                     {...linkProps}
-                    className="group flex h-44 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(33.333%-11px)]"
+                    className="group flex h-48 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(33.333%-11px)]"
                   >
                     <Image
                       src={venue.logo}
                       alt={venue.name}
-                      width={300}
-                      height={150}
-                      className={`h-28 max-w-[85%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
-                        venue.logo.includes("jebel-ali-rec") ? "grayscale invert brightness-[2]" : "brightness-0 invert"
+                      width={400}
+                      height={200}
+                      className={`h-36 max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
+                        venue.logo.includes("jebel-ali-rec") || venue.logo.includes("helipad") ? "grayscale invert brightness-[2]" : "brightness-0 invert"
                       }`}
                     />
                   </Tag>

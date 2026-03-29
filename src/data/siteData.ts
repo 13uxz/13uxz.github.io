@@ -129,8 +129,8 @@ export const siteData = {
       url: "https://www.maismusica.ae/",
       label: "Agency Bookings",
       venues: [
-        { name: "JA Resorts & Hotels", role: "DJ", logo: "/logos/ja-resorts.svg", url: "https://www.jaresortshotels.com/" },
-        { name: "Jebel Ali Recreation Club", role: "DJ", logo: "/logos/jebel-ali-rec-club.png", url: "https://www.jaresortshotels.com/" },
+        { name: "JA Resorts & Hotels", role: "DJ", logo: "/logos/ja-resorts.svg", url: "https://travmedia.com/showPRPreview/100104029" },
+        { name: "Jebel Ali Recreation Club", role: "DJ", logo: "/logos/jebel-ali-rec-club.png", url: "https://www.instagram.com/jebelaliclub/" },
       ],
     },
   ],
