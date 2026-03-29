@@ -92,12 +92,12 @@ export default function Contact() {
         <div className="mt-16 border-t border-border pt-12 text-center">
           <div className="flex flex-col gap-3 text-[13px] text-white/75">
             <p>
-              <span className="mr-2 text-[10px] uppercase tracking-[0.2em] text-foreground">UK</span>
-              <a href="tel:+447345847418" className="transition-colors hover:text-foreground">+44 7345 847418</a>
-            </p>
-            <p>
               <span className="mr-2 text-[10px] uppercase tracking-[0.2em] text-foreground">UAE</span>
               <a href="tel:+971503019926" className="transition-colors hover:text-foreground">+971 50 301 9926</a>
+            </p>
+            <p>
+              <span className="mr-2 text-[10px] uppercase tracking-[0.2em] text-foreground">UK</span>
+              <a href="tel:+447345847418" className="transition-colors hover:text-foreground">+44 7345 847418</a>
             </p>
             <p>
               <a href="mailto:13uxz.official@gmail.com" className="transition-colors hover:text-foreground">13uxz.official@gmail.com</a>

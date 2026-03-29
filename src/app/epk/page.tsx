@@ -50,8 +50,8 @@ export default function EPK() {
           </div>
           <div className="text-right text-[12px] leading-relaxed text-accent">
             <p>{siteData.email}</p>
-            <p>+44 7345 847418</p>
             <p>+971 50 301 9926</p>
+            <p>+44 7345 847418</p>
             <p>13uxz.com</p>
             <p>@13uxz</p>
           </div>
@@ -225,12 +225,12 @@ export default function EPK() {
               <a href={`mailto:${siteData.email}`} className="underline">{siteData.email}</a>
             </p>
             <p>
-              <span className="text-accent">UK:</span>{" "}
-              <a href="tel:+447345847418" className="underline">+44 7345 847418</a>
-            </p>
-            <p>
               <span className="text-accent">UAE:</span>{" "}
               <a href="tel:+971503019926" className="underline">+971 50 301 9926</a>
+            </p>
+            <p>
+              <span className="text-accent">UK:</span>{" "}
+              <a href="tel:+447345847418" className="underline">+44 7345 847418</a>
             </p>
             <p>
               <span className="text-accent">Web:</span>{" "}
