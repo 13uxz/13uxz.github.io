@@ -31,16 +31,16 @@ export default function Hero() {
             Biography
           </a>
           <a
-            href="#music"
-            className="border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
-          >
-            Music
-          </a>
-          <a
             href="#gallery"
             className="border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
           >
             Gallery
+          </a>
+          <a
+            href="#music"
+            className="border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
+          >
+            Music
           </a>
           <a
             href="#brands"
@@ -49,8 +49,14 @@ export default function Hero() {
             Brands
           </a>
           <a
+            href="#testimonials"
+            className="border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
+          >
+            Testimonials
+          </a>
+          <a
             href="#bookings"
-            className="col-span-2 border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5 sm:col-span-1"
+            className="border border-white/30 px-7 py-3 text-center text-[11px] uppercase tracking-[0.2em] transition-colors hover:border-white hover:bg-white/5"
           >
             Bookings
           </a>

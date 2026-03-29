@@ -12,9 +12,10 @@ import {
 
 const links = [
   { label: "Biography", href: "#about" },
-  { label: "Music", href: "#music" },
   { label: "Gallery", href: "#gallery" },
+  { label: "Music", href: "#music" },
   { label: "Brands", href: "#brands" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Bookings", href: "#bookings" },
 ];
 
