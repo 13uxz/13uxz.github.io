@@ -35,9 +35,16 @@ const DownloadIcon = () => (
   </svg>
 );
 
+const PrinterIcon = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <polyline points="6 9 6 2 18 2 18 9" />
+    <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+    <rect width="12" height="8" x="6" y="14" />
+  </svg>
+);
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [pressKit, setPressKit] = useState(false);
 
   return (
     <nav className="fixed top-0 z-50 w-full bg-black/60 backdrop-blur-xl">
@@ -60,33 +67,13 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <div className="relative">
-            <button
-              onClick={() => setPressKit(!pressKit)}
-              className="flex items-center gap-1.5 text-[13px] uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-70"
-            >
-              <DownloadIcon />
-              Press Kit
-            </button>
-            {pressKit && (
-              <div className="absolute right-0 top-full mt-3 flex flex-col gap-1 border border-border bg-black/95 p-2 backdrop-blur-xl">
-                <a
-                  href="/13uxz-press-kit.pdf" download
-                  onClick={() => setPressKit(false)}
-                  className="whitespace-nowrap px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-70"
-                >
-                  Dark
-                </a>
-                <a
-                  href="/13uxz-press-kit-print.pdf" download
-                  onClick={() => setPressKit(false)}
-                  className="whitespace-nowrap px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-70"
-                >
-                  Light
-                </a>
-              </div>
-            )}
-          </div>
+          <a
+            href="/13uxz-press-kit.pdf" download
+            className="flex items-center gap-1.5 text-[13px] uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-70"
+          >
+            <DownloadIcon />
+            Press Kit
+          </a>
           <span className="h-4 w-px bg-border" />
           <div className="flex items-center gap-3">
             {Object.entries(siteData.socials).map(([key, url]) => {
@@ -169,14 +156,6 @@ export default function Navbar() {
           >
             <DownloadIcon />
             Press Kit
-          </a>
-          <a
-            href="/13uxz-press-kit-print.pdf" download
-            onClick={() => setOpen(false)}
-            className="flex items-center justify-end gap-1.5 text-[11px] uppercase tracking-[0.15em] text-white/60 transition-opacity hover:opacity-70"
-          >
-            <DownloadIcon />
-            Press Kit — Light
           </a>
         </div>
       )}
