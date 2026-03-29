@@ -136,7 +136,7 @@ export const siteData = {
   ],
 
   labels: [
-    { name: "Cafe De Anatolia", logo: "/logos/cafe-de-anatolia.jpg", url: "https://www.beatport.com/label/cafe-de-anatolia/86029", invert: true },
+    { name: "Cafe De Anatolia", logo: "/logos/cafe-de-anatolia.jpg", url: "https://cafe-de-anatolia.com/", invert: true },
     { name: "Soviett Records", logo: "/logos/soviett.jpg", url: "https://www.beatport.com/label/soviett/61640", invert: false },
     { name: "Dyno Records", logo: "/logos/dyno-records.jpg", url: "https://www.officialdynorecords.com/", invert: false },
     { name: "Nova Mova Records", logo: "/logos/nova-mova.jpg", url: "https://www.beatport.com/label/nova-mova/105198", invert: true },
