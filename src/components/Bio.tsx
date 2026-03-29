@@ -3,7 +3,7 @@ import { siteData } from "@/data/siteData";
 
 export default function Bio() {
   return (
-    <section id="about" className="px-6 py-32 sm:px-8">
+    <section id="about" className="px-6 pt-40 pb-32 sm:px-8 sm:pt-32">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-16 text-center text-3xl font-light tracking-wide sm:text-4xl">
           Biography
