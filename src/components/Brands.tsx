@@ -128,9 +128,7 @@ export default function Brands() {
                       alt={venue.name}
                       width={300}
                       height={120}
-                      className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
-                        venue.logo.endsWith(".svg") ? "brightness-0 invert" : "grayscale brightness-[2] mix-blend-screen"
-                      } ${isLarge ? "h-40" : "h-28"}`}
+                      className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 brightness-0 invert h-28`}
                     />
                   </Tag>
                 );
@@ -154,7 +152,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "brightness-0 invert"}`}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "grayscale invert brightness-[2]"}`}
                 />
               </a>
             ) : (
@@ -164,7 +162,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "brightness-0 invert"}`}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "grayscale invert brightness-[2]"}`}
                 />
               </div>
             )}

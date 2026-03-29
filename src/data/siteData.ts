@@ -78,7 +78,7 @@ export const siteData = {
 
   teaching: [
     { name: "Dubai Sound Academy", logo: "/logos/dubai-sound-academy.png", url: "https://www.dubaisoundacademy.com/" },
-    { name: "Original Mix DJs", logo: "/logos/original-mix-djs.jpeg", url: "https://www.originalmixdjs.com/" },
+    { name: "Original Mix DJs", logo: "/logos/original-mix-djs.png", url: "https://www.originalmixdjs.com/" },
   ],
 
   events: [
@@ -90,7 +90,7 @@ export const siteData = {
       venues: [
         { name: "Helipad by Frozen Cherry", logo: "/logos/helipad.png" },
         { name: "Atelier M at Pier 7", logo: "/logos/atelier-m.svg", url: "https://atelierm.ae/" },
-        { name: "Zero Gravity", logo: "/logos/zero-gravity.svg", url: "https://www.0-gravity.ae/", size: "large" },
+        { name: "Zero Gravity", logo: "/logos/zero-gravity.svg", url: "https://www.0-gravity.ae/" },
         { name: "Dubai Marina Yacht Club", logo: "/logos/dubai-marina-yacht-club.svg", url: "https://www.dubaimarinayachtclub.com/" },
       ],
     },
@@ -126,7 +126,7 @@ export const siteData = {
         { name: "Destination Insights", role: "DJ", logo: "/logos/destination-insights.png", url: "https://www.destinationinsight.com/" },
         { name: "Inspiratus Brand Experience", role: "DJ", logo: "/logos/inspiratus.png", url: "https://www.inspiratus.com/" },
         { name: "Dubai Shopping Festival", role: "DJ", logo: "/logos/dubai-shopping-festival.png", url: "https://www.mydsf.ae/" },
-        { name: "Offside Sports Bar", role: "DJ", logo: "/logos/offside.png", url: "https://www.jaresortshotels.com/restaurant-detail/dubai/ja-ocean-view-hotel/offside" },
+        { name: "Offside Sports Bar", role: "DJ", logo: "/logos/offside.png", url: "https://www.jaresortshotels.com/restaurant-detail/dubai/ja-ocean-view-hotel/offside", size: "double" },
       ],
     },
     {
