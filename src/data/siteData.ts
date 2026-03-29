@@ -80,7 +80,7 @@ export const siteData = {
     {
       name: "Sounds by AKS",
       logo: "/logos/sounds-by-aks.jpg",
-      label: "Private Events",
+      label: "Private Event Venues",
       venues: [
         { name: "Helipad by Frozen Cherry", logo: "/logos/helipad.png" },
         { name: "Atelier M at Pier 7", logo: "/logos/atelier-m.svg", url: "https://atelierm.ae/" },

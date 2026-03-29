@@ -22,13 +22,13 @@ export default function Brands() {
         {/* Events — Sounds by AKS (above agencies) */}
         {siteData.events.map((event) => (
           <div key={event.name} className="mb-24 text-center">
-            <div className="mb-12 flex h-20 items-center justify-center">
+            <div className="mb-12 flex h-24 items-center justify-center">
               <Image
                 src={event.logo}
                 alt={event.name}
-                width={240}
-                height={80}
-                className="h-16 w-auto mix-blend-screen"
+                width={300}
+                height={120}
+                className="h-20 w-auto mix-blend-screen"
               />
             </div>
 
@@ -52,7 +52,7 @@ export default function Brands() {
                       alt={venue.name}
                       width={200}
                       height={90}
-                      className={`h-20 max-w-[85%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${logoFilter(venue.logo)}`}
+                      className="h-20 max-w-[85%] object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100"
                     />
                   </Tag>
                 );
@@ -139,7 +139,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : ""}`}
+                  className={`h-16 w-auto mix-blend-screen ${agency.logo.endsWith(".png") || agency.logo.endsWith(".svg") ? "invert" : ""}`}
                 />
               </a>
             ) : (
@@ -149,7 +149,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : ""}`}
+                  className={`h-16 w-auto mix-blend-screen ${agency.logo.endsWith(".png") || agency.logo.endsWith(".svg") ? "invert" : ""}`}
                 />
               </div>
             )}
