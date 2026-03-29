@@ -18,7 +18,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center text-center">
         <p className="-mr-[0.4em] mb-4 text-[13px] uppercase tracking-[0.4em] text-accent">
-          DJ &middot; Producer &middot; London
+          DJ &middot; Producer &middot; London &middot; Dubai
         </p>
         <h1 className="-mr-[0.35em] font-mono text-7xl font-bold tracking-[0.35em] sm:text-[120px] sm:leading-none">
           13UXZ
