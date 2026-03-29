@@ -94,6 +94,13 @@ export default function EPK() {
                 </li>
               ))}
             </ul>
+
+            <h2 className="mb-4 mt-8 text-lg font-medium tracking-wide">
+              Genres
+            </h2>
+            <p className="text-[13px] leading-relaxed text-accent">
+              Afrohouse, Latin House, Melodic House & Techno, Organic House, Progressive, Techno
+            </p>
           </div>
           <div>
             <h2 className="mb-4 text-lg font-medium tracking-wide">
@@ -109,13 +116,6 @@ export default function EPK() {
                 </li>
               ))}
             </ul>
-
-            <h2 className="mb-4 mt-8 text-lg font-medium tracking-wide">
-              Genres
-            </h2>
-            <p className="text-[13px] leading-relaxed text-accent">
-              Afrohouse, Latin House, Melodic House & Techno, Organic House, Progressive, Techno
-            </p>
           </div>
         </section>
 
