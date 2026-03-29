@@ -130,15 +130,15 @@ export const siteData = {
       label: "Agency Bookings",
       venues: [
         { name: "JA Resorts & Hotels", role: "DJ", logo: "/logos/ja-resorts.svg", url: "https://www.jaresortshotels.com/" },
-        { name: "Jebel Ali Clubhouse", role: "DJ", logo: "/logos/ja-resorts.svg", url: "https://www.jaresortshotels.com/" },
+        { name: "Jebel Ali Recreation Club", role: "DJ", logo: "/logos/jebel-ali-rec-club.png", url: "https://www.jaresortshotels.com/" },
       ],
     },
   ],
 
   labels: [
     { name: "Cafe De Anatolia", logo: "/logos/cafe-de-anatolia.jpg", url: "https://www.beatport.com/label/cafe-de-anatolia/86029", invert: true },
-    { name: "Soviett Records", logo: "/logos/soviett.jpg", url: "https://www.beatport.com/label/soviett/87498", invert: false },
-    { name: "Dyno Records", logo: "/logos/dyno-records.jpg", url: "https://www.beatport.com/label/dyno-records/148595", invert: false },
+    { name: "Soviett Records", logo: "/logos/soviett.jpg", url: "https://www.beatport.com/label/soviett/61640", invert: false },
+    { name: "Dyno Records", logo: "/logos/dyno-records.jpg", url: "https://www.officialdynorecords.com/", invert: false },
     { name: "Nova Mova Records", logo: "/logos/nova-mova.jpg", url: "https://www.beatport.com/label/nova-mova/105198", invert: true },
     { name: "Erase Records", logo: "/logos/erase-records.jpg", url: "https://www.beatport.com/label/erase-records/16498", invert: false },
     { name: "Browing", logo: "/logos/browing.png", url: "https://browingrecords.com/", invert: true },

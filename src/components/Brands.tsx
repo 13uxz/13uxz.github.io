@@ -174,7 +174,9 @@ export default function Brands() {
                       alt={venue.name}
                       width={300}
                       height={150}
-                      className={`h-28 max-w-[85%] object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100`}
+                      className={`h-28 max-w-[85%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
+                        venue.logo.includes("jebel-ali-rec") ? "grayscale invert brightness-[2]" : "brightness-0 invert"
+                      }`}
                     />
                   </Tag>
                 );
