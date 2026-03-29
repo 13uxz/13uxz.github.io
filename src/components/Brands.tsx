@@ -114,6 +114,7 @@ export default function Brands() {
             <div className="flex flex-wrap justify-center gap-4">
               {event.venues.map((venue) => {
                 const venueUrl = "url" in venue ? (venue.url as string) : "";
+                const isLarge = "size" in venue && venue.size === "large";
                 const Tag = venueUrl ? "a" : "div";
                 const linkProps = venueUrl ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" } : {};
                 return (
@@ -127,7 +128,7 @@ export default function Brands() {
                       alt={venue.name}
                       width={300}
                       height={120}
-                      className="h-28 max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 brightness-0 invert"
+                      className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 brightness-0 invert ${isLarge ? "h-40" : "h-28"}`}
                     />
                   </Tag>
                 );
