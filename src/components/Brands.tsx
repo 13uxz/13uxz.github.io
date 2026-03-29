@@ -152,7 +152,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "grayscale invert brightness-[2]"}`}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "brightness-0 invert"}`}
                 />
               </a>
             ) : (
@@ -162,7 +162,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "grayscale invert brightness-[2]"}`}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "brightness-0 invert"}`}
                 />
               </div>
             )}
