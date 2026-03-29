@@ -128,7 +128,9 @@ export default function Brands() {
                       alt={venue.name}
                       width={300}
                       height={120}
-                      className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 brightness-0 invert ${isLarge ? "h-40" : "h-28"}`}
+                      className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
+                        venue.logo.endsWith(".svg") ? "brightness-0 invert" : "grayscale brightness-[2] mix-blend-screen"
+                      } ${isLarge ? "h-40" : "h-28"}`}
                     />
                   </Tag>
                 );
