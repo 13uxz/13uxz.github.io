@@ -76,10 +76,16 @@ export const siteData = {
     linktree: "https://linktr.ee/13uxz",
   },
 
+  teaching: [
+    { name: "Dubai Sound Academy", logo: "/logos/dubai-sound-academy.png", url: "https://www.dubaisoundacademy.com/" },
+    { name: "Original Mix DJs", logo: "/logos/original-mix-djs.jpeg", url: "https://www.originalmixdjs.com/" },
+  ],
+
   events: [
     {
       name: "Sounds by AKS",
       logo: "/logos/sounds-by-aks.jpg",
+      url: "https://www.instagram.com/soundsbyaks/",
       label: "Private Event Venues",
       venues: [
         { name: "Helipad by Frozen Cherry", logo: "/logos/helipad.png" },

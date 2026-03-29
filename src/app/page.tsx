@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Bio from "@/components/Bio";
 import Brands from "@/components/Brands";
+import Teaching from "@/components/Teaching";
 import PhotoBreak from "@/components/PhotoBreak";
 import Labels from "@/components/Labels";
 import Music from "@/components/Music";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Bio />
         <Brands />
+        <Teaching />
         <PhotoBreak />
         <Labels />
         <Music />

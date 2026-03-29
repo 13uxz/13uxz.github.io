@@ -22,14 +22,26 @@ export default function Brands() {
         {/* Events — Sounds by AKS (above agencies) */}
         {siteData.events.map((event) => (
           <div key={event.name} className="mb-24 text-center">
-            <div className="mb-12 flex h-24 items-center justify-center">
-              <Image
-                src={event.logo}
-                alt={event.name}
-                width={300}
-                height={120}
-                className="h-20 w-auto mix-blend-screen"
-              />
+            <div className="mb-12 flex h-32 items-center justify-center">
+              {event.url ? (
+                <a href={event.url} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-70">
+                  <Image
+                    src={event.logo}
+                    alt={event.name}
+                    width={300}
+                    height={120}
+                    className="h-28 w-auto grayscale brightness-[2] mix-blend-screen"
+                  />
+                </a>
+              ) : (
+                <Image
+                  src={event.logo}
+                  alt={event.name}
+                  width={300}
+                  height={120}
+                  className="h-28 w-auto grayscale brightness-[2] mix-blend-screen"
+                />
+              )}
             </div>
 
             <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
