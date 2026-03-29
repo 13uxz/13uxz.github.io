@@ -156,7 +156,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"}`}
+                  className={`w-auto ${agency.logo.includes("sole") ? "h-32" : "h-16"} ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"}`}
                 />
               </a>
             ) : (
@@ -166,7 +166,7 @@ export default function Brands() {
                   alt={agency.management}
                   width={240}
                   height={80}
-                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"}`}
+                  className={`w-auto ${agency.logo.includes("sole") ? "h-32" : "h-16"} ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"}`}
                 />
               </div>
             )}
