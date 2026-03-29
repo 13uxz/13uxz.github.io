@@ -51,6 +51,17 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <a
+            href="/epk"
+            className="flex items-center gap-1.5 text-[13px] uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-70"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Press Kit
+          </a>
           <span className="h-4 w-px bg-border" />
           <div className="flex items-center gap-3">
             {Object.entries(siteData.socials).map(([key, url]) => {
@@ -125,6 +136,19 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
+          <span className="h-px w-full bg-border" />
+          <a
+            href="/epk"
+            onClick={() => setOpen(false)}
+            className="flex items-center justify-end gap-1.5 text-[13px] uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-70"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Press Kit
+          </a>
         </div>
       )}
     </nav>
