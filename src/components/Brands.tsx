@@ -174,20 +174,25 @@ export default function Brands() {
             <div className="flex flex-wrap justify-center gap-4">
               {agency.venues.map((venue: any) => {
                 const venueUrl = "url" in venue ? (venue.url as string) : "";
+                const isDouble = venue.size === "double";
                 const Tag = venueUrl ? "a" : "div";
                 const linkProps = venueUrl ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" } : {};
                 return (
                   <Tag
                     key={venue.name}
                     {...linkProps}
-                    className="group flex h-48 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(33.333%-11px)]"
+                    className={`group flex items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 ${
+                      isDouble ? "h-64 w-[calc(50%-8px)] sm:w-[calc(50%-8px)]" : "h-48 w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)]"
+                    }`}
                   >
                     <Image
                       src={venue.logo}
                       alt={venue.name}
                       width={400}
                       height={200}
-                      className={`h-36 max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
+                      className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
+                        isDouble ? "h-52" : "h-36"
+                      } ${
                         venue.logo.includes("jebel-ali-rec") || venue.logo.includes("helipad") ? "grayscale invert brightness-[2]" : "brightness-0 invert"
                       }`}
                     />
