@@ -13,7 +13,7 @@ const highlights = [
   "COP28 staff closing party",
   "Modulate @ KYO on the Palm",
   "Featured on BeatFM weekly show",
-  "Trained with Point Blank, Toolroom & Granular DXB",
+  "Courses with Point Blank, Toolroom & Granular DXB",
 ];
 
 const labels = siteData.labels.map((l) => l.name);
