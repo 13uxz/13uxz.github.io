@@ -75,14 +75,14 @@ export default function Navbar() {
                   onClick={() => setPressKit(false)}
                   className="whitespace-nowrap px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-70"
                 >
-                  Standard
+                  Dark
                 </a>
                 <a
                   href="/13uxz-press-kit-print.pdf" download
                   onClick={() => setPressKit(false)}
                   className="whitespace-nowrap px-4 py-2 text-[11px] uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-70"
                 >
-                  Print-Friendly
+                  Light
                 </a>
               </div>
             )}
@@ -176,7 +176,7 @@ export default function Navbar() {
             className="flex items-center justify-end gap-1.5 text-[11px] uppercase tracking-[0.15em] text-white/60 transition-opacity hover:opacity-70"
           >
             <DownloadIcon />
-            Press Kit — Print
+            Press Kit — Light
           </a>
         </div>
       )}
