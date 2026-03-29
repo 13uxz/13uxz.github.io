@@ -2,6 +2,21 @@
 
 import Image from "next/image";
 import { siteData } from "@/data/siteData";
+import {
+  SpotifyIcon,
+  BeatportIcon,
+  SoundCloudIcon,
+  InstagramIcon,
+  LinktreeIcon,
+} from "@/components/SocialIcons";
+
+const socialIcons: Record<string, React.FC> = {
+  spotify: SpotifyIcon,
+  beatport: BeatportIcon,
+  soundcloud: SoundCloudIcon,
+  instagram: InstagramIcon,
+  linktree: LinktreeIcon,
+};
 
 const allTracks = siteData.releasesByGenre.flatMap((g) =>
   g.tracks.map((t) => ({ ...t, genre: g.genre }))
@@ -208,11 +223,15 @@ export default function EPK() {
         <section className="border-t border-border pt-10">
           <h2 className="mb-6 text-lg font-medium tracking-wide">Links</h2>
           <div className="flex gap-6">
-            {Object.entries(siteData.socials).map(([key, url]) => (
-              <a key={key} href={url} target="_blank" rel="noopener noreferrer" className="text-[13px] capitalize underline transition-opacity hover:opacity-70">
-                {key}
-              </a>
-            ))}
+            {Object.entries(siteData.socials).map(([key, url]) => {
+              const Icon = socialIcons[key];
+              return (
+                <a key={key} href={url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-[13px] capitalize transition-opacity hover:opacity-70">
+                  {Icon && <Icon />}
+                  {key}
+                </a>
+              );
+            })}
           </div>
         </section>
 
