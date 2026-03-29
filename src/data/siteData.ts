@@ -140,7 +140,7 @@ export const siteData = {
     { name: "Soviett Records", logo: "/logos/soviett.jpg", url: "https://www.beatport.com/label/soviett/61640", invert: false },
     { name: "Dyno Records", logo: "/logos/dyno-records.jpg", url: "https://www.officialdynorecords.com/", invert: false },
     { name: "Nova Mova Records", logo: "/logos/nova-mova.jpg", url: "https://www.beatport.com/label/nova-mova/105198", invert: true },
-    { name: "Erase Records", logo: "/logos/erase-records.jpg", url: "https://www.beatport.com/label/erase-records/16498", invert: false },
+    { name: "Erase Records", logo: "/logos/erase-records.jpg", url: "https://www.beatport.com/label/erase-records/1065", invert: false },
     { name: "Browing", logo: "/logos/browing.png", url: "https://browingrecords.com/", invert: true },
     { name: "Mystic Carousel", logo: "/logos/mystic-carousel.jpg", url: "https://www.beatport.com/label/mystic-carousel-records/32044", invert: false },
   ],
