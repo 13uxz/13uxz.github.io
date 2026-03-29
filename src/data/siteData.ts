@@ -76,6 +76,20 @@ export const siteData = {
     linktree: "https://linktr.ee/13uxz",
   },
 
+  events: [
+    {
+      name: "Sounds by AKS",
+      logo: "/logos/sounds-by-aks.jpg",
+      label: "Private Events",
+      venues: [
+        { name: "Helipad by Frozen Cherry", logo: "/logos/helipad.png" },
+        { name: "Atelier M at Pier 7", logo: "/logos/atelier-m.svg", url: "https://atelierm.ae/" },
+        { name: "Zero Gravity", logo: "/logos/zero-gravity.svg", url: "https://www.0-gravity.ae/" },
+        { name: "Dubai Marina Yacht Club", logo: "/logos/dubai-marina-yacht-club.svg", url: "https://www.dubaimarinayachtclub.com/" },
+      ],
+    },
+  ],
+
   brands: [
     {
       management: "Blackspoon Management",
@@ -107,6 +121,16 @@ export const siteData = {
         { name: "Inspiratus Brand Experience", role: "DJ", logo: "/logos/inspiratus.png", url: "https://www.inspiratus.com/" },
         { name: "Dubai Shopping Festival", role: "DJ", logo: "/logos/dubai-shopping-festival.png", url: "https://www.mydsf.ae/" },
         { name: "Offside Sports Bar", role: "DJ", logo: "/logos/offside.png", url: "https://www.jaresortshotels.com/restaurant-detail/dubai/ja-ocean-view-hotel/offside" },
+      ],
+    },
+    {
+      management: "Mais Musica",
+      logo: "/logos/mais-musica.jpg",
+      url: "https://www.maismusica.ae/",
+      label: "Agency Bookings",
+      venues: [
+        { name: "JA Resorts & Hotels", role: "DJ", logo: "/logos/ja-resorts.svg", url: "https://www.jaresortshotels.com/" },
+        { name: "Jebel Ali Clubhouse", role: "DJ", logo: "/logos/ja-resorts.svg", url: "https://www.jaresortshotels.com/" },
       ],
     },
   ],

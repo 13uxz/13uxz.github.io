@@ -7,8 +7,10 @@ function logoFilter(src: string) {
 }
 
 export default function Brands() {
-  const residencies = siteData.brands.filter((g) => !("label" in g));
-  const bookings = siteData.brands.find((g) => "label" in g);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const allBrands = [...siteData.brands] as any[];
+  const residencies = allBrands.filter((g: any) => !g.label);
+  const agencies = allBrands.filter((g: any) => g.label);
 
   return (
     <section id="brands" className="px-6 py-32 sm:px-8">
@@ -17,9 +19,51 @@ export default function Brands() {
           Brands
         </h2>
 
-        {/* Residencies — shown first */}
+        {/* Events — Sounds by AKS (above agencies) */}
+        {siteData.events.map((event) => (
+          <div key={event.name} className="mb-24 text-center">
+            <div className="mb-12 flex h-20 items-center justify-center">
+              <Image
+                src={event.logo}
+                alt={event.name}
+                width={240}
+                height={80}
+                className="h-16 w-auto mix-blend-screen"
+              />
+            </div>
+
+            <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
+              {event.label}
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4">
+              {event.venues.map((venue) => {
+                const venueUrl = "url" in venue ? (venue.url as string) : "";
+                const Tag = venueUrl ? "a" : "div";
+                const linkProps = venueUrl ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" } : {};
+                return (
+                  <Tag
+                    key={venue.name}
+                    {...linkProps}
+                    className="group flex h-40 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(25%-12px)]"
+                  >
+                    <Image
+                      src={venue.logo}
+                      alt={venue.name}
+                      width={200}
+                      height={90}
+                      className={`h-20 max-w-[85%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${logoFilter(venue.logo)}`}
+                    />
+                  </Tag>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+
+        {/* Residencies */}
         <div className="grid gap-24 md:grid-cols-2">
-          {residencies.map((group) => {
+          {residencies.map((group: any) => {
             const LogoImg = (
               <Image
                 src={group.logo}
@@ -51,7 +95,7 @@ export default function Brands() {
                 </p>
 
                 <div className="grid grid-cols-2 gap-4">
-                  {group.venues.map((venue) => {
+                  {group.venues.map((venue: any) => {
                     const venueUrl = "url" in venue ? (venue.url as string) : "";
                     const Tag = venueUrl ? "a" : "div";
                     const linkProps = venueUrl ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" } : {};
@@ -80,30 +124,42 @@ export default function Brands() {
           })}
         </div>
 
-        {/* Bookings — Sole Agency */}
-        {bookings && (
-          <div className="mt-24 text-center">
-            <a
-              href={bookings.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mb-12 flex h-20 items-center justify-center transition-opacity hover:opacity-70"
-            >
-              <Image
-                src={bookings.logo}
-                alt={bookings.management}
-                width={240}
-                height={80}
-                className="h-16 w-auto"
-              />
-            </a>
+        {/* Agencies — Sole Agency + Mais Musica */}
+        {agencies.map((agency: any) => (
+          <div key={agency.management} className="mt-24 text-center">
+            {agency.url ? (
+              <a
+                href={agency.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mb-12 flex h-20 items-center justify-center transition-opacity hover:opacity-70"
+              >
+                <Image
+                  src={agency.logo}
+                  alt={agency.management}
+                  width={240}
+                  height={80}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : ""}`}
+                />
+              </a>
+            ) : (
+              <div className="mb-12 flex h-20 items-center justify-center">
+                <Image
+                  src={agency.logo}
+                  alt={agency.management}
+                  width={240}
+                  height={80}
+                  className={`h-16 w-auto ${agency.logo.endsWith(".jpg") ? "mix-blend-screen" : ""}`}
+                />
+              </div>
+            )}
 
             <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-accent">
-              {"label" in bookings ? (bookings.label as string) : "Bookings"}
+              {"label" in agency ? (agency.label as string) : "Bookings"}
             </p>
 
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-              {bookings.venues.map((venue) => {
+            <div className="flex flex-wrap justify-center gap-4">
+              {agency.venues.map((venue: any) => {
                 const venueUrl = "url" in venue ? (venue.url as string) : "";
                 const Tag = venueUrl ? "a" : "div";
                 const linkProps = venueUrl ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" } : {};
@@ -111,21 +167,21 @@ export default function Brands() {
                   <Tag
                     key={venue.name}
                     {...linkProps}
-                    className="group flex h-44 items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
+                    className="group flex h-44 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(33.333%-11px)]"
                   >
                     <Image
                       src={venue.logo}
                       alt={venue.name}
                       width={300}
                       height={150}
-                      className="h-28 max-w-[85%] object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100"
+                      className={`h-28 max-w-[85%] object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100`}
                     />
                   </Tag>
                 );
               })}
             </div>
           </div>
-        )}
+        ))}
       </div>
     </section>
   );
