@@ -41,7 +41,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav links + social icons — right */}
-        <div className="hidden items-center gap-10 md:flex">
+        <div className="hidden items-center gap-10 lg:flex">
           {links.map((link) => (
             <a
               key={link.href}
@@ -74,7 +74,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile: social icons + hamburger */}
-        <div className="flex items-center gap-4 md:hidden">
+        <div className="flex items-center gap-4 lg:hidden">
           <div className="flex items-center gap-2.5">
             {Object.entries(siteData.socials).map(([key, url]) => {
               const config = socialConfig[key];
@@ -114,7 +114,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="flex flex-col gap-5 bg-black/95 px-6 pb-6 pt-6 md:hidden">
+        <div className="flex flex-col gap-5 bg-black/95 px-6 pb-6 pt-6 lg:hidden">
           {links.map((link) => (
             <a
               key={link.href}
