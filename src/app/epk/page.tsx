@@ -13,7 +13,7 @@ const highlights = [
   "COP28 staff closing party",
   "Modulate @ KYO on the Palm",
   "Featured on BeatFM weekly show",
-  "Trained at Point Blank, Toolroom & Granular DXB",
+  "Trained with Point Blank, Toolroom & Granular DXB",
 ];
 
 const labels = siteData.labels.map((l) => l.name);
@@ -114,9 +114,42 @@ export default function EPK() {
               Genres
             </h2>
             <p className="text-[13px] leading-relaxed text-accent">
-              Afrohouse, Melodic House & Techno, Organic House, Progressive, Techno
+              Afrohouse, Latin House, Melodic House & Techno, Organic House, Progressive, Techno
             </p>
           </div>
+        </section>
+
+        {/* Gallery */}
+        <section className="mb-12 border-t border-border pt-10">
+          <h2 className="mb-6 text-lg font-medium tracking-wide">Gallery</h2>
+          <div className="grid grid-cols-3 gap-3">
+            {siteData.photos.slice(0, 6).map((photo, i) => (
+              <div key={i} className="relative aspect-square overflow-hidden">
+                <Image
+                  src={photo.src}
+                  alt={photo.alt}
+                  fill
+                  className={`object-cover ${"position" in photo ? photo.position : "object-center"}`}
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Testimonial */}
+        <section className="mb-12 border-t border-border pt-10">
+          <h2 className="mb-6 text-lg font-medium tracking-wide">Testimonial</h2>
+          {siteData.testimonials.map((t) => (
+            <blockquote key={t.name}>
+              <p className="text-[13px] leading-[1.75] text-accent italic">
+                &ldquo;{t.quote}&rdquo;
+              </p>
+              <footer className="mt-4">
+                <span className="text-[13px] font-medium">{t.name}</span>
+                <span className="ml-2 text-[11px] text-accent">{t.title}</span>
+              </footer>
+            </blockquote>
+          ))}
         </section>
 
         {/* Discography */}
@@ -143,7 +176,7 @@ export default function EPK() {
             {Object.entries(siteData.socials).map(([key, url]) => (
               <div key={key} className="flex items-baseline justify-between gap-4">
                 <span className="text-[13px] capitalize">{key}</span>
-                <span className="truncate text-[11px] text-accent">{url}</span>
+                <a href={url} target="_blank" rel="noopener noreferrer" className="truncate text-[11px] text-accent underline">{url}</a>
               </div>
             ))}
           </div>
