@@ -143,14 +143,14 @@ export const siteData = {
 
   testimonials: [
     {
-      quote: "Dave '13uxz' Buckley is an exceptionally talented DJ and producer I've had the pleasure of collaborating with. He's one of the most driven and hardworking artists I've come across, with a constant hunger to learn, connect, and create. He's already delivered one of our standout releases of 2025 on my label, with more strong material on the way. Beyond music, Dave is a person of great character\u2014thoughtful, insightful, and deeply dedicated to his craft. He has all the makings of an artist with limitless potential and a wonderful future ahead.",
-      name: "Aritra 'ARIII' Dasgupta",
-      title: "Label Founder, Dyno Music Records",
-    },
-    {
-      quote: "DJ David is one of the most refined and sophisticated DJs I've worked with. His music selection, timing, and ability to read the room were perfectly aligned with our restaurant's mood\u2014delivering both elegance and energy at the highest level.",
+      quote: "DJ David is one of the most refined and sophisticated DJs I've worked with. His music selection, timing, and ability to read the room were perfectly aligned with our restaurant's mood, delivering both elegance and energy at the highest level.",
       name: "Jeet Verma",
       title: "Beverage Manager, LSL Capital",
+    },
+    {
+      quote: "Dave '13uxz' Buckley is an exceptionally talented DJ and producer I've had the pleasure of collaborating with. He's one of the most driven and hardworking artists I've come across, with a constant hunger to learn, connect, and create. He's already delivered one of our standout releases of 2025 on my label, with more strong material on the way. Beyond music, Dave is a person of great character, thoughtful, insightful, and deeply dedicated to his craft. He has all the makings of an artist with limitless potential and a wonderful future ahead.",
+      name: "Aritra 'ARIII' Dasgupta",
+      title: "Label Founder, Dyno Music Records",
     },
   ],
 
