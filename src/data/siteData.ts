@@ -147,6 +147,11 @@ export const siteData = {
       name: "Aritra 'ARIII' Dasgupta",
       title: "Label Founder, Dyno Music Records",
     },
+    {
+      quote: "DJ David is one of the most refined and sophisticated DJs I've worked with. His music selection, timing, and ability to read the room were perfectly aligned with our restaurant's mood\u2014delivering both elegance and energy at the highest level.",
+      name: "Jeet Verma",
+      title: "Beverage Manager, LSL Capital",
+    },
   ],
 
   labels: [
