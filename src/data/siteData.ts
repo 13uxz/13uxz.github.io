@@ -153,6 +153,11 @@ export const siteData = {
       title: "CEO, Blackspoon Management",
     },
     {
+      quote: "I've worked with many artists and DJs over the years, but DJ David stands out. He has a deep understanding of atmosphere and knows exactly what vibe to create, backed by an immense knowledge of music. He reads the motion and flow of any event or restaurant setting and plays accordingly, consistently earning appreciation from guests and colleagues alike.",
+      name: "Bhim Gaur",
+      title: "Restaurant Manager, Jamavar",
+    },
+    {
       quote: "Dave '13uxz' Buckley is an exceptionally talented DJ and producer I've had the pleasure of collaborating with. He's one of the most driven and hardworking artists I've come across, with a constant hunger to learn, connect, and create. He's already delivered one of our standout releases of 2025 on my label, with more strong material on the way. Beyond music, Dave is a person of great character, thoughtful, insightful, and deeply dedicated to his craft. He has all the makings of an artist with limitless potential and a wonderful future ahead.",
       name: "Aritra 'ARIII' Dasgupta",
       title: "Label Founder, Dyno Music Records",
