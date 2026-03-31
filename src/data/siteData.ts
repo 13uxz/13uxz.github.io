@@ -158,6 +158,11 @@ export const siteData = {
       title: "Restaurant Manager, Jamavar Dubai",
     },
     {
+      quote: "DJ David brings the perfect combination of professional communication, an ability to read the room, and was always comfortable with different audiences. Respected by everyone at Masti, guests always commented on his performances and we were sad to see him leave.",
+      name: "Joseph Adegoke",
+      title: "Manager, Masti",
+    },
+    {
       quote: "Dave '13uxz' Buckley is an exceptionally talented DJ and producer I've had the pleasure of collaborating with. He's one of the most driven and hardworking artists I've come across, with a constant hunger to learn, connect, and create. He's already delivered one of our standout releases of 2025 on my label, with more strong material on the way. Beyond music, Dave is a person of great character, thoughtful, insightful, and deeply dedicated to his craft. He has all the makings of an artist with limitless potential and a wonderful future ahead.",
       name: "Aritra 'ARIII' Dasgupta",
       title: "Label Founder, Dyno Music Records",
