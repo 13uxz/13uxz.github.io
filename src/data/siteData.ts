@@ -148,7 +148,7 @@ export const siteData = {
       title: "Beverage Manager, LSL Capital",
     },
     {
-      quote: "David worked with us for several years across multiple venues covering private events, brunches and dinner services, and was one of the best DJs we've had. Great music, smooth flow, and he always knew how to read the crowd and keep the energy suitable for our guests. Reliable, always available, and happy to help with anything sound related our venues required.",
+      quote: "David worked with us for several years across multiple venues covering private events, brunches and dinner services, and was one of the best DJs we've had. Great music, smooth flow, and he always knew how to read the room and keep the energy suitable for our guests. Reliable, always available, and happy to help with anything sound related our venues required.",
       name: "Charbel Mhanna",
       title: "CEO, Blackspoon Management",
     },
