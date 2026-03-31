@@ -148,6 +148,11 @@ export const siteData = {
       title: "Beverage Manager, LSL Capital",
     },
     {
+      quote: "David worked with us for several years across multiple venues covering private events, brunches and dinner services, and was one of the best DJs we've had. Great music, smooth flow, and he always knew how to read the crowd and keep the energy suitable for our guests. Reliable, always available, and happy to help with anything sound related our venues required.",
+      name: "Charbel Mhanna",
+      title: "CEO, Blackspoon Management",
+    },
+    {
       quote: "Dave '13uxz' Buckley is an exceptionally talented DJ and producer I've had the pleasure of collaborating with. He's one of the most driven and hardworking artists I've come across, with a constant hunger to learn, connect, and create. He's already delivered one of our standout releases of 2025 on my label, with more strong material on the way. Beyond music, Dave is a person of great character, thoughtful, insightful, and deeply dedicated to his craft. He has all the makings of an artist with limitless potential and a wonderful future ahead.",
       name: "Aritra 'ARIII' Dasgupta",
       title: "Label Founder, Dyno Music Records",
