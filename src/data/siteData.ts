@@ -167,6 +167,11 @@ export const siteData = {
       name: "Aritra 'ARIII' Dasgupta",
       title: "Label Founder, Dyno Music Records",
     },
+    {
+      quote: "An incredibly versatile DJ with the ability to deliver open format, house classics, and upfront sets.",
+      name: "Jon Besant",
+      title: "Owner, Mais Musica",
+    },
   ],
 
   labels: [
