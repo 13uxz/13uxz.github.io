@@ -19,7 +19,7 @@ export default function Teaching() {
               <Tag
                 key={school.name}
                 {...linkProps}
-                className="group flex h-48 w-[calc(50%-8px)] items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30 sm:w-[calc(33.333%-11px)]"
+                className="group flex h-64 w-[calc(50%-8px)] flex-col items-center justify-center border border-border px-8 transition-colors duration-300 hover:border-white/30 sm:w-[calc(33.333%-11px)]"
               >
                 <Image
                   src={school.logo}
@@ -28,6 +28,9 @@ export default function Teaching() {
                   height={120}
                   className="h-28 max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 mix-blend-screen"
                 />
+                <p className="mt-4 text-[11px] leading-relaxed tracking-wide text-white/50 transition-colors duration-300 group-hover:text-white/70">
+                  {school.description}
+                </p>
               </Tag>
             );
           })}

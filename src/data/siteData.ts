@@ -77,8 +77,18 @@ export const siteData = {
   },
 
   teaching: [
-    { name: "Dubai Sound Academy", logo: "/logos/dubai-sound-academy.png", url: "https://www.dubaisoundacademy.com/" },
-    { name: "Original Mix DJs", logo: "/logos/original-mix-djs.png", url: "https://www.originalmixdjs.com/" },
+    {
+      name: "Dubai Sound Academy",
+      logo: "/logos/dubai-sound-academy.png",
+      url: "https://www.dubaisoundacademy.com/",
+      description: "The Middle East's first official Pioneer DJ school, offering private and group lessons in DJing and music production.",
+    },
+    {
+      name: "Original Mix DJs",
+      logo: "/logos/original-mix-djs.png",
+      url: "https://www.originalmixdjs.com/",
+      description: "DJ training and production courses for all ages, from beginner to intermediate, including school programmes across Dubai.",
+    },
   ],
 
   events: [
