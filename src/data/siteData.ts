@@ -180,7 +180,7 @@ export const siteData = {
     {
       quote: "An incredibly versatile DJ with the ability to deliver open format, house classics, and upfront sets.",
       name: "Jon Besant",
-      title: "Owner, Mais Musica",
+      title: "Partner, Mais Musica",
       logo: "/logos/mais-musica.jpg",
       url: "https://www.maismusica.ae/",
     },
