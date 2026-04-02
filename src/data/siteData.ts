@@ -87,7 +87,7 @@ export const siteData = {
       name: "Original Mix DJs",
       logo: "/logos/original-mix-djs.png",
       url: "https://www.originalmixdjs.com/",
-      description: "DJ training and production courses for all ages, from beginner to intermediate, including school programmes across Dubai.",
+      description: "DJ training and music production courses for kids and teens, including school programmes across Dubai.",
     },
   ],
 
