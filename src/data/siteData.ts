@@ -172,6 +172,11 @@ export const siteData = {
       name: "Jon Besant",
       title: "Owner, Mais Musica",
     },
+    {
+      quote: "13UXZ has been a huge part of the journey at Sounds by AKS. From early on, he played a big role in shaping the energy and identity of the brand. His creative style, fresh selection of music, and especially his own productions really stood out and connected strongly with our audience. He brought a unique sound to the floor and consistently delivered sets that people remembered. Artists like him are a big reason Sounds by AKS has grown into what it is today.",
+      name: "Karanveer Singh",
+      title: "DJ KV5",
+    },
   ],
 
   labels: [
