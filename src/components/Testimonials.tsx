@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteData } from "@/data/siteData";
 
 export default function Testimonials() {
@@ -14,14 +15,31 @@ export default function Testimonials() {
               <p className="text-[15px] leading-[1.8] text-foreground italic">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <footer className="mt-8">
-                <span className="text-[11px] uppercase tracking-[0.2em] text-white/75">
-                  {t.name}
-                </span>
-                <br />
-                <span className="text-[10px] uppercase tracking-[0.2em] text-white/60">
-                  {t.title}
-                </span>
+              <footer className="mt-8 flex flex-col items-center gap-4">
+                <div>
+                  <span className="text-[11px] uppercase tracking-[0.2em] text-white/75">
+                    {t.name}
+                  </span>
+                  <br />
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/60">
+                    {t.title}
+                  </span>
+                </div>
+                {"logo" in t && (
+                  <a
+                    href={t.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative h-8 w-24 opacity-50 transition-opacity hover:opacity-100"
+                  >
+                    <Image
+                      src={t.logo}
+                      alt={t.title}
+                      fill
+                      className="object-contain brightness-0 invert"
+                    />
+                  </a>
+                )}
               </footer>
             </blockquote>
           ))}

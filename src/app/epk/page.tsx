@@ -185,15 +185,22 @@ export default function EPK() {
 
         {/* Testimonial */}
         <section className="mb-12 border-t border-border pt-10">
-          <h2 className="mb-6 text-lg font-medium tracking-wide">Testimonial</h2>
+          <h2 className="mb-6 text-lg font-medium tracking-wide">Testimonials</h2>
           {siteData.testimonials.map((t) => (
-            <blockquote key={t.name}>
+            <blockquote key={t.name} className="mb-8 last:mb-0">
               <p className="text-[13px] leading-[1.75] text-accent italic">
                 &ldquo;{t.quote}&rdquo;
               </p>
-              <footer className="mt-4">
-                <span className="text-[13px] font-medium">{t.name}</span>
-                <span className="ml-2 text-[11px] text-accent">{t.title}</span>
+              <footer className="mt-4 flex items-center gap-3">
+                <div>
+                  <span className="text-[13px] font-medium">{t.name}</span>
+                  <span className="ml-2 text-[11px] text-accent">{t.title}</span>
+                </div>
+                {"logo" in t && (
+                  <a href={t.url} target="_blank" rel="noopener noreferrer" className="relative h-5 w-16 shrink-0">
+                    <Image src={t.logo} alt={t.title} fill className="object-contain" />
+                  </a>
+                )}
               </footer>
             </blockquote>
           ))}
