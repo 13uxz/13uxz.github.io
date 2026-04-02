@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { siteData } from "@/data/siteData";
 
+function logoFilter(src: string) {
+  if (src.endsWith(".png") || src.endsWith(".jpg") || src.endsWith(".jpeg") || src.endsWith(".avif"))
+    return "grayscale brightness-[2] mix-blend-screen";
+  return "brightness-0 invert";
+}
+
 export default function Testimonials() {
   return (
     <section id="testimonials" className="px-6 py-32 sm:px-8">
@@ -30,13 +36,14 @@ export default function Testimonials() {
                     href={t.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="relative h-8 w-24 opacity-50 transition-opacity hover:opacity-100"
+                    className="transition-opacity hover:opacity-70"
                   >
                     <Image
                       src={t.logo}
                       alt={t.title}
-                      fill
-                      className="object-contain brightness-0 invert"
+                      width={120}
+                      height={40}
+                      className={`h-8 w-auto opacity-60 ${logoFilter(t.logo)}`}
                     />
                   </a>
                 )}
