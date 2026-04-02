@@ -43,7 +43,7 @@ export default function Testimonials() {
                       alt={t.title}
                       width={240}
                       height={80}
-                      className={`w-auto opacity-60 ${t.logo.includes("masti") ? "h-8" : "h-16"} ${logoFilter(t.logo)}`}
+                      className={`w-auto opacity-60 ${t.logo.includes("masti") || t.logo.includes("mais-musica") ? "h-8" : "h-16"} ${logoFilter(t.logo)}`}
                     />
                   </a>
                 )}
