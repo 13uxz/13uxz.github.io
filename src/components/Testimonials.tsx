@@ -41,9 +41,9 @@ export default function Testimonials() {
                     <Image
                       src={t.logo}
                       alt={t.title}
-                      width={120}
-                      height={40}
-                      className={`h-8 w-auto opacity-60 ${logoFilter(t.logo)}`}
+                      width={240}
+                      height={80}
+                      className={`h-16 w-auto opacity-60 ${logoFilter(t.logo)}`}
                     />
                   </a>
                 )}
