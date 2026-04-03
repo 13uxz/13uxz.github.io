@@ -160,7 +160,7 @@ export default function EPK() {
           <img
             src="/photos/hero.jpg"
             alt="13uxz"
-            className="absolute inset-0 h-full w-full object-cover object-top brightness-[0.2]"
+            className="absolute inset-0 h-full w-full object-cover object-[center_25%] brightness-[0.2]"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
           <div className="relative z-10 w-full px-10 pb-12 sm:px-16">
@@ -210,6 +210,56 @@ export default function EPK() {
 
           <Divider />
 
+          {/* Gallery */}
+          <section className="mb-16">
+            <SectionLabel>Gallery</SectionLabel>
+            <div className="grid grid-cols-3 gap-2">
+              {siteData.photos.slice(0, 6).map((photo, i) => (
+                <div key={i} className="relative aspect-square overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className={`absolute inset-0 h-full w-full object-cover ${"position" in photo ? photo.position : "object-center"}`}
+                  />
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <Divider />
+
+          {/* Discography */}
+          <section className="mb-16">
+            <SectionLabel>Discography</SectionLabel>
+            <div className="space-y-8">
+              {siteData.releasesByGenre.map((group) => (
+                <div key={group.genre}>
+                  <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-white/40">
+                    {group.genre}
+                  </p>
+                  <div className="space-y-2">
+                    {group.tracks.map((t) => (
+                      <div
+                        key={t.title}
+                        className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2"
+                      >
+                        <span className="text-[13px] text-white/80">
+                          {t.title}
+                        </span>
+                        <span className="shrink-0 text-[11px] text-white/40">
+                          {t.label}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          <Divider />
+
           {/* Highlights + Labels */}
           <section className="mb-16 grid gap-10 sm:grid-cols-2">
             <div>
@@ -239,23 +289,6 @@ export default function EPK() {
                   </li>
                 ))}
               </ul>
-            </div>
-          </section>
-
-          <Divider />
-
-          {/* Genres */}
-          <section className="mb-16">
-            <SectionLabel>Genres</SectionLabel>
-            <div className="grid grid-cols-4 gap-3">
-              {["Afrohouse", "Funky House", "Latin House", "Melodic House & Techno", "Nu Disco", "Organic House", "Progressive", "Techno"].map((g) => (
-                <span
-                  key={g}
-                  className="border border-white/10 bg-white/[0.03] px-4 py-2 text-center text-[12px] tracking-wide text-white/60"
-                >
-                  {g}
-                </span>
-              ))}
             </div>
           </section>
 
@@ -303,19 +336,17 @@ export default function EPK() {
 
           <Divider />
 
-          {/* Gallery */}
+          {/* Genres */}
           <section className="mb-16">
-            <SectionLabel>Gallery</SectionLabel>
-            <div className="grid grid-cols-3 gap-2">
-              {siteData.photos.slice(0, 6).map((photo, i) => (
-                <div key={i} className="relative aspect-square overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className={`absolute inset-0 h-full w-full object-cover ${"position" in photo ? photo.position : "object-center"}`}
-                  />
-                </div>
+            <SectionLabel>Genres</SectionLabel>
+            <div className="grid grid-cols-4 gap-3">
+              {["Afrohouse", "Funky House", "Latin House", "Melodic House & Techno", "Nu Disco", "Organic House", "Progressive", "Techno"].map((g) => (
+                <span
+                  key={g}
+                  className="border border-white/10 bg-white/[0.03] px-4 py-2 text-center text-[12px] tracking-wide text-white/60"
+                >
+                  {g}
+                </span>
               ))}
             </div>
           </section>
@@ -343,37 +374,6 @@ export default function EPK() {
                     </span>
                   </footer>
                 </blockquote>
-              ))}
-            </div>
-          </section>
-
-          <Divider />
-
-          {/* Discography */}
-          <section className="mb-16">
-            <SectionLabel>Discography</SectionLabel>
-            <div className="space-y-8">
-              {siteData.releasesByGenre.map((group) => (
-                <div key={group.genre}>
-                  <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-white/40">
-                    {group.genre}
-                  </p>
-                  <div className="space-y-2">
-                    {group.tracks.map((t) => (
-                      <div
-                        key={t.title}
-                        className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2"
-                      >
-                        <span className="text-[13px] text-white/80">
-                          {t.title}
-                        </span>
-                        <span className="shrink-0 text-[11px] text-white/40">
-                          {t.label}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               ))}
             </div>
           </section>
