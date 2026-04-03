@@ -23,9 +23,15 @@ export default function Testimonials() {
               </p>
               <footer className="mt-8 flex flex-col items-center gap-4">
                 <div>
-                  <span className="text-[11px] uppercase tracking-[0.2em] text-white/75">
-                    {t.name}
-                  </span>
+                  {"url" in t && !("logo" in t) ? (
+                    <a href={t.url} target="_blank" rel="noopener noreferrer" className="text-[11px] uppercase tracking-[0.2em] text-white/75 underline decoration-white/30 underline-offset-2 transition-opacity hover:opacity-70">
+                      {t.name}
+                    </a>
+                  ) : (
+                    <span className="text-[11px] uppercase tracking-[0.2em] text-white/75">
+                      {t.name}
+                    </span>
+                  )}
                   <br />
                   <span className="text-[10px] uppercase tracking-[0.2em] text-white/60">
                     {t.title}

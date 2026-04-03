@@ -201,6 +201,17 @@ export const siteData = {
       logo: "/logos/mais-musica.jpg",
       url: "https://www.maismusica.ae/",
     },
+    {
+      quote: "Sharing the stage with 13uxz was a great experience. As a percussionist, I really value his musical sensitivity and his ability to connect with the audience in real time. The dynamic between DJ and percussionist is really important and flowed naturally, making every performance feel authentic and full of energy.",
+      name: "Osmany Ramirez Varona",
+      title: "Percussionist, Miti Percussion",
+      url: "https://www.instagram.com/miti_percussion/",
+    },
+    {
+      quote: "Dave attended my music production course, where he showed strong technical ability and a clear focus on sound design. He has a great ear for detail and a solid creative instinct. He's also played at my techno events, delivering well structured sets that connect with the crowd and build energy properly. Reliable, easy to work with, and committed to his craft. I'd happily recommend him for bookings.",
+      name: "Kev",
+      title: "DJ, Cattaree",
+    },
   ],
 
   labels: [
