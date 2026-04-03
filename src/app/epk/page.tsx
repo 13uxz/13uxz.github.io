@@ -176,7 +176,7 @@ export default function EPK() {
           <section className="mb-16">
             <SectionLabel>Genres</SectionLabel>
             <div className="flex flex-wrap gap-3">
-              {["Afrohouse", "Latin House", "Melodic House & Techno", "Organic House", "Progressive", "Techno"].map((g) => (
+              {["Afrohouse", "Funky House", "Latin House", "Melodic House & Techno", "Nu Disco", "Organic House", "Progressive", "Techno"].map((g) => (
                 <span
                   key={g}
                   className="border border-white/10 bg-white/[0.03] px-4 py-2 text-[12px] tracking-wide text-white/60"
