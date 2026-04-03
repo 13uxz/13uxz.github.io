@@ -53,6 +53,14 @@ export default function EPK() {
       const pdfHidden = el.querySelectorAll("[data-pdf-hide]");
       pdfHidden.forEach((e) => ((e as HTMLElement).style.display = "none"));
 
+      // Collapse hero height and tighten section spacing for PDF
+      const header = el.querySelector("header") as HTMLElement;
+      const origMinH = header.style.minHeight;
+      header.style.minHeight = "auto";
+
+      const spacedEls = el.querySelectorAll("section, .mb-16");
+      spacedEls.forEach((s) => ((s as HTMLElement).style.marginBottom = "2rem"));
+
       // Collect section boundaries for smart page breaks
       const rect = el.getBoundingClientRect();
       const sectionEls = el.querySelectorAll("header, section, footer");
@@ -70,6 +78,8 @@ export default function EPK() {
       el.style.width = origWidth;
       el.style.maxWidth = origMaxWidth;
       pdfHidden.forEach((e) => ((e as HTMLElement).style.display = ""));
+      header.style.minHeight = origMinH;
+      spacedEls.forEach((s) => ((s as HTMLElement).style.marginBottom = ""));
 
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
       const pageW = pdf.internal.pageSize.getWidth();
