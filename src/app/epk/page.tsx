@@ -49,6 +49,10 @@ export default function EPK() {
       el.style.width = "900px";
       el.style.maxWidth = "900px";
 
+      // Hide hero image and gradient for PDF (text header stays)
+      const pdfHidden = el.querySelectorAll("[data-pdf-hide]");
+      pdfHidden.forEach((e) => ((e as HTMLElement).style.display = "none"));
+
       // Collect section boundaries for smart page breaks
       const rect = el.getBoundingClientRect();
       const sectionEls = el.querySelectorAll("header, section, footer");
@@ -65,6 +69,7 @@ export default function EPK() {
 
       el.style.width = origWidth;
       el.style.maxWidth = origMaxWidth;
+      pdfHidden.forEach((e) => ((e as HTMLElement).style.display = ""));
 
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
       const pageW = pdf.internal.pageSize.getWidth();
@@ -162,24 +167,34 @@ export default function EPK() {
 
       <div ref={epkRef} className="epk-page min-h-screen bg-[#050505] text-[#f0f0f0]">
         {/* ── Hero header ── */}
-        <header className="px-10 pb-12 pt-16 sm:px-16">
-          <div className="mx-auto flex max-w-[900px] items-end justify-between">
-            <div>
-              <p className="mb-3 text-[10px] uppercase tracking-[0.4em] text-white/50">
-                Electronic Press Kit
-              </p>
-              <h1 className="-mr-[0.3em] font-mono text-6xl font-bold tracking-[0.3em] sm:text-7xl">
-                13UXZ
-              </h1>
-              <p className="-mr-[0.3em] mt-3 text-[13px] uppercase tracking-[0.3em] text-white/60">
-                {siteData.tagline}
-              </p>
-            </div>
-            <div className="hidden text-right text-[12px] leading-loose text-white/50 sm:block">
-              <p className="text-white/80">{siteData.email}</p>
-              <p>+44 7345 847418</p>
-              <p>+971 50 301 9926</p>
-              <p>13uxz.com</p>
+        <header className="relative flex min-h-[520px] items-end overflow-hidden">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            data-pdf-hide
+            src="/photos/hero.jpg"
+            alt="13uxz"
+            className="absolute inset-0 h-full w-full object-cover object-[center_10%] brightness-[0.2]"
+          />
+          <div data-pdf-hide className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
+          <div className="relative z-10 w-full px-10 pb-12 sm:px-16">
+            <div className="mx-auto flex max-w-[900px] items-end justify-between">
+              <div>
+                <p className="mb-3 text-[10px] uppercase tracking-[0.4em] text-white/50">
+                  Electronic Press Kit
+                </p>
+                <h1 className="-mr-[0.3em] font-mono text-6xl font-bold tracking-[0.3em] sm:text-7xl">
+                  13UXZ
+                </h1>
+                <p className="-mr-[0.3em] mt-3 text-[13px] uppercase tracking-[0.3em] text-white/60">
+                  {siteData.tagline}
+                </p>
+              </div>
+              <div className="hidden text-right text-[12px] leading-loose text-white/50 sm:block">
+                <p className="text-white/80">{siteData.email}</p>
+                <p>+44 7345 847418</p>
+                <p>+971 50 301 9926</p>
+                <p>13uxz.com</p>
+              </div>
             </div>
           </div>
         </header>
