@@ -211,6 +211,7 @@ export const siteData = {
       quote: "Dave attended my music production course, where he showed strong technical ability and a clear focus on sound design. He has a great ear for detail and a solid creative instinct. He's also played at my techno events, delivering well structured sets that connect with the crowd and build energy properly. Reliable, easy to work with, and committed to his craft. I'd happily recommend him for bookings.",
       name: "Kev",
       title: "DJ, Cattaree",
+      url: "https://www.instagram.com/cattareemusic/",
     },
   ],
 
