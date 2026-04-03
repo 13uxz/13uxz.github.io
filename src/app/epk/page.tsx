@@ -37,35 +37,33 @@ export default function EPK() {
     if (!epkRef.current || generating) return;
     setGenerating(true);
     try {
-      const mod = await import("html2pdf.js");
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const html2pdf = (typeof mod.default === "function" ? mod.default : mod) as any;
-      const blob = await html2pdf()
-        .set({
-          margin: 0,
-          filename: "13uxz-press-kit.pdf",
-          image: { type: "jpeg", quality: 0.95 },
-          html2canvas: {
-            scale: 2,
-            useCORS: true,
-            backgroundColor: "#050505",
-            logging: false,
-          },
-          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-          pagebreak: { mode: ["css", "legacy"] },
-        })
-        .from(epkRef.current)
-        .toPdf()
-        .output("blob");
-      // Manual download — more reliable than .save() across browsers
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "13uxz-press-kit.pdf";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(url);
+      const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
+        import("html2canvas"),
+        import("jspdf"),
+      ]);
+
+      const canvas = await html2canvas(epkRef.current, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: "#050505",
+      });
+
+      const imgData = canvas.toDataURL("image/jpeg", 0.95);
+      const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
+
+      const pageW = pdf.internal.pageSize.getWidth();
+      const pageH = pdf.internal.pageSize.getHeight();
+      const imgW = pageW;
+      const imgH = (canvas.height * imgW) / canvas.width;
+
+      let y = 0;
+      while (y < imgH) {
+        if (y > 0) pdf.addPage();
+        pdf.addImage(imgData, "JPEG", 0, -y, imgW, imgH);
+        y += pageH;
+      }
+
+      pdf.save("13uxz-press-kit.pdf");
     } catch (err) {
       console.error("PDF generation failed:", err);
       alert("PDF generation failed. Please try again.");
