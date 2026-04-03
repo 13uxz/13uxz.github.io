@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import Image from "next/image";
 import { siteData } from "@/data/siteData";
 import {
   SpotifyIcon,
@@ -56,6 +55,9 @@ export default function EPK() {
         })
         .from(epkRef.current)
         .save();
+    } catch (err) {
+      console.error("PDF generation failed:", err);
+      alert("PDF generation failed. Please try again.");
     } finally {
       setGenerating(false);
     }
@@ -64,7 +66,7 @@ export default function EPK() {
   return (
     <>
       {/* Floating controls */}
-      <div className="fixed right-6 top-6 z-50 flex gap-3 print:hidden">
+      <div className="fixed right-6 top-6 z-50 flex gap-3">
         <a
           href="/"
           className="border border-white/20 bg-black/60 px-5 py-2.5 text-[11px] uppercase tracking-[0.15em] text-white backdrop-blur-xl transition-all hover:border-white/40 hover:bg-black/80"
@@ -83,12 +85,11 @@ export default function EPK() {
       <div ref={epkRef} className="epk-page min-h-screen bg-[#050505] text-[#f0f0f0]">
         {/* ── Hero header ── */}
         <header className="relative flex min-h-[420px] items-end overflow-hidden">
-          <Image
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src="/photos/hero.jpg"
             alt="13uxz"
-            fill
-            className="object-cover object-top brightness-[0.2]"
-            priority
+            className="absolute inset-0 h-full w-full object-cover object-top brightness-[0.2]"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
           <div className="relative z-10 w-full px-10 pb-12 sm:px-16">
@@ -119,11 +120,11 @@ export default function EPK() {
           {/* Photo + Bio */}
           <section className="mb-16 grid gap-10 sm:grid-cols-[260px_1fr]">
             <div className="relative aspect-[3/4] overflow-hidden">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src="/photos/press-hoodie.webp"
                 alt="13uxz press photo"
-                fill
-                className="object-cover object-top"
+                className="absolute inset-0 h-full w-full object-cover object-top"
               />
             </div>
             <div>
@@ -237,11 +238,11 @@ export default function EPK() {
             <div className="grid grid-cols-3 gap-2">
               {siteData.photos.slice(0, 6).map((photo, i) => (
                 <div key={i} className="relative aspect-square overflow-hidden">
-                  <Image
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
                     src={photo.src}
                     alt={photo.alt}
-                    fill
-                    className={`object-cover ${"position" in photo ? photo.position : "object-center"}`}
+                    className={`absolute inset-0 h-full w-full object-cover ${"position" in photo ? photo.position : "object-center"}`}
                   />
                 </div>
               ))}
@@ -273,11 +274,11 @@ export default function EPK() {
                     </div>
                     {"logo" in t && t.logo && (
                       <div className="relative h-5 w-16 shrink-0">
-                        <Image
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
                           src={t.logo}
                           alt={t.title}
-                          fill
-                          className="object-contain brightness-0 invert opacity-40"
+                          className="absolute inset-0 h-full w-full object-contain brightness-0 invert opacity-40"
                         />
                       </div>
                     )}
