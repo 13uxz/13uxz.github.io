@@ -197,7 +197,7 @@ export const siteData = {
     {
       quote: "DJ David is one of the most refined and sophisticated DJs I've worked with. His music selection, timing, and ability to read the room were perfectly aligned with our restaurant's mood, delivering both elegance and energy at the highest level.",
       name: "Jeet Verma",
-      title: "Beverage Manager, LSL Capital",
+      title: "Bar Manager, LSL Capital",
       nameUrl: "https://www.instagram.com/flavour_designer/",
       logo: "/logos/lsl-capital.svg",
       url: "https://lslcapital.com/",
