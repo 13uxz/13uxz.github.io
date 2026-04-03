@@ -68,7 +68,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/13uxz-press-kit.pdf" download
+            href="/epk"
             className="flex items-center gap-1.5 text-[13px] uppercase tracking-[0.15em] text-white transition-opacity duration-300 hover:opacity-70"
           >
             <DownloadIcon />
@@ -150,7 +150,7 @@ export default function Navbar() {
           ))}
           <span className="h-px w-full bg-border" />
           <a
-            href="/13uxz-press-kit.pdf" download
+            href="/epk"
             onClick={() => setOpen(false)}
             className="flex items-center justify-end gap-1.5 text-[13px] uppercase tracking-[0.15em] text-white transition-opacity hover:opacity-70"
           >
