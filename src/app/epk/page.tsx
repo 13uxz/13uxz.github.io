@@ -49,6 +49,13 @@ export default function EPK() {
       el.style.width = "900px";
       el.style.maxWidth = "900px";
 
+      // Collect section boundaries for smart page breaks
+      const rect = el.getBoundingClientRect();
+      const sectionEls = el.querySelectorAll("header, section, footer");
+      const breakpoints = Array.from(sectionEls).map(
+        (s) => Math.round((s as HTMLElement).getBoundingClientRect().top - rect.top)
+      );
+
       const canvas = await html2canvas(el, {
         scale: 2,
         useCORS: true,
@@ -59,19 +66,58 @@ export default function EPK() {
       el.style.width = origWidth;
       el.style.maxWidth = origMaxWidth;
 
-      const imgData = canvas.toDataURL("image/jpeg", 0.95);
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
-
       const pageW = pdf.internal.pageSize.getWidth();
       const pageH = pdf.internal.pageSize.getHeight();
-      const imgW = pageW;
-      const imgH = (canvas.height * imgW) / canvas.width;
+      const elW = 900;
+      const pxPerMm = elW / pageW;
+      const pageHeightPx = pageH * pxPerMm;
+      const totalPx = el.scrollHeight;
+      const canvasScale = canvas.width / elW;
 
-      let y = 0;
-      while (y < imgH) {
-        if (y > 0) pdf.addPage();
-        pdf.addImage(imgData, "JPEG", 0, -y, imgW, imgH);
-        y += pageH;
+      // Build page slices that break at section boundaries
+      const slices: [number, number][] = [];
+      let cursor = 0;
+      while (cursor < totalPx) {
+        let end = cursor + pageHeightPx;
+        if (end >= totalPx) {
+          slices.push([cursor, totalPx]);
+          break;
+        }
+        // Find the last section boundary before `end`
+        let best = end;
+        for (let i = breakpoints.length - 1; i >= 0; i--) {
+          if (breakpoints[i] <= end && breakpoints[i] > cursor) {
+            best = breakpoints[i];
+            break;
+          }
+        }
+        slices.push([cursor, best]);
+        cursor = best;
+      }
+
+      // Render each slice to its own PDF page
+      for (let i = 0; i < slices.length; i++) {
+        if (i > 0) pdf.addPage();
+        const [startPx, endPx] = slices[i];
+        const sliceH = endPx - startPx;
+        const startCanvas = Math.round(startPx * canvasScale);
+        const sliceHCanvas = Math.round(sliceH * canvasScale);
+
+        const pageCanvas = document.createElement("canvas");
+        pageCanvas.width = canvas.width;
+        pageCanvas.height = sliceHCanvas;
+        const ctx = pageCanvas.getContext("2d")!;
+        ctx.fillStyle = "#050505";
+        ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
+        ctx.drawImage(
+          canvas,
+          0, startCanvas, canvas.width, sliceHCanvas,
+          0, 0, canvas.width, sliceHCanvas
+        );
+
+        const imgData = pageCanvas.toDataURL("image/jpeg", 0.95);
+        pdf.addImage(imgData, "JPEG", 0, 0, pageW, sliceH / pxPerMm);
       }
 
       pdf.save("13uxz-press-kit.pdf");
