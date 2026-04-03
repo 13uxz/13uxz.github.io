@@ -1,5 +1,6 @@
 "use client";
 
+import { useRef, useState } from "react";
 import Image from "next/image";
 import { siteData } from "@/data/siteData";
 import {
@@ -30,6 +31,36 @@ const highlights = [
 const labels = siteData.labels.map((l) => l.name);
 
 export default function EPK() {
+  const epkRef = useRef<HTMLDivElement>(null);
+  const [generating, setGenerating] = useState(false);
+
+  async function handleDownload() {
+    if (!epkRef.current || generating) return;
+    setGenerating(true);
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const html2pdf = (await import("html2pdf.js")).default as any;
+      await html2pdf()
+        .set({
+          margin: 0,
+          filename: "13uxz-press-kit.pdf",
+          image: { type: "jpeg", quality: 0.95 },
+          html2canvas: {
+            scale: 2,
+            useCORS: true,
+            backgroundColor: "#050505",
+            logging: false,
+          },
+          jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
+          pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+        })
+        .from(epkRef.current)
+        .save();
+    } finally {
+      setGenerating(false);
+    }
+  }
+
   return (
     <>
       {/* Floating controls */}
@@ -41,16 +72,17 @@ export default function EPK() {
           Back to site
         </a>
         <button
-          onClick={() => window.print()}
-          className="bg-white px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-black transition-opacity hover:opacity-80"
+          onClick={handleDownload}
+          disabled={generating}
+          className="bg-white px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-black transition-opacity hover:opacity-80 disabled:opacity-50"
         >
-          Download PDF
+          {generating ? "Generating..." : "Download PDF"}
         </button>
       </div>
 
-      <div className="epk-page min-h-screen bg-[#050505] text-[#f0f0f0]">
+      <div ref={epkRef} className="epk-page min-h-screen bg-[#050505] text-[#f0f0f0]">
         {/* ── Hero header ── */}
-        <header className="relative flex min-h-[420px] items-end overflow-hidden print:min-h-[320px]">
+        <header className="relative flex min-h-[420px] items-end overflow-hidden">
           <Image
             src="/photos/hero.jpg"
             alt="13uxz"
@@ -59,7 +91,7 @@ export default function EPK() {
             priority
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
-          <div className="relative z-10 w-full px-10 pb-12 sm:px-16 print:px-10">
+          <div className="relative z-10 w-full px-10 pb-12 sm:px-16">
             <div className="mx-auto flex max-w-[900px] items-end justify-between">
               <div>
                 <p className="mb-3 text-[10px] uppercase tracking-[0.4em] text-white/50">
@@ -83,9 +115,9 @@ export default function EPK() {
         </header>
 
         {/* ── Content ── */}
-        <div className="mx-auto max-w-[900px] px-10 py-16 sm:px-16 print:px-10 print:py-10">
+        <div className="mx-auto max-w-[900px] px-10 py-16 sm:px-16">
           {/* Photo + Bio */}
-          <section className="mb-16 grid gap-10 sm:grid-cols-[260px_1fr] print:mb-12">
+          <section className="mb-16 grid gap-10 sm:grid-cols-[260px_1fr]">
             <div className="relative aspect-[3/4] overflow-hidden">
               <Image
                 src="/photos/press-hoodie.webp"
@@ -96,19 +128,18 @@ export default function EPK() {
             </div>
             <div>
               <SectionLabel>Biography</SectionLabel>
-              <p className="mb-4 text-[13px] leading-[1.85] text-white/70">
-                {siteData.bio[0]}
-              </p>
-              <p className="text-[13px] leading-[1.85] text-white/70">
-                {siteData.bio[1]}
-              </p>
+              {siteData.bio.map((paragraph, i) => (
+                <p key={i} className="mb-4 text-[13px] leading-[1.85] text-white/70 last:mb-0">
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </section>
 
           <Divider />
 
           {/* Highlights + Labels */}
-          <section className="mb-16 grid gap-10 sm:grid-cols-2 print:mb-12">
+          <section className="mb-16 grid gap-10 sm:grid-cols-2">
             <div>
               <SectionLabel>Key Highlights</SectionLabel>
               <ul className="space-y-2.5">
@@ -142,7 +173,7 @@ export default function EPK() {
           <Divider />
 
           {/* Genres */}
-          <section className="mb-16 print:mb-12">
+          <section className="mb-16">
             <SectionLabel>Genres</SectionLabel>
             <div className="flex flex-wrap gap-3">
               {["Afrohouse", "Latin House", "Melodic House & Techno", "Organic House", "Progressive", "Techno"].map((g) => (
@@ -159,7 +190,7 @@ export default function EPK() {
           <Divider />
 
           {/* Brands & Residencies */}
-          <section className="mb-16 print:mb-12">
+          <section className="mb-16">
             <SectionLabel>Brands & Residencies</SectionLabel>
             <div className="grid gap-8 sm:grid-cols-2">
               {siteData.brands.map((brand) => (
@@ -201,7 +232,7 @@ export default function EPK() {
           <Divider />
 
           {/* Gallery */}
-          <section className="mb-16 print:mb-12">
+          <section className="mb-16">
             <SectionLabel>Gallery</SectionLabel>
             <div className="grid grid-cols-3 gap-2">
               {siteData.photos.slice(0, 6).map((photo, i) => (
@@ -220,7 +251,7 @@ export default function EPK() {
           <Divider />
 
           {/* Testimonials */}
-          <section className="mb-16 print:mb-12">
+          <section className="mb-16">
             <SectionLabel>Testimonials</SectionLabel>
             <div className="space-y-8">
               {siteData.testimonials.map((t) => (
@@ -259,7 +290,7 @@ export default function EPK() {
           <Divider />
 
           {/* Discography */}
-          <section className="mb-16 print:mb-12">
+          <section className="mb-16">
             <SectionLabel>Discography</SectionLabel>
             <div className="space-y-8">
               {siteData.releasesByGenre.map((group) => (
@@ -290,7 +321,7 @@ export default function EPK() {
           <Divider />
 
           {/* Links + Contact */}
-          <section className="mb-16 grid gap-10 sm:grid-cols-2 print:mb-12">
+          <section className="mb-16 grid gap-10 sm:grid-cols-2">
             <div>
               <SectionLabel>Links</SectionLabel>
               <div className="flex flex-wrap gap-4">
@@ -302,7 +333,7 @@ export default function EPK() {
                       href={url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 border border-white/10 bg-white/[0.03] px-4 py-2.5 text-[12px] capitalize tracking-wide text-white/70 transition-all hover:border-white/30 hover:text-white print:hover:border-white/10 print:hover:text-white/70"
+                      className="flex items-center gap-2 border border-white/10 bg-white/[0.03] px-4 py-2.5 text-[12px] capitalize tracking-wide text-white/70 transition-all hover:border-white/30 hover:text-white"
                     >
                       {Icon && <Icon />}
                       {key}
@@ -348,33 +379,6 @@ export default function EPK() {
           </footer>
         </div>
       </div>
-
-      {/* Print styles — dark theme preserved */}
-      <style jsx global>{`
-        @media print {
-          body {
-            background: #050505 !important;
-            color: #f0f0f0 !important;
-            -webkit-print-color-adjust: exact !important;
-            print-color-adjust: exact !important;
-            color-adjust: exact !important;
-          }
-          .epk-page {
-            background: #050505 !important;
-          }
-          @page {
-            margin: 0.4in;
-            size: A4;
-          }
-          /* Avoid orphaned sections */
-          section {
-            break-inside: avoid;
-          }
-          blockquote {
-            break-inside: avoid;
-          }
-        }
-      `}</style>
     </>
   );
 }
@@ -390,7 +394,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
 }
 
 function Divider() {
-  return <div className="mb-16 h-px bg-white/[0.06] print:mb-12" />;
+  return <div className="mb-16 h-px bg-white/[0.06]" />;
 }
 
 function ContactLine({
@@ -412,7 +416,7 @@ function ContactLine({
       <a
         href={href}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-        className="text-white/70 underline decoration-white/20 underline-offset-2 transition-colors hover:text-white print:hover:text-white/70"
+        className="text-white/70 underline decoration-white/20 underline-offset-2 transition-colors hover:text-white"
       >
         {children}
       </a>
