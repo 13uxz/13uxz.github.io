@@ -37,9 +37,10 @@ export default function EPK() {
     if (!epkRef.current || generating) return;
     setGenerating(true);
     try {
+      const mod = await import("html2pdf.js");
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const html2pdf = (await import("html2pdf.js")).default as any;
-      await html2pdf()
+      const html2pdf = (typeof mod.default === "function" ? mod.default : mod) as any;
+      const blob = await html2pdf()
         .set({
           margin: 0,
           filename: "13uxz-press-kit.pdf",
@@ -51,10 +52,20 @@ export default function EPK() {
             logging: false,
           },
           jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-          pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+          pagebreak: { mode: ["css", "legacy"] },
         })
         .from(epkRef.current)
-        .save();
+        .toPdf()
+        .output("blob");
+      // Manual download — more reliable than .save() across browsers
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "13uxz-press-kit.pdf";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
     } catch (err) {
       console.error("PDF generation failed:", err);
       alert("PDF generation failed. Please try again.");
@@ -176,11 +187,11 @@ export default function EPK() {
           {/* Genres */}
           <section className="mb-16">
             <SectionLabel>Genres</SectionLabel>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="grid grid-cols-4 gap-3">
               {["Afrohouse", "Funky House", "Latin House", "Melodic House & Techno", "Nu Disco", "Organic House", "Progressive", "Techno"].map((g) => (
                 <span
                   key={g}
-                  className="border border-white/10 bg-white/[0.03] px-4 py-2 text-[12px] tracking-wide text-white/60"
+                  className="border border-white/10 bg-white/[0.03] px-4 py-2 text-center text-[12px] tracking-wide text-white/60"
                 >
                   {g}
                 </span>
