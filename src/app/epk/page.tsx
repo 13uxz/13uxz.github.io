@@ -162,33 +162,24 @@ export default function EPK() {
 
       <div ref={epkRef} className="epk-page min-h-screen bg-[#050505] text-[#f0f0f0]">
         {/* ── Hero header ── */}
-        <header className="relative flex min-h-[520px] items-end overflow-hidden">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/photos/hero.jpg"
-            alt="13uxz"
-            className="absolute inset-0 h-full w-full object-cover object-[center_10%] brightness-[0.2]"
-          />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
-          <div className="relative z-10 w-full px-10 pb-12 sm:px-16">
-            <div className="mx-auto flex max-w-[900px] items-end justify-between">
-              <div>
-                <p className="mb-3 text-[10px] uppercase tracking-[0.4em] text-white/50">
-                  Electronic Press Kit
-                </p>
-                <h1 className="-mr-[0.3em] font-mono text-6xl font-bold tracking-[0.3em] sm:text-7xl">
-                  13UXZ
-                </h1>
-                <p className="-mr-[0.3em] mt-3 text-[13px] uppercase tracking-[0.3em] text-white/60">
-                  {siteData.tagline}
-                </p>
-              </div>
-              <div className="hidden text-right text-[12px] leading-loose text-white/50 sm:block">
-                <p className="text-white/80">{siteData.email}</p>
-                <p>+44 7345 847418</p>
-                <p>+971 50 301 9926</p>
-                <p>13uxz.com</p>
-              </div>
+        <header className="px-10 pb-12 pt-16 sm:px-16">
+          <div className="mx-auto flex max-w-[900px] items-end justify-between">
+            <div>
+              <p className="mb-3 text-[10px] uppercase tracking-[0.4em] text-white/50">
+                Electronic Press Kit
+              </p>
+              <h1 className="-mr-[0.3em] font-mono text-6xl font-bold tracking-[0.3em] sm:text-7xl">
+                13UXZ
+              </h1>
+              <p className="-mr-[0.3em] mt-3 text-[13px] uppercase tracking-[0.3em] text-white/60">
+                {siteData.tagline}
+              </p>
+            </div>
+            <div className="hidden text-right text-[12px] leading-loose text-white/50 sm:block">
+              <p className="text-white/80">{siteData.email}</p>
+              <p>+44 7345 847418</p>
+              <p>+971 50 301 9926</p>
+              <p>13uxz.com</p>
             </div>
           </div>
         </header>
