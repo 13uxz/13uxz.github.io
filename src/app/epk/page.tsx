@@ -74,6 +74,7 @@ export default function EPK() {
               </div>
               <div className="hidden text-right text-[12px] leading-loose text-white/50 sm:block">
                 <p className="text-white/80">{siteData.email}</p>
+                <p>+971 50 301 9926</p>
                 <p>+44 7345 847418</p>
                 <p>13uxz.com</p>
               </div>
@@ -315,6 +316,9 @@ export default function EPK() {
               <div className="space-y-3 text-[13px]">
                 <ContactLine label="Email" href={`mailto:${siteData.email}`}>
                   {siteData.email}
+                </ContactLine>
+                <ContactLine label="UAE" href="tel:+971503019926">
+                  +971 50 301 9926
                 </ContactLine>
                 <ContactLine label="UK" href="tel:+447345847418">
                   +44 7345 847418
