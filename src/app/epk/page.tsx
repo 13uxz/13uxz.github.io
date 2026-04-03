@@ -278,7 +278,8 @@ export default function EPK() {
                         <img
                           src={t.logo}
                           alt={t.title}
-                          className="absolute inset-0 h-full w-full object-contain brightness-0 invert opacity-40"
+                          style={{ filter: "brightness(0) invert(1)" }}
+                          className="absolute inset-0 h-full w-full object-contain opacity-40"
                         />
                       </div>
                     )}
