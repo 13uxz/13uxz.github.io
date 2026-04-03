@@ -263,26 +263,13 @@ export default function EPK() {
                   <p className="text-[13px] leading-[1.85] text-white/60 italic">
                     &ldquo;{t.quote}&rdquo;
                   </p>
-                  <footer className="mt-3 flex items-center gap-3">
-                    <div>
-                      <span className="text-[13px] font-medium text-white/90">
-                        {t.name}
-                      </span>
-                      <span className="ml-2 text-[11px] text-white/40">
-                        {t.title}
-                      </span>
-                    </div>
-                    {"logo" in t && t.logo && (
-                      <div className="relative h-5 w-16 shrink-0">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={t.logo}
-                          alt={t.title}
-                          style={{ filter: "brightness(0) invert(1)" }}
-                          className="absolute inset-0 h-full w-full object-contain opacity-40"
-                        />
-                      </div>
-                    )}
+                  <footer className="mt-3">
+                    <span className="text-[13px] font-medium text-white/90">
+                      {t.name}
+                    </span>
+                    <span className="ml-2 text-[11px] text-white/40">
+                      {t.title}
+                    </span>
                   </footer>
                 </blockquote>
               ))}
