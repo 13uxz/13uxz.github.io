@@ -67,7 +67,7 @@ export default function Footer() {
             <EmailIcon />
           </a>
           <a
-            href="https://wa.me/971503019926"
+            href="https://wa.me/447345847418"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white transition-opacity duration-300 hover:opacity-70"
