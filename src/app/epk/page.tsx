@@ -42,11 +42,22 @@ export default function EPK() {
         import("jspdf"),
       ]);
 
-      const canvas = await html2canvas(epkRef.current, {
+      // Constrain to a fixed width so text is readable on A4
+      const el = epkRef.current;
+      const origWidth = el.style.width;
+      const origMaxWidth = el.style.maxWidth;
+      el.style.width = "900px";
+      el.style.maxWidth = "900px";
+
+      const canvas = await html2canvas(el, {
         scale: 2,
         useCORS: true,
         backgroundColor: "#050505",
+        width: 900,
       });
+
+      el.style.width = origWidth;
+      el.style.maxWidth = origMaxWidth;
 
       const imgData = canvas.toDataURL("image/jpeg", 0.95);
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
@@ -128,12 +139,12 @@ export default function EPK() {
         <div className="mx-auto max-w-[900px] px-10 py-16 sm:px-16">
           {/* Photo + Bio */}
           <section className="mb-16 grid gap-10 sm:grid-cols-[260px_1fr]">
-            <div className="relative aspect-[3/4] overflow-hidden">
+            <div className="relative aspect-[2/3] overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/photos/press-hoodie.webp"
                 alt="13uxz press photo"
-                className="absolute inset-0 h-full w-full object-cover object-top"
+                className="absolute inset-0 h-full w-full object-cover object-[center_15%]"
               />
             </div>
             <div>
