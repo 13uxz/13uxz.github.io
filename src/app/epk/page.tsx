@@ -76,10 +76,14 @@ export default function EPK() {
       const canvasScale = canvas.width / elW;
 
       // Build page slices that break at section boundaries
+      const marginPx = 10 * pxPerMm; // top margin for continuation pages
       const slices: [number, number][] = [];
       let cursor = 0;
+      let isFirst = true;
       while (cursor < totalPx) {
-        let end = cursor + pageHeightPx;
+        const available = isFirst ? pageHeightPx : pageHeightPx - marginPx;
+        let end = cursor + available;
+        isFirst = false;
         if (end >= totalPx) {
           slices.push([cursor, totalPx]);
           break;
@@ -97,6 +101,8 @@ export default function EPK() {
       }
 
       // Render each slice to its own PDF page
+      const marginMm = 10; // top/bottom margin for continuation pages
+
       for (let i = 0; i < slices.length; i++) {
         if (i > 0) pdf.addPage();
 
@@ -122,7 +128,8 @@ export default function EPK() {
         );
 
         const imgData = pageCanvas.toDataURL("image/jpeg", 0.95);
-        pdf.addImage(imgData, "JPEG", 0, 0, pageW, sliceH / pxPerMm);
+        const yOffset = i > 0 ? marginMm : 0;
+        pdf.addImage(imgData, "JPEG", 0, yOffset, pageW, sliceH / pxPerMm);
       }
 
       pdf.save("13uxz-press-kit.pdf");
@@ -155,12 +162,12 @@ export default function EPK() {
 
       <div ref={epkRef} className="epk-page min-h-screen bg-[#050505] text-[#f0f0f0]">
         {/* ── Hero header ── */}
-        <header className="relative flex min-h-[420px] items-end overflow-hidden">
+        <header className="relative flex min-h-[520px] items-end overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/photos/hero.jpg"
             alt="13uxz"
-            className="absolute inset-0 h-full w-full object-cover object-[center_25%] brightness-[0.2]"
+            className="absolute inset-0 h-full w-full object-cover object-[center_10%] brightness-[0.2]"
           />
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
           <div className="relative z-10 w-full px-10 pb-12 sm:px-16">
