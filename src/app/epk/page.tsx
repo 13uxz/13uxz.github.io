@@ -66,7 +66,7 @@ export default function EPK() {
       pdf.save("13uxz-press-kit.pdf");
     } catch (err) {
       console.error("PDF generation failed:", err);
-      alert("PDF generation failed. Please try again.");
+      alert("PDF generation failed: " + (err instanceof Error ? err.message : String(err)));
     } finally {
       setGenerating(false);
     }
