@@ -53,20 +53,23 @@ export default function EPK() {
       const pdfHidden = el.querySelectorAll("[data-pdf-hide]");
       pdfHidden.forEach((e) => ((e as HTMLElement).style.display = "none"));
 
-      // Collapse hero height and tighten section spacing for PDF
+      // Collapse hero height and tighten all spacing for PDF
       const header = el.querySelector("header") as HTMLElement;
       const origMinH = header.style.minHeight;
       header.style.minHeight = "auto";
+      header.style.paddingTop = "2rem";
+      header.style.paddingBottom = "1.5rem";
 
-      const spacedEls = el.querySelectorAll("section, .mb-16");
-      spacedEls.forEach((s) => ((s as HTMLElement).style.marginBottom = "2rem"));
+      const contentWrap = el.querySelector("header + div") as HTMLElement;
+      const origPy = contentWrap.style.paddingTop;
+      contentWrap.style.paddingTop = "1rem";
+      contentWrap.style.paddingBottom = "1rem";
 
-      // Collect section boundaries for smart page breaks
-      const rect = el.getBoundingClientRect();
-      const sectionEls = el.querySelectorAll("header, section, footer");
-      const breakpoints = Array.from(sectionEls).map(
-        (s) => Math.round((s as HTMLElement).getBoundingClientRect().top - rect.top)
-      );
+      const allEls = el.querySelectorAll("section, section + div, h2");
+      allEls.forEach((s) => {
+        const h = s as HTMLElement;
+        h.style.marginBottom = "1rem";
+      });
 
       const canvas = await html2canvas(el, {
         scale: 2,
@@ -79,72 +82,31 @@ export default function EPK() {
       el.style.maxWidth = origMaxWidth;
       pdfHidden.forEach((e) => ((e as HTMLElement).style.display = ""));
       header.style.minHeight = origMinH;
-      spacedEls.forEach((s) => ((s as HTMLElement).style.marginBottom = ""));
+      header.style.paddingTop = "";
+      header.style.paddingBottom = "";
+      contentWrap.style.paddingTop = origPy;
+      contentWrap.style.paddingBottom = "";
+      allEls.forEach((s) => ((s as HTMLElement).style.marginBottom = ""));
 
       const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
       const pageW = pdf.internal.pageSize.getWidth();
       const pageH = pdf.internal.pageSize.getHeight();
-      const elW = 900;
-      const pxPerMm = elW / pageW;
-      const pageHeightPx = pageH * pxPerMm;
-      const totalPx = el.scrollHeight;
-      const canvasScale = canvas.width / elW;
 
-      // Build page slices that break at section boundaries
-      const marginPx = 10 * pxPerMm; // top margin for continuation pages
-      const slices: [number, number][] = [];
-      let cursor = 0;
-      let isFirst = true;
-      while (cursor < totalPx) {
-        const available = isFirst ? pageHeightPx : pageHeightPx - marginPx;
-        let end = cursor + available;
-        isFirst = false;
-        if (end >= totalPx) {
-          slices.push([cursor, totalPx]);
-          break;
-        }
-        // Find the last section boundary before `end`
-        let best = end;
-        for (let i = breakpoints.length - 1; i >= 0; i--) {
-          if (breakpoints[i] <= end && breakpoints[i] > cursor) {
-            best = breakpoints[i];
-            break;
-          }
-        }
-        slices.push([cursor, best]);
-        cursor = best;
-      }
+      // Simple fixed-interval page slicing — pack content tightly
+      const imgData = canvas.toDataURL("image/jpeg", 0.95);
+      const imgW = pageW;
+      const imgH = (canvas.height * imgW) / canvas.width;
 
-      // Render each slice to its own PDF page
-      const marginMm = 10; // top/bottom margin for continuation pages
-
-      for (let i = 0; i < slices.length; i++) {
-        if (i > 0) pdf.addPage();
+      let y = 0;
+      while (y < imgH) {
+        if (y > 0) pdf.addPage();
 
         // Fill entire PDF page black to prevent white gaps
         pdf.setFillColor(5, 5, 5);
         pdf.rect(0, 0, pageW, pageH, "F");
 
-        const [startPx, endPx] = slices[i];
-        const sliceH = endPx - startPx;
-        const startCanvas = Math.round(startPx * canvasScale);
-        const sliceHCanvas = Math.round(sliceH * canvasScale);
-
-        const pageCanvas = document.createElement("canvas");
-        pageCanvas.width = canvas.width;
-        pageCanvas.height = sliceHCanvas;
-        const ctx = pageCanvas.getContext("2d")!;
-        ctx.fillStyle = "#050505";
-        ctx.fillRect(0, 0, pageCanvas.width, pageCanvas.height);
-        ctx.drawImage(
-          canvas,
-          0, startCanvas, canvas.width, sliceHCanvas,
-          0, 0, canvas.width, sliceHCanvas
-        );
-
-        const imgData = pageCanvas.toDataURL("image/jpeg", 0.95);
-        const yOffset = i > 0 ? marginMm : 0;
-        pdf.addImage(imgData, "JPEG", 0, yOffset, pageW, sliceH / pxPerMm);
+        pdf.addImage(imgData, "JPEG", 0, -y, imgW, imgH);
+        y += pageH;
       }
 
       pdf.save("13uxz-press-kit.pdf");
