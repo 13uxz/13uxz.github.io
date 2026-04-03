@@ -160,11 +160,10 @@ export const siteData = {
       url: "https://www.blackspoon.me/",
     },
     {
-      quote: "Dave '13uxz' Buckley is an exceptionally talented DJ and producer I've had the pleasure of collaborating with. He's one of the most driven and hardworking artists I've come across, with a constant hunger to learn, connect, and create. He's already delivered one of our standout releases of 2025 on my label, with more strong material on the way. Beyond music, Dave is a person of great character, thoughtful, insightful, and deeply dedicated to his craft. He has all the makings of an artist with limitless potential and a wonderful future ahead.",
-      name: "Aritra 'ARIII' Dasgupta",
-      title: "Label Founder, Dyno Music Records",
-      logo: "/logos/dyno-records.jpg",
-      url: "https://www.officialdynorecords.com/",
+      quote: "Sharing the stage with 13uxz was a great experience. As a percussionist, I really value his musical sensitivity and his ability to connect with the audience in real time. The dynamic between DJ and percussionist is really important and flowed naturally, making every performance feel authentic and full of energy.",
+      name: "Osmany Ramirez Varona",
+      title: "Percussionist, Miti Percussion",
+      url: "https://www.instagram.com/miti_percussion/",
     },
     {
       quote: "13UXZ has been a huge part of the journey at Sounds by AKS. From early on, he played a big role in shaping the energy and identity of the brand. His creative style, fresh selection of music, and especially his own productions really stood out and connected strongly with our audience. He brought a unique sound to the floor and consistently delivered sets that people remembered. Artists like him are a big reason Sounds by AKS has grown into what it is today.",
@@ -174,11 +173,17 @@ export const siteData = {
       url: "https://www.instagram.com/soundsbyaks/",
     },
     {
-      quote: "DJ David is one of the most refined and sophisticated DJs I've worked with. His music selection, timing, and ability to read the room were perfectly aligned with our restaurant's mood, delivering both elegance and energy at the highest level.",
-      name: "Jeet Verma",
-      title: "Beverage Manager, LSL Capital",
-      logo: "/logos/lsl-capital.svg",
-      url: "https://lslcapital.com/",
+      quote: "Dave attended my music production course, where he showed strong technical ability and a clear focus on sound design. He has a great ear for detail and a solid creative instinct. He's also played at my techno events, delivering well structured sets that connect with the crowd and build energy properly. Reliable, easy to work with, and committed to his craft. I'd happily recommend him for bookings.",
+      name: "Kevisen",
+      title: "DJ, Cattaree",
+      url: "https://www.instagram.com/cattareemusic/",
+    },
+    {
+      quote: "Dave '13uxz' Buckley is an exceptionally talented DJ and producer I've had the pleasure of collaborating with. He's one of the most driven and hardworking artists I've come across, with a constant hunger to learn, connect, and create. He's already delivered one of our standout releases of 2025 on my label, with more strong material on the way. Beyond music, Dave is a person of great character, thoughtful, insightful, and deeply dedicated to his craft. He has all the makings of an artist with limitless potential and a wonderful future ahead.",
+      name: "Aritra 'ARIII' Dasgupta",
+      title: "Label Founder, Dyno Music Records",
+      logo: "/logos/dyno-records.jpg",
+      url: "https://www.officialdynorecords.com/",
     },
     {
       quote: "I've worked with many artists and DJs over the years, but DJ David stands out. He has a deep understanding of atmosphere and knows exactly what vibe to create, backed by an immense knowledge of music. He reads the motion and flow of any event or restaurant setting and plays accordingly, consistently earning appreciation from guests and colleagues alike.",
@@ -186,6 +191,13 @@ export const siteData = {
       title: "Restaurant Manager, Jamavar Dubai",
       logo: "/logos/jamavar.svg",
       url: "https://jamavarrestaurants.com/indian-restaurant-dubai/",
+    },
+    {
+      quote: "DJ David is one of the most refined and sophisticated DJs I've worked with. His music selection, timing, and ability to read the room were perfectly aligned with our restaurant's mood, delivering both elegance and energy at the highest level.",
+      name: "Jeet Verma",
+      title: "Beverage Manager, LSL Capital",
+      logo: "/logos/lsl-capital.svg",
+      url: "https://lslcapital.com/",
     },
     {
       quote: "DJ David brings the perfect combination of professional communication, an ability to read the room, and was always comfortable with different audiences. Respected by everyone at Masti, guests always commented on his performances and we were sad to see him leave.",
@@ -200,18 +212,6 @@ export const siteData = {
       title: "Partner, Mais Musica",
       logo: "/logos/mais-musica.jpg",
       url: "https://www.maismusica.ae/",
-    },
-    {
-      quote: "Sharing the stage with 13uxz was a great experience. As a percussionist, I really value his musical sensitivity and his ability to connect with the audience in real time. The dynamic between DJ and percussionist is really important and flowed naturally, making every performance feel authentic and full of energy.",
-      name: "Osmany Ramirez Varona",
-      title: "Percussionist, Miti Percussion",
-      url: "https://www.instagram.com/miti_percussion/",
-    },
-    {
-      quote: "Dave attended my music production course, where he showed strong technical ability and a clear focus on sound design. He has a great ear for detail and a solid creative instinct. He's also played at my techno events, delivering well structured sets that connect with the crowd and build energy properly. Reliable, easy to work with, and committed to his craft. I'd happily recommend him for bookings.",
-      name: "Kevisen",
-      title: "DJ, Cattaree",
-      url: "https://www.instagram.com/cattareemusic/",
     },
   ],
 
