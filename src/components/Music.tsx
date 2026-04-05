@@ -93,14 +93,32 @@ export default function Music() {
           <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
             Mixes
           </p>
-          <iframe
-            width="100%"
-            height="400"
-            src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fplaylists%2Flounge-and-rooftop-series%2F"
-            frameBorder="0"
-            allow="autoplay"
-            title="13uxz Lounge & Rooftop Series on Mixcloud"
-          />
+          <div className="space-y-6">
+            <iframe
+              width="100%"
+              height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fafro-latin-rooftop-sessions%2F"
+              frameBorder="0"
+              allow="autoplay"
+              title="Afro Latin Rooftop Sessions on Mixcloud"
+            />
+            <iframe
+              width="100%"
+              height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Ffunky-disco-lounge-set%2F"
+              frameBorder="0"
+              allow="autoplay"
+              title="Funky Disco Lounge Set on Mixcloud"
+            />
+            <iframe
+              width="100%"
+              height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fafro-organic-lounge%2F"
+              frameBorder="0"
+              allow="autoplay"
+              title="Afro Organic Lounge on Mixcloud"
+            />
+          </div>
         </div>
 
         {/* Productions — SoundCloud */}
