@@ -41,7 +41,27 @@ export default function Testimonials() {
                     {t.title}
                   </span>
                 </div>
-                {"logo" in t && (
+                {"logos" in t ? (
+                  <div className="flex items-center gap-6">
+                    {t.logos.map((l: { src: string; url: string }) => (
+                      <a
+                        key={l.src}
+                        href={l.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-opacity hover:opacity-70"
+                      >
+                        <Image
+                          src={l.src}
+                          alt={t.title}
+                          width={240}
+                          height={80}
+                          className={`w-auto opacity-60 ${l.src.includes("masti") ? "h-4" : l.src.includes("mais-musica") ? "h-8" : "h-16"} ${logoFilter(l.src)}`}
+                        />
+                      </a>
+                    ))}
+                  </div>
+                ) : "logo" in t && (
                   <a
                     href={t.url}
                     target="_blank"

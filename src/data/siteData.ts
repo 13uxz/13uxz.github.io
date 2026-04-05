@@ -154,6 +154,16 @@ export const siteData = {
 
   testimonials: [
     {
+      quote: "I worked with David for over five years, from Masti to bringing him to both our LSL Capital restaurants, Mimi Mei Fair and Jamavar. I never saw David as an external contractor. He was a partner and a core part of the team, always there, always involved, genuinely invested in the music management and audio across all our venues and always putting in extra effort to help grow the business. I trusted him completely to take care of everything music related and never had to worry when he was there.",
+      name: "Daniel Miranda",
+      title: "Group General Manager, LSL Capital (Mimi Mei Fair & Jamavar) / Masti",
+      nameUrl: "https://ae.linkedin.com/in/daniel-miranda-a5a16732/en",
+      logos: [
+        { src: "/logos/lsl-capital.svg", url: "https://lslcapital.com/" },
+        { src: "/logos/masti.avif", url: "https://www.mastidubai.com/" },
+      ],
+    },
+    {
       quote: "Dave '13uxz' Buckley is an exceptionally talented DJ and producer I've had the pleasure of collaborating with. He's one of the most driven and hardworking artists I've come across, with a constant hunger to learn, connect, and create. He's already delivered one of our standout releases of 2025 on my label, with more strong material on the way. Beyond music, Dave is a person of great character, thoughtful, insightful, and deeply dedicated to his craft. He has all the makings of an artist with limitless potential and a wonderful future ahead.",
       name: "Aritra 'ARIII' Dasgupta",
       title: "Label Founder, Dyno Music Records",
