@@ -247,6 +247,49 @@ export default function EPK() {
 
           <Divider />
 
+          {/* Mixes & Videos */}
+          <section className="mb-16">
+            <SectionLabel>Mixes &amp; Videos</SectionLabel>
+            <div className="space-y-6">
+              <div>
+                <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/40">
+                  Video Sets
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                    <span className="text-[13px] text-white/80">Afro Latin Rooftop Sessions</span>
+                    <a href="https://drive.google.com/file/d/1B0_o5_ANJrTH2P5P87v0TIDiPUsGcnSN/view" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Watch</a>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                    <span className="text-[13px] text-white/80">Afro Organic Lounge</span>
+                    <a href="https://drive.google.com/file/d/1wfH6cjxNBdfSuqcUz2ekZI4Oehp9FdDD/view" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Watch</a>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/40">
+                  Mixcloud Sets
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                    <span className="text-[13px] text-white/80">Afro Latin Rooftop Sessions</span>
+                    <a href="https://www.mixcloud.com/13uxz/afro-latin-rooftop-sessions/" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Listen</a>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                    <span className="text-[13px] text-white/80">Funky Disco Lounge Set</span>
+                    <a href="https://www.mixcloud.com/13uxz/funky-disco-lounge-set/" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Listen</a>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                    <span className="text-[13px] text-white/80">Afro Organic Lounge</span>
+                    <a href="https://www.mixcloud.com/13uxz/afro-organic-lounge/" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Listen</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <Divider />
+
           {/* Highlights + Labels */}
           <section className="mb-16 grid gap-10 sm:grid-cols-2">
             <div>
