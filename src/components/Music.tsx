@@ -91,6 +91,23 @@ export default function Music() {
                 />
               </div>
             </div>
+            <div>
+              <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
+                Afro Organic Lounge
+              </h4>
+              <div className="aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://drive.google.com/file/d/1wfH6cjxNBdfSuqcUz2ekZI4Oehp9FdDD/preview"
+                  allow="autoplay"
+                  allowFullScreen
+                  loading="lazy"
+                  title="Afro Organic Lounge"
+                  className="border border-white/10"
+                />
+              </div>
+            </div>
           </div>
           <div className="mt-6 text-center">
             <a
