@@ -211,6 +211,13 @@ export const siteData = {
       url: "https://www.mastidubai.com/",
     },
     {
+      quote: "I've had the chance to share the same space at Mimi Mei Fair with David, and even without fully overlapping, his presence and musical awareness were always noticeable. He really knows how to read a room and create the right energy. Definitely someone who adds value wherever he plays.",
+      name: "DJ Miss Rich",
+      title: "DJ",
+      nameUrl: "https://www.instagram.com/djmissnaiararich/",
+      logo: "/logos/mimi-mei-fair.svg",
+    },
+    {
       quote: "An incredibly versatile DJ with the ability to deliver open format, house classics, and upfront sets.",
       name: "Jon Besant",
       title: "Partner, Mais Musica",
