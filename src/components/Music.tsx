@@ -82,6 +82,7 @@ export default function Music() {
                   src="https://drive.google.com/file/d/1B0_o5_ANJrTH2P5P87v0TIDiPUsGcnSN/preview"
                   allow="autoplay"
                   allowFullScreen
+                  loading="lazy"
                   title="Afro Latin Rooftop Sessions"
                   className="border border-white/10"
                 />
