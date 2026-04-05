@@ -215,8 +215,6 @@ export const siteData = {
       name: "DJ Miss Rich",
       title: "DJ",
       nameUrl: "https://www.instagram.com/djmissnaiararich/",
-      logo: "/logos/mimi-mei-fair.svg",
-      url: "https://www.mimimeifair.com/",
     },
     {
       quote: "An incredibly versatile DJ with the ability to deliver open format, house classics, and upfront sets.",
