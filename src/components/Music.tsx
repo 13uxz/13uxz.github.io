@@ -68,8 +68,26 @@ export default function Music() {
           </div>
         </a>
 
-        {/* SoundCloud embed */}
+        {/* Mixes — Mixcloud */}
+        <div className="mb-16">
+          <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
+            Mixes
+          </p>
+          <iframe
+            width="100%"
+            height="400"
+            src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fplaylists%2Flounge-and-rooftop-series%2F"
+            frameBorder="0"
+            allow="autoplay"
+            title="13uxz Lounge & Rooftop Series on Mixcloud"
+          />
+        </div>
+
+        {/* Productions — SoundCloud */}
         <div className="mb-20">
+          <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
+            Productions
+          </p>
           <iframe
             width="100%"
             height="300"

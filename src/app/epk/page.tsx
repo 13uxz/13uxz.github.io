@@ -6,6 +6,7 @@ import {
   SpotifyIcon,
   BeatportIcon,
   SoundCloudIcon,
+  MixcloudIcon,
   InstagramIcon,
   LinktreeIcon,
 } from "@/components/SocialIcons";
@@ -14,6 +15,7 @@ const socialIcons: Record<string, React.FC> = {
   spotify: SpotifyIcon,
   beatport: BeatportIcon,
   soundcloud: SoundCloudIcon,
+  mixcloud: MixcloudIcon,
   instagram: InstagramIcon,
   linktree: LinktreeIcon,
 };

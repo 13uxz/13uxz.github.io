@@ -72,6 +72,7 @@ export const siteData = {
     spotify: "https://open.spotify.com/artist/2Es179UXrz8RKShF3HrEXl",
     beatport: "https://www.beatport.com/artist/13uxz/1166973",
     soundcloud: "https://soundcloud.com/13uxz",
+    mixcloud: "https://www.mixcloud.com/13uxz/",
     instagram: "https://www.instagram.com/13uxz/",
     linktree: "https://linktr.ee/13uxz",
   },
