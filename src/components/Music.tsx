@@ -71,10 +71,13 @@ export default function Music() {
         {/* Video */}
         <div className="mb-16">
           <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
-            Video
+            Videos
           </p>
-          <div className="space-y-6">
+          <div className="space-y-10">
             <div>
+              <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
+                Afro Latin Rooftop Sessions
+              </h4>
               <div className="aspect-video">
                 <iframe
                   width="100%"
@@ -87,9 +90,6 @@ export default function Music() {
                   className="border border-white/10"
                 />
               </div>
-              <p className="mt-2 text-center text-[11px] uppercase tracking-[0.2em] text-white/50">
-                Afro Latin Rooftop Sessions
-              </p>
             </div>
           </div>
           <div className="mt-6 text-center">
