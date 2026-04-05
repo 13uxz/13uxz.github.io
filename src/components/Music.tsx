@@ -78,16 +78,14 @@ export default function Music() {
               <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
                 Afro Latin Rooftop Sessions
               </h4>
-              <div className="aspect-video">
+              <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
-                  width="100%"
-                  height="100%"
                   src="https://drive.google.com/file/d/1B0_o5_ANJrTH2P5P87v0TIDiPUsGcnSN/preview"
                   allow="autoplay"
                   allowFullScreen
                   loading="lazy"
                   title="Afro Latin Rooftop Sessions"
-                  className="border border-white/10"
+                  className="absolute inset-0 h-full w-full border border-white/10"
                 />
               </div>
             </div>
@@ -95,16 +93,14 @@ export default function Music() {
               <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
                 Afro Organic Lounge
               </h4>
-              <div className="aspect-video">
+              <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
-                  width="100%"
-                  height="100%"
                   src="https://drive.google.com/file/d/1wfH6cjxNBdfSuqcUz2ekZI4Oehp9FdDD/preview"
                   allow="autoplay"
                   allowFullScreen
                   loading="lazy"
                   title="Afro Organic Lounge"
-                  className="border border-white/10"
+                  className="absolute inset-0 h-full w-full border border-white/10"
                 />
               </div>
             </div>
