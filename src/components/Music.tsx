@@ -68,6 +68,26 @@ export default function Music() {
           </div>
         </a>
 
+        {/* Video */}
+        <div className="mb-16">
+          <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
+            Video
+          </p>
+          <div className="flex aspect-video items-center justify-center border border-white/10 bg-white/[0.03]">
+            <p className="text-sm text-white/30">Coming soon</p>
+          </div>
+          <div className="mt-4 text-center">
+            <a
+              href="https://www.instagram.com/13uxz/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[11px] uppercase tracking-[0.2em] text-white/50 transition-colors duration-300 hover:text-white"
+            >
+              Watch video highlights on Instagram &rarr;
+            </a>
+          </div>
+        </div>
+
         {/* Mixes — Mixcloud */}
         <div className="mb-16">
           <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
