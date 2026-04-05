@@ -73,10 +73,25 @@ export default function Music() {
           <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
             Video
           </p>
-          <div className="flex aspect-video items-center justify-center border border-white/10 bg-white/[0.03]">
-            <p className="text-sm text-white/30">Coming soon</p>
+          <div className="space-y-6">
+            <div>
+              <div className="aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://drive.google.com/file/d/1B0_o5_ANJrTH2P5P87v0TIDiPUsGcnSN/preview"
+                  allow="autoplay"
+                  allowFullScreen
+                  title="Afro Latin Rooftop Sessions"
+                  className="border border-white/10"
+                />
+              </div>
+              <p className="mt-2 text-center text-[11px] uppercase tracking-[0.2em] text-white/50">
+                Afro Latin Rooftop Sessions
+              </p>
+            </div>
           </div>
-          <div className="mt-4 text-center">
+          <div className="mt-6 text-center">
             <a
               href="https://www.instagram.com/stories/highlights/17979862484305761/"
               target="_blank"
