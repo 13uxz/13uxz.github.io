@@ -78,7 +78,7 @@ export default function Music() {
           </div>
           <div className="mt-4 text-center">
             <a
-              href="https://www.instagram.com/13uxz/"
+              href="https://www.instagram.com/stories/highlights/17979862484305761/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-[11px] uppercase tracking-[0.2em] text-white/50 transition-colors duration-300 hover:text-white"
