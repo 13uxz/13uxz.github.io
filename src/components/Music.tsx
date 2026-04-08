@@ -117,6 +117,28 @@ export default function Music() {
           </div>
         </div>
 
+        {/* Interview — Dyno Records */}
+        <div className="mb-16">
+          <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
+            Interview
+          </p>
+          <div>
+            <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
+              Dyno Records Podcast
+            </h4>
+            <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src="https://www.youtube.com/embed/32yGbfEoPQ0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                loading="lazy"
+                title="Dyno Records Podcast Interview"
+                className="absolute inset-0 h-full w-full border border-white/10"
+              />
+            </div>
+          </div>
+        </div>
+
         {/* Mixes — Mixcloud */}
         <div className="mb-16">
           <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
