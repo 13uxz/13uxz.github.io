@@ -198,10 +198,6 @@ export default function Music() {
           .filter((g) => g.tracks.length > 1)
           .map((group) => (
             <div key={group.genre} className="mb-16 last:mb-0">
-              <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
-                {group.genre}
-              </p>
-
               {/* Coming Soon teaser */}
               {"comingSoon" in group && group.comingSoon && (
                 <div className="mx-auto mb-10 max-w-md">
@@ -243,6 +239,10 @@ export default function Music() {
                   </div>
                 </div>
               )}
+
+              <p className="mb-6 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
+                {group.genre}
+              </p>
 
               {/* Collection banner if present */}
               {"banner" in group && group.banner && (
