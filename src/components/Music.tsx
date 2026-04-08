@@ -202,6 +202,50 @@ export default function Music() {
                 {group.genre}
               </p>
 
+              {/* Coming Soon teaser */}
+              {"comingSoon" in group && group.comingSoon && (
+                <div className="mx-auto mb-8 max-w-md">
+                  <div className="relative overflow-hidden border border-white/10">
+                    <video
+                      src={group.comingSoon.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-0 left-0 flex w-full items-end justify-between p-5">
+                      <div>
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-white/60">
+                          Coming Soon
+                        </p>
+                        <p className="mt-1 text-lg font-medium">
+                          {group.comingSoon.title}
+                        </p>
+                        <p className="text-[11px] text-white/75">
+                          {group.comingSoon.label}
+                        </p>
+                      </div>
+                      <a
+                        href={group.comingSoon.labelUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="shrink-0 transition-opacity hover:opacity-80"
+                      >
+                        <Image
+                          src={group.comingSoon.labelLogo}
+                          alt={group.comingSoon.label}
+                          width={40}
+                          height={40}
+                          className="rounded-sm"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {/* Collection banner if present */}
               {"banner" in group && group.banner && (
                 <a

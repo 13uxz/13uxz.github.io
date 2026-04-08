@@ -29,6 +29,13 @@ export const siteData = {
         { title: "Tulia", label: "Cafe De Anatolia", artwork: "/photos/art-tulia.webp", url: "https://www.beatport.com/track/tulia/22334795" },
         { title: "Qwenda", label: "Erase Records", artwork: "/photos/art-qwenda.webp", url: "https://www.beatport.com/release/qwenda/5002153" },
       ],
+      comingSoon: {
+        title: "Late Night Text",
+        label: "Dyno Records",
+        video: "/videos/late-night-coming-soon.mp4",
+        labelLogo: "/logos/dyno-records.jpg",
+        labelUrl: "https://www.officialdynorecords.com/",
+      },
     },
     {
       genre: "Melodic House / Techno",
