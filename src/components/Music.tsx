@@ -202,7 +202,7 @@ export default function Music() {
               {"comingSoon" in group && group.comingSoon && (
                 <div className="mx-auto mb-10 max-w-md">
                   <p className="mb-4 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
-                    {group.genre} &mdash; Coming Soon
+                    {group.genre} &nbsp;&mdash; Coming Soon
                   </p>
                   <div className="overflow-hidden border border-white/10">
                     <video
