@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { siteData } from "@/data/siteData";
 import {
   SpotifyIcon,
@@ -33,92 +33,6 @@ const labels = siteData.labels.map((l) => l.name);
 
 export default function EPK() {
   const epkRef = useRef<HTMLDivElement>(null);
-  const [generating, setGenerating] = useState(false);
-
-  async function handleDownload() {
-    if (!epkRef.current || generating) return;
-    setGenerating(true);
-    try {
-      const [{ default: html2canvas }, { jsPDF }] = await Promise.all([
-        import("html2canvas-pro"),
-        import("jspdf"),
-      ]);
-
-      // Constrain to a fixed width so text is readable on A4
-      const el = epkRef.current;
-      const origWidth = el.style.width;
-      const origMaxWidth = el.style.maxWidth;
-      el.style.width = "900px";
-      el.style.maxWidth = "900px";
-
-      // Hide hero image and gradient for PDF (text header stays)
-      const pdfHidden = el.querySelectorAll("[data-pdf-hide]");
-      pdfHidden.forEach((e) => ((e as HTMLElement).style.display = "none"));
-
-      // Collapse hero height and tighten all spacing for PDF
-      const header = el.querySelector("header") as HTMLElement;
-      const origMinH = header.style.minHeight;
-      header.style.minHeight = "auto";
-      header.style.paddingTop = "2rem";
-      header.style.paddingBottom = "1.5rem";
-
-      const contentWrap = el.querySelector("header + div") as HTMLElement;
-      const origPy = contentWrap.style.paddingTop;
-      contentWrap.style.paddingTop = "1rem";
-      contentWrap.style.paddingBottom = "1rem";
-
-      const allEls = el.querySelectorAll("section, section + div, h2");
-      allEls.forEach((s) => {
-        const h = s as HTMLElement;
-        h.style.marginBottom = "1rem";
-      });
-
-      const canvas = await html2canvas(el, {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: "#050505",
-        width: 900,
-      });
-
-      el.style.width = origWidth;
-      el.style.maxWidth = origMaxWidth;
-      pdfHidden.forEach((e) => ((e as HTMLElement).style.display = ""));
-      header.style.minHeight = origMinH;
-      header.style.paddingTop = "";
-      header.style.paddingBottom = "";
-      contentWrap.style.paddingTop = origPy;
-      contentWrap.style.paddingBottom = "";
-      allEls.forEach((s) => ((s as HTMLElement).style.marginBottom = ""));
-
-      const pdf = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
-      const pageW = pdf.internal.pageSize.getWidth();
-      const pageH = pdf.internal.pageSize.getHeight();
-
-      // Simple fixed-interval page slicing — pack content tightly
-      const imgData = canvas.toDataURL("image/jpeg", 0.95);
-      const imgW = pageW;
-      const imgH = (canvas.height * imgW) / canvas.width;
-
-      let y = 0;
-      while (y < imgH) {
-        if (y > 0) pdf.addPage();
-
-        // Fill entire PDF page black to prevent white gaps
-        pdf.setFillColor(5, 5, 5);
-        pdf.rect(0, 0, pageW, pageH, "F");
-
-        pdf.addImage(imgData, "JPEG", 0, -y, imgW, imgH);
-        y += pageH;
-      }
-
-      pdf.save("13uxz-press-kit.pdf");
-    } catch (err) {
-      console.error("PDF generation failed:", err);
-      alert("PDF generation failed: " + (err instanceof Error ? err.message : String(err)));
-    } finally {
-      setGenerating(false);
-    }
-  }
 
   return (
     <>
@@ -130,13 +44,13 @@ export default function EPK() {
         >
           Back to site
         </a>
-        <button
-          onClick={handleDownload}
-          disabled={generating}
-          className="bg-white px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-black transition-opacity hover:opacity-80 disabled:opacity-50"
+        <a
+          href="/13uxz-press-kit.pdf"
+          download="13uxz-press-kit.pdf"
+          className="bg-white px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.15em] text-black transition-opacity hover:opacity-80"
         >
-          {generating ? "Generating..." : "Download PDF"}
-        </button>
+          Download PDF
+        </a>
       </div>
 
       <div ref={epkRef} className="epk-page min-h-screen bg-[#050505] text-[#f0f0f0]">
