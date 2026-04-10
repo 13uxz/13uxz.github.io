@@ -24,6 +24,7 @@ export const siteData = {
   releasesByGenre: [
     {
       genre: "Afrohouse",
+      banner: { src: "/photos/art-desert-voices.webp", title: "Desert Voices", url: "https://www.beatport.com/release/qwenda/5002153" },
       tracks: [
         { title: "Paradise", label: "Cafe De Anatolia", artwork: "/photos/art-paradise.webp", url: "https://www.beatport.com/track/paradise/22334794" },
         { title: "Tulia", label: "Cafe De Anatolia", artwork: "/photos/art-tulia.webp", url: "https://www.beatport.com/track/tulia/22334795" },
