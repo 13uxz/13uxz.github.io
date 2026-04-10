@@ -241,6 +241,12 @@ export const siteData = {
       title: "DJ",
       nameUrl: "https://www.instagram.com/djmissnaiararich/",
     },
+    {
+      quote: "Dave's one of those DJs you can tell actually lives the music he plays. We've worked together in the studio on edits and originals, and that production knowledge really comes through in his sets. Playing alongside him you notice he's always a few steps ahead, and it never feels forced. Solid guy to work with behind the decks or in the studio.",
+      name: "Rico Mannion",
+      title: "DJ",
+      nameUrl: "https://www.instagram.com/ricomannion/",
+    },
   ],
 
   labels: [
