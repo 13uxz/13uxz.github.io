@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { siteData } from "@/data/siteData";
 
-function TrackCard({ track }: { track: { title: string; label: string; artwork: string; url: string } }) {
+function TrackCard({ track }: { track: { title: string; label: string; artwork: string; url: string; featuredOn?: string } }) {
   return (
     <a
       href={track.url}
@@ -26,6 +26,11 @@ function TrackCard({ track }: { track: { title: string; label: string; artwork: 
       <div className="mt-3">
         <p className="text-sm font-medium">{track.title}</p>
         <p className="text-[11px] text-white/75">{track.label}</p>
+        {track.featuredOn && (
+          <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-white/50">
+            Featured on {track.featuredOn}
+          </p>
+        )}
       </div>
     </a>
   );

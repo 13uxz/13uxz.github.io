@@ -233,6 +233,11 @@ export default function EPK() {
                       >
                         <span className="text-[13px] text-white/80">
                           {t.title}
+                          {"featuredOn" in t && t.featuredOn && (
+                            <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">
+                              Featured on {t.featuredOn}
+                            </span>
+                          )}
                         </span>
                         <span className="shrink-0 text-[11px] text-white/40">
                           {t.label}
