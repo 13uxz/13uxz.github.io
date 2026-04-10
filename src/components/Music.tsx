@@ -1,38 +1,45 @@
 import Image from "next/image";
 import { siteData } from "@/data/siteData";
 
-function TrackCard({ track }: { track: { title: string; label: string; artwork: string; url: string; featuredOn?: string } }) {
+function TrackCard({ track }: { track: { title: string; label: string; artwork: string; url: string; featuredOn?: { title: string; url: string } } }) {
   return (
-    <a
-      href={track.url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group/track"
-    >
-      <div className="relative aspect-square overflow-hidden">
-        <Image
-          src={track.artwork}
-          alt={track.title}
-          fill
-          className="object-cover transition-transform duration-700 group-hover/track:scale-110"
-        />
-        <div className="absolute inset-0 bg-black/0 transition-all duration-500 group-hover/track:bg-black/50" />
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover/track:opacity-100">
-          <span className="text-[10px] uppercase tracking-[0.2em] sm:text-[11px]">
-            Beatport &rarr;
-          </span>
+    <div>
+      <a
+        href={track.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="group/track"
+      >
+        <div className="relative aspect-square overflow-hidden">
+          <Image
+            src={track.artwork}
+            alt={track.title}
+            fill
+            className="object-cover transition-transform duration-700 group-hover/track:scale-110"
+          />
+          <div className="absolute inset-0 bg-black/0 transition-all duration-500 group-hover/track:bg-black/50" />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-500 group-hover/track:opacity-100">
+            <span className="text-[10px] uppercase tracking-[0.2em] sm:text-[11px]">
+              Beatport &rarr;
+            </span>
+          </div>
         </div>
-      </div>
-      <div className="mt-3">
-        <p className="text-sm font-medium">{track.title}</p>
-        <p className="text-[11px] text-white/75">{track.label}</p>
-        {track.featuredOn && (
-          <p className="mt-1 text-[10px] uppercase tracking-[0.15em] text-white/50">
-            Featured on {track.featuredOn}
-          </p>
-        )}
-      </div>
-    </a>
+        <div className="mt-3">
+          <p className="text-sm font-medium">{track.title}</p>
+          <p className="text-[11px] text-white/75">{track.label}</p>
+        </div>
+      </a>
+      {track.featuredOn && (
+        <a
+          href={track.featuredOn.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-1 block text-[10px] uppercase tracking-[0.15em] text-white/50 transition-colors hover:text-white"
+        >
+          Featured on {track.featuredOn.title} &rarr;
+        </a>
+      )}
+    </div>
   );
 }
 

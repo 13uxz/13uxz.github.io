@@ -27,7 +27,7 @@ export const siteData = {
       tracks: [
         { title: "Paradise", label: "Cafe De Anatolia", artwork: "/photos/art-paradise.webp", url: "https://www.beatport.com/track/paradise/22334794" },
         { title: "Tulia", label: "Cafe De Anatolia", artwork: "/photos/art-tulia.webp", url: "https://www.beatport.com/track/tulia/22334795" },
-        { title: "Qwenda", label: "Erase Records", artwork: "/photos/art-qwenda.webp", url: "https://www.beatport.com/release/desert-voices/5232032", featuredOn: "Desert Voices" },
+        { title: "Qwenda", label: "Erase Records", artwork: "/photos/art-qwenda.webp", url: "https://www.beatport.com/release/qwenda/5002153", featuredOn: { title: "Desert Voices", url: "https://www.beatport.com/release/desert-voices/5232032" } },
       ],
       comingSoon: {
         title: "Late Night Text",
