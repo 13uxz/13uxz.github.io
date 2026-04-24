@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { siteData } from "@/data/siteData";
 import {
   SpotifyIcon,
@@ -32,12 +31,10 @@ const highlights = [
 const labels = siteData.labels.map((l) => l.name);
 
 export default function EPK() {
-  const epkRef = useRef<HTMLDivElement>(null);
-
   return (
     <>
       {/* Floating controls */}
-      <div data-html2canvas-ignore className="fixed right-6 top-6 z-50 flex gap-3">
+      <div className="fixed right-6 top-6 z-50 flex gap-3">
         <a
           href="/"
           className="border border-white/20 bg-black/60 px-5 py-2.5 text-[11px] uppercase tracking-[0.15em] text-white backdrop-blur-xl transition-all hover:border-white/40 hover:bg-black/80"
@@ -53,17 +50,16 @@ export default function EPK() {
         </a>
       </div>
 
-      <div ref={epkRef} className="epk-page min-h-screen bg-[#050505] text-[#f0f0f0]">
+      <div className="epk-page min-h-screen bg-[#050505] text-[#f0f0f0]">
         {/* ── Hero header ── */}
         <header className="relative flex min-h-[520px] items-end overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            data-pdf-hide
             src="/photos/hero.jpg"
             alt="13uxz"
             className="absolute inset-0 h-full w-full object-cover object-[center_10%] brightness-[0.2]"
           />
-          <div data-pdf-hide className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/60 to-transparent" />
           <div className="relative z-10 w-full px-10 pb-12 sm:px-16">
             <div className="mx-auto flex max-w-[900px] items-end justify-between">
               <div>
