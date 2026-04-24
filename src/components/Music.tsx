@@ -210,15 +210,15 @@ export default function Music() {
           .filter((g) => g.tracks.length > 1)
           .map((group) => (
             <div key={group.genre} className="mb-16 last:mb-0">
-              {/* Coming Soon teaser */}
-              {"comingSoon" in group && group.comingSoon && (
+              {/* Latest Release teaser */}
+              {"latestRelease" in group && group.latestRelease && (
                 <div className="mx-auto mb-10 max-w-md">
                   <p className="mb-4 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
-                    {group.genre} &nbsp;&mdash; Coming Soon
+                    {group.genre} &nbsp;&mdash; Latest Release
                   </p>
                   <div className="overflow-hidden border border-white/10">
                     <video
-                      src={group.comingSoon.video}
+                      src={group.latestRelease.video}
                       controls
                       playsInline
                       preload="metadata"
@@ -228,27 +228,37 @@ export default function Music() {
                   <div className="mt-3 flex items-center justify-between">
                     <div>
                       <p className="text-sm font-medium">
-                        {group.comingSoon.title}
+                        {group.latestRelease.title}
                       </p>
                       <p className="text-[11px] text-white/75">
-                        {group.comingSoon.label}
+                        {group.latestRelease.label}
                       </p>
                     </div>
                     <a
-                      href={group.comingSoon.labelUrl}
+                      href={group.latestRelease.url ?? group.latestRelease.labelUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="shrink-0 transition-opacity hover:opacity-80"
                     >
                       <Image
-                        src={group.comingSoon.labelLogo}
-                        alt={group.comingSoon.label}
-                        width={40}
-                        height={40}
+                        src={group.latestRelease.artwork ?? group.latestRelease.labelLogo}
+                        alt={group.latestRelease.title}
+                        width={60}
+                        height={60}
                         className="rounded-sm"
                       />
                     </a>
                   </div>
+                  {group.latestRelease.url && (
+                    <a
+                      href={group.latestRelease.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 block text-center text-[11px] uppercase tracking-[0.2em] text-white/75 transition-colors hover:text-white"
+                    >
+                      Buy on Beatport &rarr;
+                    </a>
+                  )}
                 </div>
               )}
 

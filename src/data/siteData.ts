@@ -29,12 +29,14 @@ export const siteData = {
         { title: "Tulia", label: "Cafe De Anatolia", artwork: "/photos/art-tulia.webp", url: "https://www.beatport.com/track/tulia/22334795" },
         { title: "Qwenda", label: "Erase Records", artwork: "/photos/art-qwenda.webp", url: "https://www.beatport.com/release/qwenda/5002153", featuredOn: { title: "Desert Voices", url: "https://www.beatport.com/release/desert-voices/5232032" } },
       ],
-      comingSoon: {
+      latestRelease: {
         title: "Late Night Text",
         label: "Dyno Records",
         video: "/videos/late-night-coming-soon.mp4",
+        artwork: "/photos/art-late-night-text.webp",
         labelLogo: "/logos/dyno-records.jpg",
         labelUrl: "https://www.officialdynorecords.com/",
+        url: "https://www.beatport.com/track/late-night-text/28421161",
       },
     },
     {
