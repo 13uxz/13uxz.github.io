@@ -249,16 +249,6 @@ export default function Music() {
                       />
                     </a>
                   </div>
-                  {group.latestRelease.url && (
-                    <a
-                      href={group.latestRelease.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 block text-center text-[11px] uppercase tracking-[0.2em] text-white/75 transition-colors hover:text-white"
-                    >
-                      Buy on Beatport &rarr;
-                    </a>
-                  )}
                 </div>
               )}
 
