@@ -199,7 +199,7 @@ export default function Brands() {
         {londonBrands.length > 0 && (
           <div className="mb-32">
             <CityHeader city="London" />
-            <div className="grid gap-12 md:grid-cols-2">
+            <div className="mx-auto flex max-w-sm flex-col items-stretch gap-16">
               {londonBrands.map((group) => (
                 <div key={group.management ?? group.label} className="text-center">
                   {group.label && (
@@ -243,9 +243,7 @@ export default function Brands() {
                         />
                       </div>
                     )
-                  ) : (
-                    <div className="mb-8 h-12" />
-                  )}
+                  ) : null}
 
                   <div className="flex justify-center">
                     {group.venues.map((venue) => {
