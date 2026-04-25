@@ -245,9 +245,11 @@ export default function Brands() {
                     <div className="mb-8 h-12" />
                   )}
 
-                  <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-white/75">
-                    {group.label ?? "Bookings"}
-                  </p>
+                  {group.label && (
+                    <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-white/75">
+                      {group.label}
+                    </p>
+                  )}
 
                   <div className="flex justify-center">
                     {group.venues.map((venue) => {

@@ -123,7 +123,7 @@ export const siteData = {
       management: "Cool Daddy Gigs Management",
       logo: "/logos/cool-daddy-gigs.png",
       url: "https://cooldaddygigsmanagement.com/",
-      label: "Upcoming",
+      label: "Agency Bookings",
       venues: [
         { name: "Aki London", role: "Upcoming", logo: "/logos/aki-london.png", url: "https://akilondon.com/" },
       ],
