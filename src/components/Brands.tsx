@@ -203,9 +203,88 @@ export default function Brands() {
         {londonBrands.length > 0 && (
           <div className="mb-32">
             <CityHeader city="London" />
-            {londonBrands.map((group) => (
-              <AgencyGroup key={`london-${group.management ?? group.label}`} group={group} />
-            ))}
+            <div className="grid gap-12 md:grid-cols-2">
+              {londonBrands.map((group) => (
+                <div key={group.management ?? group.label} className="text-center">
+                  {group.logo && group.management ? (
+                    group.url ? (
+                      <a
+                        href={group.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mb-8 flex h-12 items-center justify-center transition-opacity hover:opacity-70"
+                      >
+                        <Image
+                          src={group.logo}
+                          alt={group.management}
+                          width={240}
+                          height={80}
+                          className={`h-8 w-auto ${
+                            group.logo.includes("cool-daddy") ? "mix-blend-screen" :
+                            group.logo.endsWith(".jpg") ? "mix-blend-screen" :
+                            "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"
+                          }`}
+                        />
+                      </a>
+                    ) : (
+                      <div className="mb-8 flex h-12 items-center justify-center">
+                        <Image
+                          src={group.logo}
+                          alt={group.management}
+                          width={240}
+                          height={80}
+                          className={`h-8 w-auto ${
+                            group.logo.includes("cool-daddy") ? "mix-blend-screen" :
+                            group.logo.endsWith(".jpg") ? "mix-blend-screen" :
+                            "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"
+                          }`}
+                        />
+                      </div>
+                    )
+                  ) : (
+                    <div className="mb-8 h-12" />
+                  )}
+
+                  <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-white/75">
+                    {group.label ?? "Bookings"}
+                  </p>
+
+                  <div className="flex justify-center">
+                    {group.venues.map((venue) => {
+                      const venueUrl = venue.url ?? "";
+                      const Tag = venueUrl ? "a" : "div";
+                      const linkProps = venueUrl
+                        ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" }
+                        : {};
+                      return (
+                        <Tag
+                          key={venue.name}
+                          {...(linkProps as any)}
+                          className="group flex h-48 w-full max-w-sm flex-col items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
+                        >
+                          <Image
+                            src={venue.logo}
+                            alt={venue.name}
+                            width={400}
+                            height={200}
+                            className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
+                              venue.logo.includes("aki-london") ? "h-12" : "h-36"
+                            } ${
+                              venue.logo.includes("notting-hill") ? "mix-blend-screen" : "brightness-0 invert"
+                            }`}
+                          />
+                          {venue.role && venue.role !== "DJ" && (
+                            <span className="mt-3 text-[10px] uppercase tracking-[0.2em] text-white/75">
+                              {venue.role}
+                            </span>
+                          )}
+                        </Tag>
+                      );
+                    })}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
