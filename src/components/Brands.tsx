@@ -163,7 +163,7 @@ function AgencyGroup({ group }: { group: BrandGroup }) {
                   "brightness-0 invert"
                 }`}
               />
-              {venue.role && (
+              {venue.role && venue.role !== "DJ" && (
                 <span className="mt-3 text-[10px] uppercase tracking-[0.2em] text-white/75">
                   {venue.role}
                 </span>
