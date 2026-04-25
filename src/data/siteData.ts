@@ -103,6 +103,7 @@ export const siteData = {
 
   events: [
     {
+      region: "Dubai",
       name: "Sounds by AKS",
       logo: "/logos/sounds-by-aks.jpg",
       url: "https://www.instagram.com/soundsbyaks/",
@@ -118,6 +119,15 @@ export const siteData = {
 
   brands: [
     {
+      region: "London",
+      label: "Recent & Upcoming",
+      venues: [
+        { name: "Notting Hill Arts Club", role: "DJ", logo: "/logos/notting-hill-arts-club.png", url: "https://nottinghillartsclub.com/" },
+        { name: "Aki London", role: "Upcoming", logo: "/logos/aki-london.png", url: "https://akilondon.com/" },
+      ],
+    },
+    {
+      region: "Dubai",
       management: "Blackspoon Management",
       logo: "/logos/blackspoon.png",
       url: "https://www.blackspoon.me/",
@@ -127,6 +137,7 @@ export const siteData = {
       ],
     },
     {
+      region: "Dubai",
       management: "LSL Capital",
       logo: "/logos/lsl-capital.svg",
       url: "https://lslcapital.com/",
@@ -136,6 +147,7 @@ export const siteData = {
       ],
     },
     {
+      region: "Dubai",
       management: "Sole Agency",
       logo: "/logos/sole-agency.png",
       url: "https://sole-agency.com/",
@@ -150,6 +162,7 @@ export const siteData = {
       ],
     },
     {
+      region: "Dubai",
       management: "Mais Musica",
       logo: "/logos/mais-musica.jpg",
       url: "https://www.maismusica.ae/",

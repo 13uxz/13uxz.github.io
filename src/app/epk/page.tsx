@@ -243,10 +243,12 @@ export default function EPK() {
           <section className="mb-16">
             <SectionLabel>Brands & Residencies</SectionLabel>
             <div className="grid gap-8 sm:grid-cols-2">
-              {siteData.brands.map((brand) => (
-                <div key={brand.management} className="border-l border-white/10 pl-5">
+              {siteData.brands.map((brand) => {
+                const heading = "management" in brand ? brand.management : `${brand.region} — ${brand.label}`;
+                return (
+                <div key={heading} className="border-l border-white/10 pl-5">
                   <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/40">
-                    {brand.management}
+                    {heading}
                   </p>
                   <div className="space-y-1.5">
                     {brand.venues.map((venue) => (
@@ -261,7 +263,8 @@ export default function EPK() {
                     ))}
                   </div>
                 </div>
-              ))}
+                );
+              })}
               {siteData.events.map((event) => (
                 <div key={event.name} className="border-l border-white/10 pl-5">
                   <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/40">
