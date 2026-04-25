@@ -214,7 +214,7 @@ export default function Music() {
               {"latestRelease" in group && group.latestRelease && (
                 <div className="mx-auto mb-10 max-w-md">
                   <p className="mb-4 text-center text-[11px] uppercase tracking-[0.25em] text-white/75">
-                    {group.genre} &nbsp;&mdash; Latest Release
+                    Latest Release &nbsp;&mdash; {group.genre}
                   </p>
                   <div className="overflow-hidden border border-white/10">
                     <video
