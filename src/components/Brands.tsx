@@ -166,7 +166,6 @@ function AgencyGroup({ group }: { group: BrandGroup }) {
                   isDouble ? "h-44" : "h-36"
                 } ${
                   venue.logo.includes("notting-hill") ? "mix-blend-screen" :
-                  venue.logo.includes("aki-london") ? "mix-blend-screen" :
                   venue.logo.includes("jebel-ali-rec") || venue.logo.includes("helipad") ? "grayscale invert brightness-[2]" :
                   "brightness-0 invert"
                 }`}
