@@ -245,18 +245,22 @@ export default function Brands() {
                     )
                   ) : null}
 
-                  <div className="flex justify-center">
-                    {group.venues.map((venue) => {
-                      const venueUrl = venue.url ?? "";
-                      const Tag = venueUrl ? "a" : "div";
-                      const linkProps = venueUrl
-                        ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" }
-                        : {};
-                      return (
+                  {group.venues.map((venue) => {
+                    const venueUrl = venue.url ?? "";
+                    const Tag = venueUrl ? "a" : "div";
+                    const linkProps = venueUrl
+                      ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" }
+                      : {};
+                    return (
+                      <div key={venue.name} className="flex flex-col items-center">
+                        {venue.role && venue.role !== "DJ" && (
+                          <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-white/75">
+                            {venue.role}
+                          </p>
+                        )}
                         <Tag
-                          key={venue.name}
                           {...(linkProps as any)}
-                          className="group relative flex h-48 w-full max-w-sm items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
+                          className="group flex h-48 w-full max-w-sm items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
                         >
                           <Image
                             src={venue.logo}
@@ -269,15 +273,10 @@ export default function Brands() {
                               venue.logo.includes("notting-hill") ? "mix-blend-screen" : "brightness-0 invert"
                             }`}
                           />
-                          {venue.role && venue.role !== "DJ" && (
-                            <span className="absolute inset-x-0 bottom-6 text-center text-[10px] uppercase tracking-[0.2em] text-white/75">
-                              {venue.role}
-                            </span>
-                          )}
                         </Tag>
-                      );
-                    })}
-                  </div>
+                      </div>
+                    );
+                  })}
                 </div>
               ))}
             </div>
