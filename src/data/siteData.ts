@@ -120,9 +120,18 @@ export const siteData = {
   brands: [
     {
       region: "London",
-      label: "Recent & Upcoming",
+      label: "Recent",
       venues: [
         { name: "Notting Hill Arts Club", role: "DJ", logo: "/logos/notting-hill-arts-club.png", url: "https://nottinghillartsclub.com/" },
+      ],
+    },
+    {
+      region: "London",
+      management: "Cool Daddy Gigs Management",
+      logo: "/logos/cool-daddy-gigs.png",
+      url: "https://cooldaddygigsmanagement.com/",
+      label: "Upcoming Brunch Sets",
+      venues: [
         { name: "Aki London", role: "Upcoming", logo: "/logos/aki-london.png", url: "https://akilondon.com/" },
       ],
     },

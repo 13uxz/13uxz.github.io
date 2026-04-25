@@ -115,7 +115,11 @@ function AgencyGroup({ group }: { group: BrandGroup }) {
               alt={group.management}
               width={240}
               height={80}
-              className={`w-auto ${group.logo.includes("sole") ? "h-32" : "h-16"} ${group.logo.endsWith(".jpg") ? "mix-blend-screen" : "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"}`}
+              className={`w-auto ${group.logo.includes("sole") ? "h-32" : "h-16"} ${
+                group.logo.includes("cool-daddy") ? "mix-blend-screen" :
+                group.logo.endsWith(".jpg") ? "mix-blend-screen" :
+                "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"
+              }`}
             />
           </a>
         ) : (
@@ -125,7 +129,11 @@ function AgencyGroup({ group }: { group: BrandGroup }) {
               alt={group.management}
               width={240}
               height={80}
-              className={`w-auto ${group.logo.includes("sole") ? "h-32" : "h-16"} ${group.logo.endsWith(".jpg") ? "mix-blend-screen" : "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"}`}
+              className={`w-auto ${group.logo.includes("sole") ? "h-32" : "h-16"} ${
+                group.logo.includes("cool-daddy") ? "mix-blend-screen" :
+                group.logo.endsWith(".jpg") ? "mix-blend-screen" :
+                "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"
+              }`}
             />
           </div>
         )
