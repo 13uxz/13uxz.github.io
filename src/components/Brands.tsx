@@ -222,7 +222,7 @@ export default function Brands() {
                           width={240}
                           height={80}
                           className={`h-8 w-auto ${
-                            group.logo.includes("cool-daddy") ? "translate-x-3 mix-blend-screen" :
+                            group.logo.includes("cool-daddy") ? "mix-blend-screen" :
                             group.logo.endsWith(".jpg") ? "mix-blend-screen" :
                             "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"
                           }`}
@@ -236,7 +236,7 @@ export default function Brands() {
                           width={240}
                           height={80}
                           className={`h-8 w-auto ${
-                            group.logo.includes("cool-daddy") ? "translate-x-3 mix-blend-screen" :
+                            group.logo.includes("cool-daddy") ? "mix-blend-screen" :
                             group.logo.endsWith(".jpg") ? "mix-blend-screen" :
                             "[filter:invert(1)_grayscale(1)_brightness(2)] mix-blend-screen"
                           }`}
