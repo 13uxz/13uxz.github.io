@@ -26,13 +26,9 @@ type BrandGroup = {
 
 function CityHeader({ city }: { city: string }) {
   return (
-    <div className="mb-16 flex items-center justify-center gap-6">
-      <div className="h-px w-16 bg-border" />
-      <h3 className="text-[11px] uppercase tracking-[0.4em] text-white/75">
-        {city}
-      </h3>
-      <div className="h-px w-16 bg-border" />
-    </div>
+    <h3 className="mb-12 text-center text-2xl font-bold tracking-wide sm:text-3xl">
+      {city}
+    </h3>
   );
 }
 
@@ -262,7 +258,7 @@ export default function Brands() {
                         <Tag
                           key={venue.name}
                           {...(linkProps as any)}
-                          className="group flex h-48 w-full max-w-sm flex-col items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
+                          className="group relative flex h-48 w-full max-w-sm items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
                         >
                           <Image
                             src={venue.logo}
@@ -276,7 +272,7 @@ export default function Brands() {
                             }`}
                           />
                           {venue.role && venue.role !== "DJ" && (
-                            <span className="mt-3 text-[10px] uppercase tracking-[0.2em] text-white/75">
+                            <span className="absolute inset-x-0 bottom-6 text-center text-[10px] uppercase tracking-[0.2em] text-white/75">
                               {venue.role}
                             </span>
                           )}
