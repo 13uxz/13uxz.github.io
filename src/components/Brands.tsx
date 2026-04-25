@@ -202,6 +202,12 @@ export default function Brands() {
             <div className="grid gap-12 md:grid-cols-2">
               {londonBrands.map((group) => (
                 <div key={group.management ?? group.label} className="text-center">
+                  {group.label && (
+                    <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-white/75">
+                      {group.label}
+                    </p>
+                  )}
+
                   {group.logo && group.management ? (
                     group.url ? (
                       <a
@@ -239,12 +245,6 @@ export default function Brands() {
                     )
                   ) : (
                     <div className="mb-8 h-12" />
-                  )}
-
-                  {group.label && (
-                    <p className="mb-8 text-[10px] uppercase tracking-[0.3em] text-white/75">
-                      {group.label}
-                    </p>
                   )}
 
                   <div className="flex justify-center">
