@@ -41,3 +41,22 @@ body {
 .cinematic-img:hover {
   transform: scale(1.03);
 }
+
+/* Preserve dark theme + photos when printing the EPK page */
+@media print {
+  @page {
+    margin: 0;
+  }
+  html,
+  body,
+  .epk-page {
+    background: #050505 !important;
+    color: #f0f0f0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .epk-page * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

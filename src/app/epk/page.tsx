@@ -20,12 +20,24 @@ const socialIcons: Record<string, React.FC> = {
 };
 
 const highlights = [
-  "25,000-person crowd at Dubai Shopping Festival NYE",
-  "Residencies at Masti, Blue Seafood Asia, Jamavar & Mimi Mei Fair",
-  "COP28 staff closing party",
-  "Modulate @ KYO on the Palm",
-  "Featured on BeatFM weekly show",
-  "Courses with Point Blank, Toolroom & Granular DXB",
+  {
+    region: "London",
+    items: [
+      "Notting Hill Arts Club",
+      "Aki London brunch sets — upcoming via Cool Daddy Gigs",
+    ],
+  },
+  {
+    region: "Dubai",
+    items: [
+      "25,000-person crowd at Dubai Shopping Festival NYE",
+      "Residencies at Masti, Blue Seafood Asia, Jamavar & Mimi Mei Fair",
+      "COP28 staff closing party",
+      "Modulate @ KYO on the Palm",
+      "Featured on BeatFM weekly show",
+      "Courses with Point Blank, Toolroom & Granular DXB",
+    ],
+  },
 ];
 
 const labels = siteData.labels.map((l) => l.name);
@@ -34,7 +46,7 @@ export default function EPK() {
   return (
     <>
       {/* Floating controls */}
-      <div className="fixed right-6 top-6 z-50 flex gap-3">
+      <div className="fixed right-6 top-6 z-50 flex gap-3 print:hidden">
         <a
           href="/"
           className="border border-white/20 bg-black/60 px-5 py-2.5 text-[11px] uppercase tracking-[0.15em] text-white backdrop-blur-xl transition-all hover:border-white/40 hover:bg-black/80"
@@ -209,17 +221,26 @@ export default function EPK() {
           <section className="mb-16 grid gap-10 sm:grid-cols-2">
             <div>
               <SectionLabel>Key Highlights</SectionLabel>
-              <ul className="space-y-2.5">
-                {highlights.map((h) => (
-                  <li
-                    key={h}
-                    className="flex items-baseline gap-3 text-[13px] leading-relaxed text-white/70"
-                  >
-                    <span className="mt-0.5 h-px w-3 shrink-0 bg-white/20" />
-                    {h}
-                  </li>
+              <div className="space-y-6">
+                {highlights.map((group) => (
+                  <div key={group.region}>
+                    <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-white/40">
+                      {group.region}
+                    </p>
+                    <ul className="space-y-2.5">
+                      {group.items.map((h) => (
+                        <li
+                          key={h}
+                          className="flex items-baseline gap-3 text-[13px] leading-relaxed text-white/70"
+                        >
+                          <span className="mt-0.5 h-px w-3 shrink-0 bg-white/20" />
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </div>
             <div>
               <SectionLabel>Labels</SectionLabel>
