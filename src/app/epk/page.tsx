@@ -24,7 +24,7 @@ const highlights = [
     region: "London",
     items: [
       "Notting Hill Arts Club",
-      "Aki London brunch sets — upcoming via Cool Daddy Gigs",
+      "Resident at Aki London & Kiyori via Cool Daddy Gigs",
     ],
   },
   {

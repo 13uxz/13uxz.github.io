@@ -199,7 +199,7 @@ export default function Brands() {
         {londonBrands.length > 0 && (
           <div className="mb-32">
             <CityHeader city="London" />
-            <div className="mx-auto flex max-w-sm flex-col items-stretch gap-16">
+            <div className="mx-auto flex max-w-xl flex-col items-stretch gap-16">
               {londonBrands.map((group) => (
                 <div key={group.management ?? group.label} className="text-center">
                   {group.label && (
@@ -245,38 +245,70 @@ export default function Brands() {
                     )
                   ) : null}
 
-                  {group.venues.map((venue) => {
-                    const venueUrl = venue.url ?? "";
-                    const Tag = venueUrl ? "a" : "div";
-                    const linkProps = venueUrl
-                      ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" }
-                      : {};
-                    return (
-                      <div key={venue.name} className="flex flex-col items-center">
-                        {venue.role && venue.role !== "DJ" && (
-                          <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-white/75">
-                            {venue.role}
-                          </p>
-                        )}
-                        <Tag
-                          {...(linkProps as any)}
-                          className="group flex h-48 w-full max-w-sm items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
-                        >
-                          <Image
-                            src={venue.logo}
-                            alt={venue.name}
-                            width={400}
-                            height={200}
-                            className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
-                              venue.logo.includes("aki-london") ? "h-12" : "h-36"
-                            } ${
-                              venue.logo.includes("notting-hill") ? "mix-blend-screen" : "brightness-0 invert"
-                            }`}
-                          />
-                        </Tag>
-                      </div>
-                    );
-                  })}
+                  {group.venues.length > 1 ? (
+                    <div className="grid grid-cols-2 gap-4">
+                      {group.venues.map((venue) => {
+                        const venueUrl = venue.url ?? "";
+                        const Tag = venueUrl ? "a" : "div";
+                        const linkProps = venueUrl
+                          ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" }
+                          : {};
+                        return (
+                          <Tag
+                            key={venue.name}
+                            {...(linkProps as any)}
+                            className="group flex h-40 flex-col items-center justify-center border border-border px-4 transition-colors duration-300 hover:border-white/30"
+                          >
+                            <Image
+                              src={venue.logo}
+                              alt={venue.name}
+                              width={400}
+                              height={200}
+                              className="mb-4 h-10 w-auto max-w-[85%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 brightness-0 invert"
+                            />
+                            {venue.role && venue.role !== "DJ" && (
+                              <span className="text-[10px] uppercase tracking-[0.2em] text-white/75">
+                                {venue.role}
+                              </span>
+                            )}
+                          </Tag>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    group.venues.map((venue) => {
+                      const venueUrl = venue.url ?? "";
+                      const Tag = venueUrl ? "a" : "div";
+                      const linkProps = venueUrl
+                        ? { href: venueUrl, target: "_blank", rel: "noopener noreferrer" }
+                        : {};
+                      return (
+                        <div key={venue.name} className="flex flex-col items-center">
+                          {venue.role && venue.role !== "DJ" && (
+                            <p className="mb-4 text-[10px] uppercase tracking-[0.2em] text-white/75">
+                              {venue.role}
+                            </p>
+                          )}
+                          <Tag
+                            {...(linkProps as any)}
+                            className="group flex h-48 w-full max-w-sm items-center justify-center border border-border px-6 transition-colors duration-300 hover:border-white/30"
+                          >
+                            <Image
+                              src={venue.logo}
+                              alt={venue.name}
+                              width={400}
+                              height={200}
+                              className={`max-w-[90%] object-contain opacity-70 transition-opacity duration-300 group-hover:opacity-100 ${
+                                venue.logo.includes("aki-london") ? "h-12" : "h-36"
+                              } ${
+                                venue.logo.includes("notting-hill") ? "mix-blend-screen" : "brightness-0 invert"
+                              }`}
+                            />
+                          </Tag>
+                        </div>
+                      );
+                    })
+                  )}
                 </div>
               ))}
             </div>
