@@ -125,13 +125,13 @@ export const siteData = {
       url: "https://cooldaddygigsmanagement.com/",
       label: "Agency Bookings",
       venues: [
-        { name: "Aki London", role: "Resident", logo: "/logos/aki-london.png", url: "https://akilondon.com/" },
-        { name: "Kiyori", role: "Resident", logo: "/logos/kiyori.png", url: "https://akilondon.com/" },
+        { name: "Aki London", role: "Resident DJ", logo: "/logos/aki-london.png", url: "https://akilondon.com/" },
+        { name: "Kiyori", role: "Resident DJ", logo: "/logos/kiyori.png", url: "https://akilondon.com/" },
       ],
     },
     {
       region: "London",
-      label: "Recent",
+      label: "Private Booking",
       venues: [
         { name: "Notting Hill Arts Club", role: "DJ", logo: "/logos/notting-hill-arts-club.png", url: "https://nottinghillartsclub.com/" },
       ],
