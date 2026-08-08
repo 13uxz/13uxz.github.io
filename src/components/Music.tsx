@@ -88,6 +88,21 @@ export default function Music() {
           <div className="space-y-10">
             <div>
               <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
+                Buddha Bar Dinner Mix
+              </h4>
+              <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://drive.google.com/file/d/1w-FuE6lx6TD86F2wPE4ORhPyKTMAxNmi/preview"
+                  allow="autoplay"
+                  allowFullScreen
+                  loading="lazy"
+                  title="Buddha Bar Dinner Mix"
+                  className="absolute inset-0 h-full w-full border border-white/10"
+                />
+              </div>
+            </div>
+            <div>
+              <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
                 Afro Latin Rooftop Sessions
               </h4>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
@@ -157,6 +172,14 @@ export default function Music() {
             Mixes
           </p>
           <div className="space-y-6">
+            <iframe
+              width="100%"
+              height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar%2F"
+              frameBorder="0"
+              allow="autoplay"
+              title="Buddha Bar on Mixcloud"
+            />
             <iframe
               width="100%"
               height="120"
