@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { siteData } from "@/data/siteData";
 import {
   SpotifyIcon,
@@ -47,12 +48,12 @@ export default function EPK() {
     <>
       {/* Floating controls */}
       <div className="fixed right-6 top-6 z-50 flex gap-3 print:hidden">
-        <a
+        <Link
           href="/"
           className="border border-white/20 bg-black/60 px-5 py-2.5 text-[11px] uppercase tracking-[0.15em] text-white backdrop-blur-xl transition-all hover:border-white/40 hover:bg-black/80"
         >
           Back to site
-        </a>
+        </Link>
         <a
           href="/13uxz-press-kit.pdf"
           download="13uxz-press-kit.pdf"
