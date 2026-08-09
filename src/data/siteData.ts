@@ -5,13 +5,13 @@
 
 export const siteData = {
   name: "13uxz",
-  tagline: "DJ · Producer · London · Dubai",
+  tagline: "DJ · Producer · Luxury Hospitality · London & Dubai",
   email: "13uxz.official@gmail.com",
 
   bio: [
-    "Originally from London, Dave Buckley \"Bucks\" crafts unique and dynamic sets that captivate audiences. Specialising in upscale restaurants and bars, he delivers seamless sets with a keen ear for thoughtful track selection. His passion for music is backed by professional training, including courses with Toolroom and Point Blank Music School, training at Granular DXB, and private tuition with internationally recognised artists.",
+    "Originally from London, Dave Buckley \"Bucks\" builds sets for upscale restaurants, bars and lounges, carrying a room from dinner service through to late night without ever breaking the mood. He works extensively alongside live percussionists and saxophonists, integrating live instrumentation into his sets, the format now central to the world's leading lounge and sunset venues. His music is backed by professional training, including courses with Toolroom and Point Blank Music School, training at Granular DXB, and private tuition with internationally recognised artists.",
     "During his time in Dubai, 13uxz held residencies at Masti, Blue Seafood Asia, Jamavar and Mimi Mei Fair. He regularly performed at corporate events, including a COP28 staff closing party and the Tilal Al Ghaf Real Estate Awards. His preferred genres, Latin, Organic, Afro and Melodic House, shine through not only in his DJ sets but also in his personal remixes, edits and productions released on various record labels.",
-    "Having recently returned to London, 13uxz's first performances included Notting Hill Arts Club, followed by a residency at Aki London and Kiyori. A versatile DJ, he brings extensive experience collaborating with live percussionists and saxophonists, seamlessly integrating live elements into his sets. Career highlights include entertaining 25,000 people during the Dubai Shopping Festival on New Year's Eve, performing at the techno event Modulate at KYO on the Palm, and appearing at Sounds by Laya / Sounds by AKS events. His mixes have been featured on BeatFM as part of a weekly show.",
+    "Having recently returned to London, 13uxz's first performances included Notting Hill Arts Club, followed by residencies at Aki London and Kiyori. Career highlights include entertaining 25,000 people during the Dubai Shopping Festival on New Year's Eve, performing at the techno event Modulate at KYO on the Palm, and appearing at Sounds by Laya / Sounds by AKS events. His mixes have been featured on BeatFM as part of a weekly show.",
   ],
 
   featured: {
