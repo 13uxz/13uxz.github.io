@@ -87,24 +87,12 @@ export default function Music() {
           </p>
           <div className="space-y-10">
             <div>
-              <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
-                Aki Live, Buddha Bar Inspired Mix
-              </h4>
-              <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
-                <iframe
-                  src="https://drive.google.com/file/d/1gxE_42TpyFseYg0IXc4Ql5g0FJJ0-NYH/preview"
-                  allow="autoplay"
-                  allowFullScreen
-                  loading="lazy"
-                  title="Aki Live, Buddha Bar Inspired Mix"
-                  className="absolute inset-0 h-full w-full border border-white/10"
-                />
-              </div>
-            </div>
-            <div>
-              <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
+              <h4 className="mb-1 text-center text-lg font-semibold tracking-wide text-white">
                 Buddha Bar Inspired Dining
               </h4>
+              <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
+                Dinner service
+              </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
                   src="https://drive.google.com/file/d/1hlpsIkM21NxFDlxBdmJdTB1lJkAPbo60/preview"
@@ -112,6 +100,24 @@ export default function Music() {
                   allowFullScreen
                   loading="lazy"
                   title="Buddha Bar Inspired Dining"
+                  className="absolute inset-0 h-full w-full border border-white/10"
+                />
+              </div>
+            </div>
+            <div>
+              <h4 className="mb-1 text-center text-lg font-semibold tracking-wide text-white">
+                Aki Live, Buddha Bar Inspired Mix
+              </h4>
+              <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
+                Late night
+              </p>
+              <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://drive.google.com/file/d/1gxE_42TpyFseYg0IXc4Ql5g0FJJ0-NYH/preview"
+                  allow="autoplay"
+                  allowFullScreen
+                  loading="lazy"
+                  title="Aki Live, Buddha Bar Inspired Mix"
                   className="absolute inset-0 h-full w-full border border-white/10"
                 />
               </div>
@@ -187,30 +193,45 @@ export default function Music() {
             Mixes
           </p>
           <div className="space-y-6">
-            <iframe
-              width="100%"
-              height="120"
-              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Faki-live-buddha-bar-inspired-mix%2F"
-              frameBorder="0"
-              allow="autoplay"
-              title="Aki Live, Buddha Bar Inspired Mix on Mixcloud"
-            />
-            <iframe
-              width="100%"
-              height="120"
-              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar%2F"
-              frameBorder="0"
-              allow="autoplay"
-              title="Buddha Bar Inspired Dining on Mixcloud"
-            />
-            <iframe
-              width="100%"
-              height="120"
-              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar-warm-up%2F"
-              frameBorder="0"
-              allow="autoplay"
-              title="Buddha Bar Inspired Warm Up on Mixcloud"
-            />
+            <div>
+              <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/50">
+                Buddha Bar Inspired Downtempo Warm Up &nbsp;&middot;&nbsp; Early evening
+              </p>
+              <iframe
+                width="100%"
+                height="120"
+                src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar-warm-up%2F"
+                frameBorder="0"
+                allow="autoplay"
+                title="Buddha Bar Inspired Downtempo Warm Up on Mixcloud"
+              />
+            </div>
+            <div>
+              <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/50">
+                Buddha Bar Inspired Dining &nbsp;&middot;&nbsp; Dinner service
+              </p>
+              <iframe
+                width="100%"
+                height="120"
+                src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar%2F"
+                frameBorder="0"
+                allow="autoplay"
+                title="Buddha Bar Inspired Dining on Mixcloud"
+              />
+            </div>
+            <div>
+              <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/50">
+                Aki Live, Buddha Bar Inspired Mix &nbsp;&middot;&nbsp; Late night
+              </p>
+              <iframe
+                width="100%"
+                height="120"
+                src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Faki-live-buddha-bar-inspired-mix%2F"
+                frameBorder="0"
+                allow="autoplay"
+                title="Aki Live, Buddha Bar Inspired Mix on Mixcloud"
+              />
+            </div>
             <iframe
               width="100%"
               height="120"
