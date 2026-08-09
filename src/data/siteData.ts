@@ -110,7 +110,7 @@ export const siteData = {
       label: "Private Event Venues",
       venues: [
         { name: "Helipad by Frozen Cherry", logo: "/logos/helipad.png" },
-        { name: "Atelier M at Pier 7", logo: "/logos/atelier-m.svg", url: "https://atelierm.ae/" },
+        { name: "Atelier M at Pier 7", logo: "/logos/atelier-m.svg" },
         { name: "Zero Gravity", logo: "/logos/zero-gravity.svg", url: "https://www.0-gravity.ae/" },
         { name: "Dubai Marina Yacht Club", logo: "/logos/dubai-marina-yacht-club.svg", url: "https://www.dubaimarinayachtclub.com/" },
       ],
@@ -143,7 +143,7 @@ export const siteData = {
       url: "https://www.blackspoon.me/",
       venues: [
         { name: "Blue Seafood Asia", role: "Resident DJ", logo: "/logos/blue-seafood-asia.png" },
-        { name: "Masti", role: "Resident DJ", logo: "/logos/masti.avif", url: "https://www.mastidubai.com/" },
+        { name: "Masti", role: "Resident DJ", logo: "/logos/masti.avif" },
       ],
     },
     {
@@ -192,7 +192,7 @@ export const siteData = {
       nameUrl: "https://ae.linkedin.com/in/daniel-miranda-a5a16732/en",
       logos: [
         { src: "/logos/lsl-capital.svg", url: "https://lslcapital.com/" },
-        { src: "/logos/masti.avif", url: "https://www.mastidubai.com/" },
+        { src: "/logos/masti.avif" },
       ],
     },
     {
@@ -230,7 +230,6 @@ export const siteData = {
       name: "Joseph Adegoke",
       title: "Manager, Masti Dubai",
       logo: "/logos/masti.avif",
-      url: "https://www.mastidubai.com/",
     },
     {
       quote: "DJ David is one of the most refined and sophisticated DJs I've worked with. His music selection, timing, and ability to read the room were perfectly aligned with our restaurant's mood, delivering both elegance and energy at the highest level.",

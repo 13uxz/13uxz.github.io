@@ -7,6 +7,22 @@ function logoFilter(src: string) {
   return "brightness-0 invert";
 }
 
+// Some venues have no working site of their own, so the logo shows unlinked
+// rather than as an anchor with no destination.
+function LogoLink({ href, children }: { href?: string; children: React.ReactNode }) {
+  if (!href) return <span className="inline-block">{children}</span>;
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="transition-opacity hover:opacity-70"
+    >
+      {children}
+    </a>
+  );
+}
+
 export default function Testimonials() {
   return (
     <section id="testimonials" className="px-6 py-32 sm:px-8">
@@ -43,14 +59,8 @@ export default function Testimonials() {
                 </div>
                 {"logos" in t ? (
                   <div className="flex items-center gap-6">
-                    {t.logos.map((l: { src: string; url: string }) => (
-                      <a
-                        key={l.src}
-                        href={l.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="transition-opacity hover:opacity-70"
-                      >
+                    {t.logos.map((l: { src: string; url?: string }) => (
+                      <LogoLink key={l.src} href={l.url}>
                         <Image
                           src={l.src}
                           alt={t.title}
@@ -58,16 +68,11 @@ export default function Testimonials() {
                           height={80}
                           className={`w-auto opacity-60 ${l.src.includes("masti") ? "h-4" : l.src.includes("mais-musica") ? "h-8" : "h-16"} ${logoFilter(l.src)}`}
                         />
-                      </a>
+                      </LogoLink>
                     ))}
                   </div>
                 ) : "logo" in t && (
-                  <a
-                    href={t.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="transition-opacity hover:opacity-70"
-                  >
+                  <LogoLink href={"url" in t ? t.url : undefined}>
                     <Image
                       src={t.logo}
                       alt={t.title}
@@ -75,7 +80,7 @@ export default function Testimonials() {
                       height={80}
                       className={`w-auto opacity-60 ${t.logo.includes("masti") ? "h-4" : t.logo.includes("mais-musica") ? "h-8" : "h-16"} ${logoFilter(t.logo)}`}
                     />
-                  </a>
+                  </LogoLink>
                 )}
               </footer>
             </blockquote>
