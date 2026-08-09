@@ -175,6 +175,14 @@ export default function Music() {
             <iframe
               width="100%"
               height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Faki-live-buddha-bar-inspired-mix%2F"
+              frameBorder="0"
+              allow="autoplay"
+              title="Aki Live, Buddha Bar Inspired Mix on Mixcloud"
+            />
+            <iframe
+              width="100%"
+              height="120"
               src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar%2F"
               frameBorder="0"
               allow="autoplay"
