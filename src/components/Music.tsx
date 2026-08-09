@@ -193,45 +193,30 @@ export default function Music() {
             Mixes
           </p>
           <div className="space-y-6">
-            <div>
-              <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/50">
-                Aki Live, Buddha Bar Inspired Mix &nbsp;&middot;&nbsp; Full evening, downtempo to peak
-              </p>
-              <iframe
-                width="100%"
-                height="120"
-                src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Faki-live-buddha-bar-inspired-mix%2F"
-                frameBorder="0"
-                allow="autoplay"
-                title="Aki Live, Buddha Bar Inspired Mix on Mixcloud"
-              />
-            </div>
-            <div>
-              <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/50">
-                Buddha Bar Inspired Downtempo Warm Up &nbsp;&middot;&nbsp; Early evening
-              </p>
-              <iframe
-                width="100%"
-                height="120"
-                src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar-warm-up%2F"
-                frameBorder="0"
-                allow="autoplay"
-                title="Buddha Bar Inspired Downtempo Warm Up on Mixcloud"
-              />
-            </div>
-            <div>
-              <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/50">
-                Buddha Bar Inspired Dining &nbsp;&middot;&nbsp; Dinner service
-              </p>
-              <iframe
-                width="100%"
-                height="120"
-                src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar%2F"
-                frameBorder="0"
-                allow="autoplay"
-                title="Buddha Bar Inspired Dining on Mixcloud"
-              />
-            </div>
+            <iframe
+              width="100%"
+              height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Faki-live-buddha-bar-inspired-mix%2F"
+              frameBorder="0"
+              allow="autoplay"
+              title="Aki Live, Buddha Bar Inspired Mix on Mixcloud"
+            />
+            <iframe
+              width="100%"
+              height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar-warm-up%2F"
+              frameBorder="0"
+              allow="autoplay"
+              title="Buddha Bar Inspired Downtempo Warm Up on Mixcloud"
+            />
+            <iframe
+              width="100%"
+              height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar%2F"
+              frameBorder="0"
+              allow="autoplay"
+              title="Buddha Bar Inspired Dining on Mixcloud"
+            />
             <iframe
               width="100%"
               height="120"
