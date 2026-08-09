@@ -1,0 +1,16 @@
+# core.autocrlf is on for this machine, and git guesses that the press kit PDF
+# is text because its first bytes are ASCII. That means checkout rewrites LF to
+# CRLF inside the file and hands back a PDF hundreds of bytes larger than the
+# one that was committed. Mark the binaries so git leaves their bytes alone.
+
+*.pdf binary
+*.mp4 binary
+*.mov binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
