@@ -10,7 +10,7 @@ export const siteData = {
 
   bio: [
     "Originally from London, Dave Buckley \"Bucks\" seamlessly programmes sets for upscale restaurants, bars and lounges, carrying a room from early evening through dinner to late night service. He has extensive experience integrating live percussionists and saxophonists into his sets. His background includes courses with Toolroom and Point Blank Music School, training at Granular DXB, and private tuition with internationally recognised artists.",
-    "In Dubai, 13uxz held residencies at Masti, Blue Seafood Asia, Jamavar and Mimi Mei Fair, and performed regularly at corporate events including a COP28 staff closing party and the Tilal Al Ghaf Real Estate Awards. Latin, Organic, Afro and Melodic House are his preferred genres, running through his DJ sets as well as the remixes, edits and productions released on labels including Cafe De Anatolia, Nova Mova and Dyno Records.",
+    "In Dubai, 13uxz held residencies at Masti, Blue Seafood Asia, Jamavar and Mimi Mei Fair, and performed regularly at corporate events including a COP28 staff closing party and the Tilal Al Ghaf Real Estate Awards. Latin, Organic, Afro and Melodic House are his preferred genres, running through his DJ sets as well as the remixes, edits and productions released on labels such as Cafe De Anatolia, Nova Mova and Dyno Records.",
     "Having recently returned to London, 13uxz's first performances included Notting Hill Arts Club, followed by residencies at Aki London and Kiyori. Career highlights include playing to 25,000 people at the Dubai Shopping Festival on New Year's Eve, the techno event Modulate at KYO on the Palm, and Sounds by Laya and Sounds by AKS events. His mixes have been featured on BeatFM as part of a weekly show.",
   ],
 
