@@ -5,7 +5,7 @@
 
 export const siteData = {
   name: "13uxz",
-  tagline: "DJ · Producer · Luxury Hospitality · London & Dubai",
+  tagline: "DJ · Producer · London · Dubai",
   email: "13uxz.official@gmail.com",
 
   bio: [
