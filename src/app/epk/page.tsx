@@ -147,7 +147,25 @@ export default function EPK() {
                   <p className="mb-3 text-[10px] uppercase tracking-[0.2em] text-white/40">
                     {group.genre}
                   </p>
+                  {"banner" in group && group.banner && (
+                    <p className="mb-3 text-[10px] uppercase tracking-[0.1em] text-white/30">
+                      Featured on {group.banner.title}
+                    </p>
+                  )}
                   <div className="space-y-2">
+                    {"latestRelease" in group && group.latestRelease && (
+                      <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                        <span className="text-[13px] text-white/80">
+                          {group.latestRelease.title}
+                          <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">
+                            Latest Release
+                          </span>
+                        </span>
+                        <span className="shrink-0 text-[11px] text-white/40">
+                          {group.latestRelease.label}
+                        </span>
+                      </div>
+                    )}
                     {group.tracks.map((t) => (
                       <div
                         key={t.title}
@@ -183,6 +201,10 @@ export default function EPK() {
                   Video Sets
                 </p>
                 <div className="space-y-2">
+                  <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                    <span className="text-[13px] text-white/80">Aki Live, Buddha Bar Inspired Mix</span>
+                    <a href="https://drive.google.com/file/d/1gxE_42TpyFseYg0IXc4Ql5g0FJJ0-NYH/view" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Watch</a>
+                  </div>
                   <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
                     <span className="text-[13px] text-white/80">Buddha Bar Inspired Dining</span>
                     <a href="https://drive.google.com/file/d/1hlpsIkM21NxFDlxBdmJdTB1lJkAPbo60/view" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Watch</a>
@@ -226,6 +248,24 @@ export default function EPK() {
                     <span className="text-[13px] text-white/80">Afro Organic Lounge</span>
                     <a href="https://www.mixcloud.com/13uxz/afro-organic-lounge/" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Listen</a>
                   </div>
+                </div>
+              </div>
+              <div>
+                <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/40">
+                  Featured Edit
+                </p>
+                <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                  <span className="text-[13px] text-white/80">{siteData.featured.title}</span>
+                  <a href={siteData.featured.url} target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Listen</a>
+                </div>
+              </div>
+              <div>
+                <p className="mb-2 text-[10px] uppercase tracking-[0.2em] text-white/40">
+                  Interview
+                </p>
+                <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                  <span className="text-[13px] text-white/80">Dyno Records Podcast</span>
+                  <a href="https://www.youtube.com/watch?v=32yGbfEoPQ0" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Watch</a>
                 </div>
               </div>
             </div>

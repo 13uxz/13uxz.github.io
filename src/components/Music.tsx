@@ -88,6 +88,21 @@ export default function Music() {
           <div className="space-y-10">
             <div>
               <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
+                Aki Live, Buddha Bar Inspired Mix
+              </h4>
+              <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://drive.google.com/file/d/1gxE_42TpyFseYg0IXc4Ql5g0FJJ0-NYH/preview"
+                  allow="autoplay"
+                  allowFullScreen
+                  loading="lazy"
+                  title="Aki Live, Buddha Bar Inspired Mix"
+                  className="absolute inset-0 h-full w-full border border-white/10"
+                />
+              </div>
+            </div>
+            <div>
+              <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
                 Buddha Bar Inspired Dining
               </h4>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
