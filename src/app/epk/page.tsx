@@ -199,6 +199,14 @@ export default function EPK() {
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                    <span className="text-[13px] text-white/80">Buddha Bar</span>
+                    <a href="https://www.mixcloud.com/13uxz/buddha-bar/" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Listen</a>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                    <span className="text-[13px] text-white/80">Buddha Bar Warm Up</span>
+                    <a href="https://www.mixcloud.com/13uxz/buddha-bar-warm-up/" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Listen</a>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
                     <span className="text-[13px] text-white/80">Afro Latin Rooftop Sessions</span>
                     <a href="https://www.mixcloud.com/13uxz/afro-latin-rooftop-sessions/" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Listen</a>
                   </div>
