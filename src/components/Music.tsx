@@ -87,9 +87,12 @@ export default function Music() {
           </p>
           <div className="space-y-10">
             <div>
-              <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
+              <h4 className="mb-1 text-center text-lg font-semibold tracking-wide text-white">
                 Buddha Bar Inspired Mix
               </h4>
+              <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
+                @ Aki London Live
+              </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
                   src="https://drive.google.com/file/d/1gxE_42TpyFseYg0IXc4Ql5g0FJJ0-NYH/preview"
@@ -106,7 +109,7 @@ export default function Music() {
                 Buddha Bar Inspired Dining
               </h4>
               <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
-                Dinner service @ Aki London Live
+                @ London Sound Academy
               </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe

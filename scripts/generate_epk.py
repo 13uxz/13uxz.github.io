@@ -192,10 +192,10 @@ section_label("Mixes & Videos")
 # The warm up and dining sets follow it in running order as the detailed components.
 story.append(Paragraph("Video Sets", s_sub))
 for title, href, note in [
-    ("Aki Live, Buddha Bar Inspired Mix", "https://drive.google.com/file/d/1gxE_42TpyFseYg0IXc4Ql5g0FJJ0-NYH/view", "Full evening, downtempo to peak"),
-    ("Buddha Bar Inspired Dining", "https://drive.google.com/file/d/1hlpsIkM21NxFDlxBdmJdTB1lJkAPbo60/view", "Dinner service"),
-    ("Afro Latin Rooftop Sessions", "https://drive.google.com/file/d/1B0_o5_ANJrTH2P5P87v0TIDiPUsGcnSN/view", None),
-    ("Afro Organic Lounge", "https://drive.google.com/file/d/1wfH6cjxNBdfSuqcUz2ekZI4Oehp9FdDD/view", None),
+    ("Buddha Bar Inspired Mix", "https://drive.google.com/file/d/1gxE_42TpyFseYg0IXc4Ql5g0FJJ0-NYH/view", "@ Aki London Live"),
+    ("Buddha Bar Inspired Dining", "https://drive.google.com/file/d/1hlpsIkM21NxFDlxBdmJdTB1lJkAPbo60/view", "@ London Sound Academy"),
+    ("Afro Latin Rooftop Sessions", "https://drive.google.com/file/d/1B0_o5_ANJrTH2P5P87v0TIDiPUsGcnSN/view", "@ BAD Studios London"),
+    ("Afro Organic Lounge", "https://drive.google.com/file/d/1wfH6cjxNBdfSuqcUz2ekZI4Oehp9FdDD/view", "@ BAD Studios London"),
 ]:
     linked_row(title, href, "Watch", note)
 
