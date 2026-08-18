@@ -203,6 +203,7 @@ for title, href, note in [
 story.append(Paragraph("Mixcloud Sets", s_sub))
 for title, slug, note in [
     ("Aki Live, Buddha Bar Inspired Mix", "aki-live-buddha-bar-inspired-mix", "Full evening, downtempo to peak"),
+    ("After Hours Session", "after-hours-session-london-sound-academy", "@ London Sound Academy"),
     ("Buddha Bar Inspired Downtempo Warm Up", "buddha-bar-warm-up", "Early evening"),
     ("Buddha Bar Inspired Dining", "buddha-bar", "Dinner service"),
     ("Afro Latin Rooftop Sessions", "afro-latin-rooftop-sessions", None),

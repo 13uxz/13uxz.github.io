@@ -228,6 +228,14 @@ export default function Music() {
             <iframe
               width="100%"
               height="120"
+              src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fafter-hours-session-london-sound-academy%2F"
+              frameBorder="0"
+              allow="autoplay"
+              title="After Hours Session @ London Sound Academy on Mixcloud"
+            />
+            <iframe
+              width="100%"
+              height="120"
               src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F13uxz%2Fbuddha-bar-warm-up%2F"
               frameBorder="0"
               allow="autoplay"

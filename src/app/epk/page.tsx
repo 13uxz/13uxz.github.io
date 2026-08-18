@@ -253,6 +253,13 @@ export default function EPK() {
                   </div>
                   <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
                     <span className="text-[13px] text-white/80">
+                      After Hours Session
+                      <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">@ London Sound Academy</span>
+                    </span>
+                    <a href="https://www.mixcloud.com/13uxz/after-hours-session-london-sound-academy/" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Listen</a>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
+                    <span className="text-[13px] text-white/80">
                       Buddha Bar Inspired Downtempo Warm Up
                       <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">Early evening</span>
                     </span>
