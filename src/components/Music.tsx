@@ -106,6 +106,24 @@ export default function Music() {
             </div>
             <div>
               <h4 className="mb-1 text-center text-lg font-semibold tracking-wide text-white">
+                After Hours Session
+              </h4>
+              <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
+                @ London Sound Academy
+              </p>
+              <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+                <iframe
+                  src="https://drive.google.com/file/d/1POizHUb21BVaKulMM4r5JRWB5DzMeTuc/preview"
+                  allow="autoplay"
+                  allowFullScreen
+                  loading="lazy"
+                  title="After Hours Session"
+                  className="absolute inset-0 h-full w-full border border-white/10"
+                />
+              </div>
+            </div>
+            <div>
+              <h4 className="mb-1 text-center text-lg font-semibold tracking-wide text-white">
                 Buddha Bar Inspired Dining
               </h4>
               <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">

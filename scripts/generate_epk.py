@@ -193,6 +193,7 @@ section_label("Mixes & Videos")
 story.append(Paragraph("Video Sets", s_sub))
 for title, href, note in [
     ("Buddha Bar Inspired Mix", "https://drive.google.com/file/d/1gxE_42TpyFseYg0IXc4Ql5g0FJJ0-NYH/view", "@ Aki London Live"),
+    ("After Hours Session", "https://drive.google.com/file/d/1POizHUb21BVaKulMM4r5JRWB5DzMeTuc/view", "@ London Sound Academy"),
     ("Buddha Bar Inspired Dining", "https://drive.google.com/file/d/1hlpsIkM21NxFDlxBdmJdTB1lJkAPbo60/view", "@ London Sound Academy"),
     ("Afro Latin Rooftop Sessions", "https://drive.google.com/file/d/1B0_o5_ANJrTH2P5P87v0TIDiPUsGcnSN/view", "@ BAD Studios London"),
     ("Afro Organic Lounge", "https://drive.google.com/file/d/1wfH6cjxNBdfSuqcUz2ekZI4Oehp9FdDD/view", "@ BAD Studios London"),
