@@ -204,24 +204,30 @@ export default function EPK() {
                 <div className="space-y-2">
                   <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
                     <span className="text-[13px] text-white/80">
-                      Aki Live, Buddha Bar Inspired Mix
-                      <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">Full evening, downtempo to peak</span>
+                      Buddha Bar Inspired Mix
+                      <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">Full evening, downtempo to peak @ Aki London Live</span>
                     </span>
                     <a href="https://drive.google.com/file/d/1gxE_42TpyFseYg0IXc4Ql5g0FJJ0-NYH/view" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Watch</a>
                   </div>
                   <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
                     <span className="text-[13px] text-white/80">
                       Buddha Bar Inspired Dining
-                      <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">Dinner service</span>
+                      <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">Dinner service @ Aki London Live</span>
                     </span>
                     <a href="https://drive.google.com/file/d/1hlpsIkM21NxFDlxBdmJdTB1lJkAPbo60/view" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Watch</a>
                   </div>
                   <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
-                    <span className="text-[13px] text-white/80">Afro Latin Rooftop Sessions</span>
+                    <span className="text-[13px] text-white/80">
+                      Afro Latin Rooftop Sessions
+                      <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">@ BAD Studios London</span>
+                    </span>
                     <a href="https://drive.google.com/file/d/1B0_o5_ANJrTH2P5P87v0TIDiPUsGcnSN/view" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Watch</a>
                   </div>
                   <div className="flex items-baseline justify-between gap-4 border-b border-white/[0.06] pb-2">
-                    <span className="text-[13px] text-white/80">Afro Organic Lounge</span>
+                    <span className="text-[13px] text-white/80">
+                      Afro Organic Lounge
+                      <span className="ml-2 text-[10px] uppercase tracking-[0.1em] text-white/30">@ BAD Studios London</span>
+                    </span>
                     <a href="https://drive.google.com/file/d/1wfH6cjxNBdfSuqcUz2ekZI4Oehp9FdDD/view" target="_blank" rel="noopener noreferrer" className="shrink-0 text-[11px] text-white/40 underline decoration-white/20 underline-offset-2 hover:text-white">Watch</a>
                   </div>
                 </div>

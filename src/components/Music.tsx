@@ -88,10 +88,10 @@ export default function Music() {
           <div className="space-y-10">
             <div>
               <h4 className="mb-1 text-center text-lg font-semibold tracking-wide text-white">
-                Aki Live, Buddha Bar Inspired Mix
+                Buddha Bar Inspired Mix
               </h4>
               <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
-                Full evening, downtempo to peak
+                Full evening, downtempo to peak @ Aki London Live
               </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
@@ -99,7 +99,7 @@ export default function Music() {
                   allow="autoplay"
                   allowFullScreen
                   loading="lazy"
-                  title="Aki Live, Buddha Bar Inspired Mix"
+                  title="Buddha Bar Inspired Mix"
                   className="absolute inset-0 h-full w-full border border-white/10"
                 />
               </div>
@@ -109,7 +109,7 @@ export default function Music() {
                 Buddha Bar Inspired Dining
               </h4>
               <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
-                Dinner service
+                Dinner service @ Aki London Live
               </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
@@ -123,9 +123,12 @@ export default function Music() {
               </div>
             </div>
             <div>
-              <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
+              <h4 className="mb-1 text-center text-lg font-semibold tracking-wide text-white">
                 Afro Latin Rooftop Sessions
               </h4>
+              <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
+                @ BAD Studios London
+              </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
                   src="https://drive.google.com/file/d/1B0_o5_ANJrTH2P5P87v0TIDiPUsGcnSN/preview"
@@ -138,9 +141,12 @@ export default function Music() {
               </div>
             </div>
             <div>
-              <h4 className="mb-4 text-center text-lg font-semibold tracking-wide text-white">
+              <h4 className="mb-1 text-center text-lg font-semibold tracking-wide text-white">
                 Afro Organic Lounge
               </h4>
+              <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
+                @ BAD Studios London
+              </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
                   src="https://drive.google.com/file/d/1wfH6cjxNBdfSuqcUz2ekZI4Oehp9FdDD/preview"
