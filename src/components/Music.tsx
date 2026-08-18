@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { siteData } from "@/data/siteData";
+import VenueTag from "@/components/VenueTag";
 
 function TrackCard({ track }: { track: { title: string; label: string; artwork: string; url: string; featuredOn?: { title: string; url: string } } }) {
   return (
@@ -91,7 +92,7 @@ export default function Music() {
                 Buddha Bar Inspired Mix
               </h4>
               <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
-                @ Aki London Live
+                <VenueTag name="Aki London Live" />
               </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
@@ -109,7 +110,7 @@ export default function Music() {
                 After Hours Session
               </h4>
               <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
-                @ London Sound Academy
+                <VenueTag name="London Sound Academy" />
               </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
@@ -127,7 +128,7 @@ export default function Music() {
                 Buddha Bar Inspired Dining
               </h4>
               <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
-                @ London Sound Academy
+                <VenueTag name="London Sound Academy" />
               </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
@@ -145,7 +146,7 @@ export default function Music() {
                 Afro Latin Rooftop Sessions
               </h4>
               <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
-                @ BAD Studios London
+                <VenueTag name="BAD Studios London" />
               </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe
@@ -163,7 +164,7 @@ export default function Music() {
                 Afro Organic Lounge
               </h4>
               <p className="mb-4 text-center text-[10px] uppercase tracking-[0.2em] text-white/50">
-                @ BAD Studios London
+                <VenueTag name="BAD Studios London" />
               </p>
               <div className="relative w-full overflow-hidden" style={{ paddingBottom: "56.25%" }}>
                 <iframe

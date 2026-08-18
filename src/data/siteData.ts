@@ -285,3 +285,11 @@ export const siteData = {
 
   soundcloudUrl: "https://soundcloud.com/13uxz",
 } as const;
+
+// Venue links for the "@ venue" tags on video and mix listings.
+// Key must match the name passed to <VenueTag name="..." />.
+export const venues: Record<string, string> = {
+  "Aki London Live": "https://akilondon.com",
+  "London Sound Academy": "https://www.londonsoundacademy.com",
+  "BAD Studios London": "https://www.instagram.com/bad_studios_london/",
+};
